@@ -19,6 +19,7 @@
   # environment.
   home.packages = [
     pkgs.kitty
+    pkgs.acpi
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
