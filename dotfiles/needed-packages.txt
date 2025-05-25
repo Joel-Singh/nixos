@@ -1,0 +1,8 @@
+redshift i3-wm kitty xorg-server fzf fd brightnessctl tofi dunst picom feh base-devel vim man kitty git github-cli bat htop neofetch neovim difftastic ripgrep ncdu zathura zathura-pdf-mupdf hyprland qutebrowser tofi hyprpaper
+
+# For notify-send
+libnotify
+
+# For neovim
+luarocks
+xclip # For clipboard support
