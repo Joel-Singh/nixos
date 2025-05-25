@@ -179,7 +179,7 @@ function n() {
   fi 
 }
 
- bind '"\t":menu-complete'
+bind '"\t":menu-complete'
 
 set keyseq-timeout 25
 # History Settings
