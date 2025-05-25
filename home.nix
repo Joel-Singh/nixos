@@ -45,6 +45,9 @@
 
   programs.lazygit.enable = true;
   programs.gh.enable = true;
+  programs.neovim.enable = true;
+  programs.fzf.enable = true;
+  programs.fd.enable = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -53,6 +56,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf;
+    ".bashrc".source = dotfiles/.bashrc;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''

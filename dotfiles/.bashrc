@@ -201,8 +201,11 @@ PROMPT_COMMAND="$PROMPT_COMMAND;pwd > ~/Personal/Temporary/currentwd"
 #
 # CTRL-R to fuzzily search your command line history then run an old command
 
-source /usr/share/fzf/completion.bash
-source /usr/share/fzf/key-bindings.bash
+if command -v fzf-share >/dev/null; then
+	source "$(fzf-share)/completion.bash"
+	source "$(fzf-share)/key-bindings.bash"
+fi
+
 export FZF_DEFAULT_COMMAND="fd . $HOME"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd -t d . $HOME"
