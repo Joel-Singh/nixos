@@ -49,6 +49,7 @@
   programs.fzf.enable = true;
   programs.fd.enable = true;
   programs.feh.enable = true;
+  programs.bat.enable = true;
 
   services.hyprpaper.enable = true;
 
