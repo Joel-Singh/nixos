@@ -24,8 +24,6 @@ alias pacman='pacman --color=auto'
 alias rm='echo Use trash silly'
 alias trp='trash-put --verbose'
 alias trp-downloads='trash-put --verbose ~/Downloads/*'
-alias kdejerry='kdeconnect-cli -n jerry'
-alias feh='feh --scale-down'
 alias kcli='kdeconnect-cli'
 alias c="clear && printf '\033[3J'; fd --max-depth=1 --color never | column "
 alias xterm='xterm & disown'
