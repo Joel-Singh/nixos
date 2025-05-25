@@ -50,6 +50,8 @@
   programs.fd.enable = true;
   programs.feh.enable = true;
 
+  services.hyprpaper.enable = true;
+
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
@@ -57,6 +59,7 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf;
+    ".config/hypr/hyprpaper.conf".source = dotfiles/hyprpaper.conf;
     ".bashrc".source = dotfiles/.bashrc;
 
     # # You can also set the file content immediately.
