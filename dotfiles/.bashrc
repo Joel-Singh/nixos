@@ -192,7 +192,7 @@ shopt -s histappend
 
 # After each command, append to the history file and reread it
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-PROMPT_COMMAND="$PROMPT_COMMAND;pwd > ~/Personal/Temporary/currentwd"
+PROMPT_COMMAND="$PROMPT_COMMAND;pwd > /tmp/currentwd"
 
 # fzf and fd shortcuts
 # CTRL-T to fuzzily search for a file or directory in your home directory then insert its path at the cursor
