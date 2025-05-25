@@ -1,0 +1,14 @@
+[user]
+	email = joelsingh788@gmail.com
+	name = Joel Singh
+
+[diff]
+	external = difft
+	  wordDiff = true
+[credential]
+	helper = store
+[format]
+	pretty = oneline
+[log]
+	decorate = short
+	aabbrevCommit = true
