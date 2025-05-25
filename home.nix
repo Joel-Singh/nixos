@@ -52,6 +52,7 @@
   programs.feh.enable = true;
   programs.bat.enable = true;
   programs.qutebrowser.enable = true;
+  programs.tofi.enable = true;
 
   services.hyprpaper.enable = true;
   services.dunst.enable = true;
