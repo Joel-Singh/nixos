@@ -165,20 +165,6 @@ function timer() {
   termdown "$1" --no-bell && notify-send "Time's up!" $2
 }
 
-function n() {
-  files="/home/apple/Personal/dotfiles/.bashrc
-/home/apple/Personal/dotfiles/hyprland.conf
-/home/apple/Personal/dotfiles/.bash_profile
-/home/apple/nvim/init.lua
-/home/apple/Personal/Guiding-Principles/home/how-one-ought-to-be/Deliberate new goals.md
-/home/apple/Personal/Guiding-Principles/home/how-one-ought-to-be/Long term goals.md"
-
-  selected=$(echo -e "$files" | fzf)
-  if [[ -n $selected ]]; then
-    nvim "$selected"
-  fi 
-}
-
 bind '"\t":menu-complete'
 
 set keyseq-timeout 25
