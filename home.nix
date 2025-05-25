@@ -52,6 +52,7 @@
   programs.bat.enable = true;
 
   services.hyprpaper.enable = true;
+  services.dunst.enable = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -62,6 +63,7 @@
     ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf;
     ".config/hypr/hyprpaper.conf".source = dotfiles/hyprpaper.conf;
     ".bashrc".source = dotfiles/.bashrc;
+    ".config/dunstrc".source = dotfiles/dunstrc;
 
     # # You can also set the file content immediately.
     # ".gradle/gradle.properties".text = ''
