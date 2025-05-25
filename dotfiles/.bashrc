@@ -3,7 +3,6 @@
 #
 #
 
-export PIP_REQUIRE_VIRTUALENV=true
 export VISUAL="nvim"
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
