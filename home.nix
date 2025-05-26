@@ -26,6 +26,7 @@
     pkgs.wayclip
     pkgs.gcc
     pkgs.tree-sitter
+    pkgs.gnumake
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
