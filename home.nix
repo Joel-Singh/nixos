@@ -64,6 +64,7 @@
   programs.bat.enable = true;
   programs.qutebrowser.enable = true;
   programs.tofi.enable = true;
+  programs.zathura.enable = true;
 
   services.hyprpaper.enable = true;
   services.dunst.enable = true;
