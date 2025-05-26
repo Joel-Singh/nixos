@@ -24,6 +24,7 @@
     pkgs.trash-cli
     pkgs.luajitPackages.luarocks
     pkgs.lua51Packages.lua # For treesitter to compile
+    pkgs.gnumake # For treesitter to compile
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
