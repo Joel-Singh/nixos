@@ -44,6 +44,10 @@
     enable = true;
     userEmail = "joelsingh788@gmail.com";
     userName = "Joel Singh";
+    difftastic = {
+      enable = true;
+      enableAsDifftool = true;
+    };
   };
 
   programs.lazygit.enable = true;
