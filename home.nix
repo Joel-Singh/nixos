@@ -28,6 +28,8 @@
     pkgs.tree-sitter
     pkgs.gnumake
     pkgs.nodejs
+    pkgs.unzip
+    pkgs.wget
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
