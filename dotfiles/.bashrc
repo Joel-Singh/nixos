@@ -166,12 +166,11 @@ function timer() {
 }
 
 function rebuild() {
-  set -e
   pushd ~/Repos/nixos
   git diff -U0
   echo "NixOS Rebuilding..."
   sudo nixos-rebuild switch --flake ~/Repos/nixos\#nixos &>nixos-switch.log || ( \
-    cat nixos-switch.log | grep --color error && false)
+    cat nixos-switch.log | grep --color error && return)
   gen=$(nixos-rebuild list-generations | grep current)
   git commit -am "$gen"
   popd
