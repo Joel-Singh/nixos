@@ -50,8 +50,13 @@
     };
   };
 
-  programs.lazygit.enable = true;
+  programs.lazygit = {
+    enable = true;
+    settings.git.paging.externalDiffCommand = "difft --color=always";
+  };
+
   programs.gh.enable = true;
+
   programs.neovim.enable = true;
   programs.fzf.enable = true;
   programs.fd.enable = true;
