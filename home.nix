@@ -25,7 +25,7 @@
     pkgs.luajitPackages.luarocks
     pkgs.gnumake # For nvim
     pkgs.libgcc # For nvim
-    pkgs.lua51Packages.lua
+    pkgs.luajit
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
