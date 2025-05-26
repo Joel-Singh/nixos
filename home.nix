@@ -24,6 +24,7 @@
     pkgs.trash-cli
     pkgs.luajitPackages.luarocks
     pkgs.wayclip
+    pkgs.libgcc
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
