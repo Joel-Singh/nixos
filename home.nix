@@ -58,6 +58,8 @@
   programs.gh.enable = true;
 
   programs.neovim.enable = true;
+  programs.ripgrep.enable = true;
+
   programs.fzf.enable = true;
   programs.fd.enable = true;
   programs.feh.enable = true;
