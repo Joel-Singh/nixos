@@ -79,7 +79,7 @@ function nvim() {
   if [[ -n $@ ]]; then 
     command nvim "$@"
   else
-    command nvim -S ~/nvim/Session.vim
+    command nvim # -S ~/nvim/Session.vim
   fi
   kitten @ set-spacing padding=5
 }
