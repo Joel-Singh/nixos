@@ -17,19 +17,19 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
-    pkgs.kitty
-    pkgs.acpi
-    pkgs.libnotify
-    pkgs.trash-cli
-    pkgs.luajitPackages.luarocks
-    pkgs.wayclip
-    pkgs.gcc
-    pkgs.tree-sitter
-    pkgs.gnumake
-    pkgs.nodejs
-    pkgs.unzip
-    pkgs.wget
+  home.packages = with pkgs; [
+    kitty
+    acpi
+    libnotify
+    trash-cli
+    luajitPackages.luarocks
+    wayclip
+    gcc
+    tree-sitter
+    gnumake
+    nodejs
+    unzip
+    wget
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
