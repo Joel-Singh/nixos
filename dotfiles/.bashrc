@@ -169,10 +169,13 @@ function rebuild() {
   pushd ~/Repos/nixos
   git diff -U0
   echo "NixOS Rebuilding..."
-  sudo nixos-rebuild switch --flake ~/Repos/nixos\#nixos &>nixos-switch.log || ( \
-    cat nixos-switch.log | grep --color error && return)
-  gen=$(nixos-rebuild list-generations | grep current)
-  git commit -am "$gen"
+  sudo nixos-rebuild switch --flake ~/Repos/nixos\#nixos &>nixos-switch.log
+  if [ $? -ne 0 ]; then
+    cat nixos-switch.log | grep --color error
+  else
+    gen=$(nixos-rebuild list-generations | grep current)
+    git commit -am "$gen"
+  fi
   popd
 }
 
