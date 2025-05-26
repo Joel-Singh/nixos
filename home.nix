@@ -25,6 +25,7 @@
     pkgs.luajitPackages.luarocks
     pkgs.wayclip
     pkgs.gcc
+    pkgs.tree-sitter
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
