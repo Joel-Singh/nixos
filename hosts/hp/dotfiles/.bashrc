@@ -36,7 +36,7 @@ alias cb="cargo build"
 alias cf="cargo fmt"
 alias cc="cargo clippy --fix"
 alias shareWithPhone="kdeconnect-cli -n jerry --share"
-alias nbr="nvim ~/Repos/nixos/dotfiles/.bashrc"
+alias nbr="nvim ~/Repos/nixos/hosts/hp/dotfiles/.bashrc"
 alias nhc="nvim ~/Personal/dotfiles/hyprland.conf"
 alias nil="nvim ~/nvim/init.lua"
 alias ns="nvim ~/Personal/Temporary/scratch.txt"
@@ -169,7 +169,7 @@ function rebuild() {
   pushd ~/Repos/nixos
   git diff -U0
   echo "NixOS Rebuilding..."
-  sudo nixos-rebuild switch --flake ~/Repos/nixos\#nixos &>nixos-switch.log
+  sudo nixos-rebuild switch --flake ~/Repos/nixos\#hp &>nixos-switch.log
   if [ $? -ne 0 ]; then
     cat nixos-switch.log | grep --color error
   else
