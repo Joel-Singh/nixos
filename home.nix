@@ -24,15 +24,16 @@
     libnotify
     trash-cli
     luajitPackages.luarocks
-    wayclip
+    wayclip # Clipboard access for neovim
     gcc
-    tree-sitter
     gnumake
+    tree-sitter
     nodejs
     unzip
     wget
     google-chrome
     fastfetch
+    brightnessctl
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
