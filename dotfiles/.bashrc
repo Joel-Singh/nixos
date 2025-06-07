@@ -176,6 +176,11 @@ function rebuild() {
     gen=$(nixos-rebuild list-generations | grep current)
     git commit -am "$gen"
   fi
+
+  git push
+  if [ $? -ne 0 ]; then
+    echo "Failed to push!"
+  fi
   popd
 }
 
