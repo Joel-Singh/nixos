@@ -169,7 +169,7 @@ function rebuild() {
   pushd ~/repos/nixos
   git diff -U0
   echo "NixOS Rebuilding..."
-  sudo nixos-rebuild switch --flake ~/repos/nixos\#hp &>nixos-switch.log
+  sudo nixos-rebuild switch --flake ~/repos/nixos\#thinkpad &>nixos-switch.log
   if [ $? -ne 0 ]; then
     cat nixos-switch.log | grep --color error
   else
