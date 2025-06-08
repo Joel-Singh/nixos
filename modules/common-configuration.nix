@@ -129,24 +129,4 @@
      coreutils
   #  wget
   ];
-
-   # ircSession is the name of the new service we'll be creating
-   systemd.services.pullQuteBrowser = {
-      enable = true;
-
-      wantedBy = [ "multi-user.target" ];
-      after = [ "network.target" ];
-
-      description = "Pull qute browser repo at startup";
-
-      serviceConfig = {
-        Type = "oneshot";
-        User = "apple";
-        ExecStart = ''
-	  ${pkgs.coreutils}/bin/ls /home/apple/.config/qutebrowser && ${pkgs.git}/bin/git -C /home/apple/.config/qutebrowser/ pull;
-          ${pkgs.coreutils}/bin/ls /home/apple/.config/qutebrowser || ${pkgs.git}/bin/git -C /home/apple/.config/qutebrowser/ clone https://github.com/Joel-Singh/qutebrowser;
-	'';
-        ExecStop = '''';
-      };
-   };
 }
