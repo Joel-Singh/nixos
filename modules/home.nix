@@ -33,6 +33,7 @@
     google-chrome
     fastfetch
     brightnessctl
+    file
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
