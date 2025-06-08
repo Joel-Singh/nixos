@@ -133,20 +133,19 @@
    # ircSession is the name of the new service we'll be creating
    systemd.services.pullQuteBrowser = {
       enable = true;
-      # this service is "wanted by" (see systemd man pages, or other tutorials) the system 
-      # level that allows multiple users to login and interact with the machine non-graphically 
-      # (see the Red Hat tutorial or Arch Linux Wiki for more information on what each target means) 
-      # this is the "node" in the systemd dependency graph that will run the service
+
       wantedBy = [ "multi-user.target" ];
-      # systemd service unit declarations involve specifying dependencies and order of execution
-      # of systemd nodes; here we are saying that we want our service to start after the network has 
-      # set up (as our IRC client needs to relay over the network)
       after = [ "network.target" ];
+
       description = "Pull qute browser repo at startup";
+
       serviceConfig = {
         Type = "oneshot";
         User = "apple";
-        ExecStart = ''${pkgs.git}/bin/git -C /home/apple/.config/qutebrowser/ pull'';
+        ExecStart = ''
+	  ${pkgs.coreutils}/bin/ls /home/apple/.config/qutebrowser && ${pkgs.git}/bin/git -C /home/apple/.config/qutebrowser/ pull;
+          ${pkgs.coreutils}/bin/ls /home/apple/.config/qutebrowser || ${pkgs.git}/bin/git -C /home/apple/.config/qutebrowser/ clone https://github.com/Joel-Singh/qutebrowser;
+	'';
         ExecStop = '''';
       };
    };
