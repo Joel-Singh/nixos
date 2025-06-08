@@ -16,7 +16,7 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  environment.variables = {
+  environment.sessionVariables = {
     CURRENT_COMPUTER = "thinkpad";
   };
 }
