@@ -80,8 +80,15 @@
   programs.tofi.enable = true;
   programs.zathura.enable = true;
 
-  services.hyprpaper.enable = true;
   services.dunst.enable = true;
+
+  services.hyprpaper = {
+    enable = true;
+    settings = {
+      preload = [ "~/repos/nixos/modules/dotfiles/keroppi-wallpaper.jpeg" ];
+      wallpaper = [ "~/repos/nixos/modules/dotfiles/keroppi-wallpaper.jpeg" ];
+    };
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -90,7 +97,6 @@
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
     ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf;
-    ".config/hypr/hyprpaper.conf".source = dotfiles/hyprpaper.conf;
     ".bashrc".source = dotfiles/.bashrc;
     ".config/dunstrc".source = dotfiles/dunstrc;
 
