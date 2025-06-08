@@ -12,6 +12,7 @@
     libnotify
     trash-cli
     luajitPackages.luarocks
+    luajit # To build nvim-treesitter
     wayclip # Clipboard access for neovim
     gcc
     gnumake
@@ -70,5 +71,4 @@
   };
 
   programs.home-manager.enable = true;
-
 }
