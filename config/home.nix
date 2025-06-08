@@ -6,6 +6,13 @@
 
   home.stateVersion = "25.05"; # Do not change
 
+  home.file = {
+    ".bashrc".source = ./.bashrc;
+  };
+
+  home.pointerCursor.enable = true;
+  home.pointerCursor.package = pkgs.vanilla-dmz;
+
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     acpi
@@ -66,9 +73,6 @@
     };
   };
 
-  home.file = {
-    ".bashrc".source = ./.bashrc;
-  };
 
 
   programs.home-manager.enable = true;
