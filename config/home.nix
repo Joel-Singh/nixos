@@ -67,7 +67,7 @@
   };
 
   home.file = {
-    ".bashrc".source = dotfiles/.bashrc;
+    ".bashrc".source = ./.bashrc;
   };
 
 
