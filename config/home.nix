@@ -61,8 +61,8 @@
   services.hyprpaper = {
     enable = true;
     settings = {
-      preload = [ "~/repos/nixos/config/dotfiles/keroppi-wallpaper.jpeg" ];
-      wallpaper = [ ", ~/repos/nixos/config/dotfiles/keroppi-wallpaper.jpeg" ];
+      preload = [ "~/repos/nixos/config/keroppi-wallpaper.jpeg" ];
+      wallpaper = [ ", ~/repos/nixos/config/keroppi-wallpaper.jpeg" ];
     };
   };
 
