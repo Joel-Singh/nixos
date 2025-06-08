@@ -72,7 +72,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.apple = {
     isNormalUser = true;
-    description = "Joel Singh";
+    description = "apple";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
@@ -86,7 +86,6 @@
     };
   };
 
-  programs.firefox.enable = true;
 
   programs.hyprland.enable = true;
 
