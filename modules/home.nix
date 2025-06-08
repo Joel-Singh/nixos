@@ -24,6 +24,7 @@
     fastfetch
     brightnessctl
     file
+    qutebrowser 
   ];
 
   programs.gh.enable = true;
@@ -33,7 +34,6 @@
   programs.fd.enable = true;
   programs.feh.enable = true;
   programs.bat.enable = true;
-  programs.qutebrowser.enable = true;
   programs.tofi.enable = true;
   programs.zathura.enable = true;
   programs.firefox.enable = true;
