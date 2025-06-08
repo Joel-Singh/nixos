@@ -168,7 +168,7 @@ function timer() {
 function rebuild() {
   pushd ~/repos/nixos
 
-  if [ -z $(git diff --no-ext-diff) ]; then
+  if [ -z "$(git diff --no-ext-diff)" ]; then
     echo "No changes"
     popd
     return 0
