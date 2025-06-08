@@ -19,7 +19,6 @@
   # environment.
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
-    kitty
     acpi
     libnotify
     trash-cli
@@ -80,6 +79,8 @@
   programs.tofi.enable = true;
   programs.zathura.enable = true;
   programs.firefox.enable = true;
+  programs.kitty.enable = true;
+  wayland.windowManager.hyprland.enable = true;
 
   services.dunst.enable = true;
 
@@ -97,7 +98,6 @@
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
-    ".config/hypr/hyprland.conf".source = dotfiles/hyprland.conf;
     ".bashrc".source = dotfiles/.bashrc;
     ".config/dunstrc".source = dotfiles/dunstrc;
 
