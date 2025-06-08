@@ -71,7 +71,8 @@
   };
 
    # ircSession is the name of the new service we'll be creating
-   systemd.services.testTouch = {
+   systemd.user.services.testTouch = {
+      enable = true;
       # this service is "wanted by" (see systemd man pages, or other tutorials) the system 
       # level that allows multiple users to login and interact with the machine non-graphically 
       # (see the Red Hat tutorial or Arch Linux Wiki for more information on what each target means) 
@@ -87,10 +88,9 @@
         # specifies that this is a service that waits for notification from its predecessor (declared in
         # `after=`) before starting
         Type = "notify";
-        # username that systemd will look for; if it exists, it will start a service associated with that user
-        User = "apple";
         # the command to execute when the service starts up 
         ExecStart = "touch ~/repos/nixos/TheServiceRan"; 
+        ExecStop = "echo do nothing"; 
       };
    };
 
