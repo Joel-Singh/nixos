@@ -146,7 +146,7 @@
       serviceConfig = {
         Type = "oneshot";
         User = "apple";
-        ExecStart = ''cd /home/apple/.config/qutebrowser/; ${pkgs.git}/bin/git pull'';
+        ExecStart = ''${pkgs.git}/bin/git pull -C /home/apple/.config/qutebrowser/'';
         ExecStop = '''';
       };
    };
