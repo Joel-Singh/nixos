@@ -53,7 +53,6 @@
   programs.zathura.enable = true;
   programs.firefox.enable = true;
   programs.kitty.enable = true;
-  wayland.windowManager.hyprland.enable = true;
 
   programs.git = {
     enable = true;
@@ -72,6 +71,7 @@
 
   services.dunst.enable = true;
 
+  wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = import ./hyprland.nix;
   services.hyprpaper = {
     enable = true;
@@ -81,9 +81,6 @@
     };
   };
 
-  services.displayManager.enable = true;
-  services.displayManager.cosmic-greeter.enable = true;
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "apple";
-  services.displayManager.defaultSession = "";
 }
