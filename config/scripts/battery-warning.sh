@@ -1,5 +1,4 @@
 while true; do
-  notify-send "Script is running"
   battery_level=$(acpi -b | awk '/^Battery 0/ {print $4}')
   battery_level=${battery_level//[%,]}
 
