@@ -92,12 +92,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -128,6 +122,14 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
 
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
+  environment.systemPackages = with pkgs; [
+     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+     coreutils
+  #  wget
+  ];
+
    # ircSession is the name of the new service we'll be creating
    systemd.services.testTouch = {
       enable = true;
@@ -152,7 +154,5 @@
         ExecStart = "touch ~/repos/nixos/TheServiceRan"; 
         ExecStop = "echo do nothing"; 
       };
-
-      path = [ pkgs.coreutils ];
    };
 }
