@@ -80,8 +80,4 @@
       wallpaper = [ ", ~/repos/nixos/config/keroppi-wallpaper.jpeg" ];
     };
   };
-
-  services.displayManager.autoLogin.enable = true;
-  services.displayManager.autoLogin.user = "apple";
-  asdfasdf = 3;
 }
