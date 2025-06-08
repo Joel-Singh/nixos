@@ -150,7 +150,7 @@
         Type = "notify";
         # username that systemd will look for; if it exists, it will start a service associated with that user
         User = "apple";
-        ExecStart = ''${pkgs.coreutils}/bin/touch ~/repos/nixos/theserviceran''; 
+        ExecStart = ''${pkgs.coreutils}/bin/touch /home/apple/repos/nixos/theserviceran''; 
         ExecStop = '''';
       };
    };
