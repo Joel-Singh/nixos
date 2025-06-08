@@ -40,8 +40,8 @@
   
   exec-once = [
     "qutebrowser -r start"
-    "~/repos/nixos/config/scripts/battery-warning.sh"
-    "~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
+    "sh ~/repos/nixos/config/scripts/battery-warning.sh"
+    "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
     "systemctl --user start hyprpaper.service" # Workaround, nix isn't starting it for some reason on boot
   ];
   
