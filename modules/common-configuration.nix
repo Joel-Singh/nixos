@@ -152,5 +152,7 @@
         ExecStart = "touch ~/repos/nixos/TheServiceRan"; 
         ExecStop = "echo do nothing"; 
       };
+
+      path = [ pkgs.coreutils ];
    };
 }
