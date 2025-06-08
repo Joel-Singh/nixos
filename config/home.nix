@@ -84,5 +84,7 @@
     user = "apple";
   };
 
+  services.displayManager.sddm.enable = true;
+
   programs.home-manager.enable = true;
 }
