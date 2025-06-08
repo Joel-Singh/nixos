@@ -79,6 +79,11 @@
     };
   };
 
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "apple";
+  };
+
 
 
   programs.home-manager.enable = true;
