@@ -85,10 +85,6 @@
 
 
   programs.hyprland.enable = true;
-  services.displayManager.autoLogin = {
-    enable = true;
-    user = "apple";
-  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

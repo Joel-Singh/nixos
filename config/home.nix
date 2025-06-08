@@ -84,7 +84,5 @@
     user = "apple";
   };
 
-
-
   programs.home-manager.enable = true;
 }
