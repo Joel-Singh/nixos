@@ -38,9 +38,6 @@
     LC_TIME = "en_US.UTF-8";
   };
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
@@ -88,6 +85,10 @@
 
 
   programs.hyprland.enable = true;
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "apple";
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
