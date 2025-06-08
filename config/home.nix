@@ -81,11 +81,13 @@
     };
   };
 
-  services.displayManager.autoLogin = {
+  services.displayManager.sddm = {
     enable = true;
-    user = "apple";
+    settings = {
+      Autologin = {
+        Session = "hyprland.desktop";
+        User = "apple";
+      };
+    };
   };
-
-  services.displayManager.sddm.enable = true;
-
 }
