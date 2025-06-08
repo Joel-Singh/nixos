@@ -168,8 +168,11 @@ function timer() {
 function rebuild() {
   pushd ~/repos/nixos
   git diff -U0
+  git add -A
+  git commit -m "temporary" # Flakes doesn't recognize non-committed files
   echo "NixOS Rebuilding..."
   sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER &>nixos-switch.log
+  git reset --soft HEAD^
   if [ $? -ne 0 ]; then
     cat nixos-switch.log | grep --color error
   else
