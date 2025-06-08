@@ -81,6 +81,8 @@
     };
   };
 
+  services.displayManager.enable = true;
+  services.displayManager.cosmic-greeter.enable = true;
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "apple";
   services.displayManager.defaultSession = "";
