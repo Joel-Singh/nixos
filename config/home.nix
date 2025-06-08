@@ -10,6 +10,14 @@
     ".bashrc".source = ./.bashrc;
   };
 
+  home.pointerCursor = {
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Classic";
+    size = 16;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     acpi
