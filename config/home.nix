@@ -10,9 +10,6 @@
     ".bashrc".source = ./.bashrc;
   };
 
-  home.pointerCursor.enable = true;
-  home.pointerCursor.package = pkgs.vanilla-dmz;
-
   nixpkgs.config.allowUnfree = true;
   home.packages = with pkgs; [
     acpi
@@ -32,6 +29,7 @@
     brightnessctl
     file
     qutebrowser 
+    nwg-look
   ];
 
   programs.gh.enable = true;
