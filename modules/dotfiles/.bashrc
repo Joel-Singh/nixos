@@ -167,6 +167,10 @@ function timer() {
 
 function rebuild() {
   pushd ~/repos/nixos
+  if [ -z $(git diff --no-ext-diff) ]; then
+    echo "No changes"
+    return 0
+  fi
   git diff -U0
   git add -A
   git commit -m "temporary" # Flakes doesn't recognize non-committed files
