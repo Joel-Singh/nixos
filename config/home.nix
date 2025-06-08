@@ -30,6 +30,7 @@
     file
     qutebrowser 
     nwg-look
+    bibata-cursors
   ];
 
   programs.gh.enable = true;
