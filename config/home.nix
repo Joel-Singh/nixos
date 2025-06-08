@@ -85,7 +85,7 @@
     enable = true;
     settings = {
       Autologin = {
-        Session = "hyprland.desktop";
+        Session = "Hyprland";
         User = "apple";
       };
     };
