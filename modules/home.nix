@@ -88,7 +88,7 @@
     enable = true;
     settings = {
       preload = [ "~/repos/nixos/modules/dotfiles/keroppi-wallpaper.jpeg" ];
-      wallpaper = [ "~/repos/nixos/modules/dotfiles/keroppi-wallpaper.jpeg" ];
+      wallpaper = [ ", ~/repos/nixos/modules/dotfiles/keroppi-wallpaper.jpeg" ];
     };
   };
 
