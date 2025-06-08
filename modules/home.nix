@@ -95,5 +95,7 @@
       };
    };
 
+   environment.systemPackages = environment.systemPackages // [ pkgs.firefox ];
+
   programs.home-manager.enable = true;
 }
