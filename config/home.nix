@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  programs.home-manager.enable = true;
+
   home.username = "apple";
   home.homeDirectory = "/home/apple";
 
@@ -86,5 +88,4 @@
 
   services.displayManager.sddm.enable = true;
 
-  programs.home-manager.enable = true;
 }
