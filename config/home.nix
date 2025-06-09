@@ -43,6 +43,7 @@
     lua-language-server
     rust-analyzer
     btop
+    libsForQt5.dolphin
   ];
 
   programs.gh.enable = true;
