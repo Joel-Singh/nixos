@@ -97,4 +97,9 @@
       wallpaper = [ ", ~/repos/nixos/config/keroppi-wallpaper.jpeg" ];
     };
   };
+
+  xdg.mimeApps.enable = true;
+  xdg.mimeApps.defaultApplications = {
+    "inode/directory" = "org.kde.dolphin.desktop";
+  };
 }

@@ -35,11 +35,13 @@ alias cr="cargo run"
 alias cb="cargo build"
 alias cf="cargo fmt"
 alias cc="cargo clippy --fix"
+alias nd="exec nix develop"
 alias shareWithPhone="kdeconnect-cli -n jerry --share"
 alias nbr="nvim ~/repos/nixos/config/.bashrc"
 alias nil="nvim ~/.config/nvim/init.lua"
 alias nhx="nvim ~/repos/nixos/config/home.nix"
 alias ns="nvim ~/scratch.txt"
+alias mhcn="man home-configuration.nix"
 alias lvim="echo you probably meant nvim"
 alias snapshot="git diff && git add -A && git commit -m \"Snapshot \" && git push"
 alias ss="snapshot"
@@ -144,6 +146,10 @@ function runPython() {
 
 function timer() {
   termdown "$1" --no-bell && notify-send "Time's up!" $2
+}
+
+function rebuild_manual() {
+  sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER &>/home/apple/repos/nixos/nixos-switch.log
 }
 
 function rebuild() {
