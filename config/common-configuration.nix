@@ -123,6 +123,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
      vim
+     libsForQt5.dolphin
   ];
 
   services.displayManager.sddm = {
