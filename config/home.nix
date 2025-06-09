@@ -42,6 +42,7 @@
     nwg-look
     lua-language-server
     cargo
+    alsa-lib # For DuckSlayer
   ];
 
   programs.gh.enable = true;
