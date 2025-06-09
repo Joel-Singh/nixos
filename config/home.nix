@@ -38,8 +38,9 @@
     fastfetch
     brightnessctl
     file
-    qutebrowser 
+    qutebrowser
     nwg-look
+    lua-language-server
   ];
 
   programs.gh.enable = true;
