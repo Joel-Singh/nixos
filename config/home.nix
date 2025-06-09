@@ -43,7 +43,7 @@
     lua-language-server
     rust-analyzer
     btop
-    kdePackages.xdg-desktop-portal-kde
+    xdg-desktop-portal-gtk
   ];
 
   programs.gh.enable = true;
