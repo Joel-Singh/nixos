@@ -72,7 +72,7 @@ function launch_gnucash() {
 }
 
 function nvim() {
-  export in_nvim = 1
+  export in_nvim=1
   kitten @ set-spacing padding=0
   if [[ -n $@ ]]; then 
     command nvim "$@"
@@ -80,7 +80,7 @@ function nvim() {
     command nvim -S ~/.cache/nvim/session.vim
   fi
   kitten @ set-spacing padding=5
-  export in_nvim = 0
+  export in_nvim=0
 }
 
 function cd() {
