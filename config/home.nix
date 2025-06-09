@@ -43,7 +43,6 @@
     lua-language-server
     rust-analyzer
     btop
-    xdg-desktop-portal-gtk
   ];
 
   programs.gh.enable = true;
