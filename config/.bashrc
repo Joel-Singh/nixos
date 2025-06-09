@@ -147,7 +147,7 @@ function timer() {
 }
 
 function rebuild() {
-  pushd ~/repos/nixos
+  pushd ~/repos/nixos > /dev/null
 
   if [ -z "$(git diff --no-ext-diff)" ]; then
     echo "No changes"
@@ -170,7 +170,7 @@ function rebuild() {
     git push --quiet
   fi
 
-  popd
+  popd > /dev/null
 }
 
 bind '"\t":menu-complete'
