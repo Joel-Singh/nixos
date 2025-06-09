@@ -8,6 +8,8 @@ export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
 export JOELS_COMPUTER="true" # Used for DuckSlayer
 
+echo Reached 1
+
 # Added default
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
@@ -179,7 +181,10 @@ function rebuild() {
   popd > /dev/null
 }
 
+echo Reached 184
+
 if [ -z "$in_nvim" ]; then
+  echo Reached 187
   bind '"\t":menu-complete'
 
   set keyseq-timeout 25
@@ -213,5 +218,8 @@ if [ -z "$in_nvim" ]; then
   export FZF_COMPLETION_TRIGGER=''
   export PATH=/home/apple/.local/bin:/home/apple/.cargo/bin:/home/apple/Applications/:$PATH
 fi
+
+
+echo Reached 222
 
 fd --max-depth=1 --color never | column
