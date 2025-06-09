@@ -162,7 +162,7 @@ function rebuild() {
   sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER &>/home/apple/repos/nixos/nixos-switch.log
   is_rebuild_successful=$?
   git reset --soft HEAD^
-  if [ is_rebuild_successful -ne 0 ]; then
+  if [ $is_rebuild_successful -ne 0 ]; then
     cat nixos-switch.log | grep --color error
   else
     gen=$(nixos-rebuild list-generations | grep current)
