@@ -41,6 +41,7 @@
     qutebrowser
     nwg-look
     lua-language-server
+    cargo
   ];
 
   programs.gh.enable = true;
