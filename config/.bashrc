@@ -160,9 +160,9 @@ function rebuild() {
   git commit -m "temporary" # Flakes doesn't recognize non-committed files
   echo "NixOS Rebuilding..."
   sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER &>nixos-switch.log
-  rebuild_success=$?
+  is_rebuild_successful=$?
   git reset --soft HEAD^
-  if [ rebuild_success -ne 0 ]; then
+  if [ is_rebuild_successful -ne 0 ]; then
     cat nixos-switch.log | grep --color error
   else
     gen=$(nixos-rebuild list-generations | grep current)
