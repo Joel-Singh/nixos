@@ -7,7 +7,7 @@ export VISUAL="nvim"
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
 export JOELS_COMPUTER="true" # Used for DuckSlayer
-export in_nvim = 0;
+export in_nvim=0
 
 # Added default
 # If not running interactively, don't do anything
@@ -179,7 +179,7 @@ function rebuild() {
   popd > /dev/null
 }
 
-if [ $in_nvim -eq 0 ]; then
+if [ "$in_nvim" -eq "0" ]; then
   bind '"\t":menu-complete'
 
   set keyseq-timeout 25
