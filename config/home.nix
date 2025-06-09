@@ -41,8 +41,7 @@
     qutebrowser
     nwg-look
     lua-language-server
-    cargo
-    alsa-lib.dev # For DuckSlayer
+    rust-analyzer
   ];
 
   programs.gh.enable = true;
