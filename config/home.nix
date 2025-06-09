@@ -42,6 +42,7 @@
     nwg-look
     lua-language-server
     rust-analyzer
+    btop
   ];
 
   programs.gh.enable = true;
