@@ -72,7 +72,11 @@ function launch_gnucash() {
   nohup gnucash ~/gnucash/myMainMoneyFile.gnucash > /dev/null & disown & e
 }
 
-kitten @ set-spacing padding=5
+
+if [ -z "$in_nvim" ]; then
+  kitten @ set-spacing padding=5
+fi
+
 function nvim() {
   export in_nvim=1
   kitten @ set-spacing padding=0
