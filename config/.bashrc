@@ -107,6 +107,15 @@ function n-graph() {
   fi
 }
 
+function n-config() {
+  config=$(fd . /home/apple/.config | fzf)
+  if [ -z "$config" ]; then
+    echo No config selected
+  else
+    nvim "$config"
+  fi
+}
+
 function viewMd() {
   pandoc "$1" -o "/home/apple/Personal/Temporary/viewMdFile.pdf" && z "/home/apple/Personal/Temporary/viewMdFile.pdf"
 }
