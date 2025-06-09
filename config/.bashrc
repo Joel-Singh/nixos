@@ -167,7 +167,7 @@ function rebuild() {
   else
     gen=$(nixos-rebuild list-generations | grep current)
     git commit -am "$gen"
-    git push > /dev/null
+    git push --quiet
   fi
 
   popd
