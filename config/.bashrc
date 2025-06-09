@@ -51,7 +51,6 @@ alias ghrepolist="gh repo list -L 99"
 alias keymaps="bind -P | awk '/can be found/ {print \$0}' | fzf"
 alias cal3="cal -3"
 alias calyear="cal --year"
-alias n-graph='nvim "$(fd . /home/apple/Personal/Guiding-Principles/ | fzf)"'
 alias pdft='mkdir -p output && pdflatex -output-directory=./output'
 alias neofetch='fastfetch'
 alias ff='fastfetch'
@@ -90,39 +89,6 @@ function cd() {
     fd --max-depth=1 --color never | column
 }
 
-function y-S() {
-  if [[ -z $1 ]]; then
-    echo "Usage: y-S <package>"
-    return
-  fi
-
-  pkg=$(yay -Ss $1 | awk '/^[a-z]/ {print $1}' | fzf -q ${1})
-  if [[ -n $pkg ]]; then
-    yay -S $pkg
-  fi
-}
-
-function p-S() {
-  if [[ -z $1 ]]; then
-    echo "Usage: p-S <package>"
-    return
-  fi
-
-  pkg=$(yay -Ss $1 | awk '/^[a-z]/ {print $1}' | awk '!/^aur/' | fzf -q ${1})
-  if [[ -n $pkg ]]; then
-    sudo pacman -S $pkg
-  fi
-}
-
-function p-R() {
-  pkg=$(pacman -Qq | fzf -q ${1:-""})
-  if [[ -n "$pkg" ]]; then
-    sudo pacman -Rs "$pkg"
-  else
-    echo "No package selected."
-  fi
-}
-
 function clone() {
   repo=$(gh repo list -L 99 | awk '/Joel-Singh/ {print $1}' | fzf)
   if [[ -n "$repo" ]]; then
@@ -132,6 +98,14 @@ function clone() {
   fi
 }
 
+function n-graph() {
+  document=$(fd . /home/apple/repos/Guiding-Principles/ | fzf)
+  if [ -z "$document" ]; then
+    echo No document selected
+  else
+    nvim "$document"
+  fi
+}
 
 function viewMd() {
   pandoc "$1" -o "/home/apple/Personal/Temporary/viewMdFile.pdf" && z "/home/apple/Personal/Temporary/viewMdFile.pdf"
