@@ -43,7 +43,7 @@
     lua-language-server
     rust-analyzer
     btop
-    libsForQt5.dolphin
+    xdg-desktop-portal-gtk
   ];
 
   programs.gh.enable = true;
