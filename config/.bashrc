@@ -157,7 +157,7 @@ function rebuild() {
 
   git diff -U0
   git add -A
-  git commit -m "temporary" # Flakes doesn't recognize non-committed files
+  git commit -m "temporary" > /dev/null # Flakes doesn't recognize non-committed files
   echo "NixOS Rebuilding..."
   sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER &>/home/apple/repos/nixos/nixos-switch.log
   is_rebuild_successful=$?
@@ -167,7 +167,7 @@ function rebuild() {
   else
     gen=$(nixos-rebuild list-generations | grep current)
     git commit -am "$gen"
-    git push
+    git push > /dev/null
   fi
 
   popd
