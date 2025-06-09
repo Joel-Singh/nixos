@@ -43,6 +43,7 @@
     lua-language-server
     rust-analyzer
     btop
+    bacon
   ];
 
   programs.gh.enable = true;
