@@ -68,7 +68,7 @@
       ctrl-u = "scroll-page(-1)";
       ctrl-d = "scroll-page(1)";
     };
-  }
+  };
 
   programs.git = {
     enable = true;
