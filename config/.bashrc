@@ -7,7 +7,6 @@ export VISUAL="nvim"
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
 export JOELS_COMPUTER="true" # Used for DuckSlayer
-export in_nvim=0
 
 # Added default
 # If not running interactively, don't do anything
@@ -71,6 +70,7 @@ function launch_gnucash() {
   nohup gnucash ~/gnucash/myMainMoneyFile.gnucash > /dev/null & disown & e
 }
 
+kitten @ set-spacing padding=5
 function nvim() {
   export in_nvim=1
   kitten @ set-spacing padding=0
@@ -80,7 +80,7 @@ function nvim() {
     command nvim -S ~/.cache/nvim/session.vim
   fi
   kitten @ set-spacing padding=5
-  export in_nvim=0
+  unset in_nvim=0
 }
 
 function cd() {
@@ -179,7 +179,7 @@ function rebuild() {
   popd > /dev/null
 }
 
-if [ "$in_nvim" -eq "0" ]; then
+if [ -z "$in_nvim" ]; then
   bind '"\t":menu-complete'
 
   set keyseq-timeout 25
