@@ -7,6 +7,7 @@ export VISUAL="nvim"
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
 export JOELS_COMPUTER="true" # Used for DuckSlayer
+export in_nvim = 0;
 
 # Added default
 # If not running interactively, don't do anything
@@ -70,10 +71,8 @@ function launch_gnucash() {
   nohup gnucash ~/gnucash/myMainMoneyFile.gnucash > /dev/null & disown & e
 }
 
-if [ -z "$NVIM" ]; then
-  kitten @ set-spacing padding=5
-fi
 function nvim() {
+  export in_nvim = 1
   kitten @ set-spacing padding=0
   if [[ -n $@ ]]; then 
     command nvim "$@"
@@ -81,6 +80,7 @@ function nvim() {
     command nvim -S ~/.cache/nvim/session.vim
   fi
   kitten @ set-spacing padding=5
+  export in_nvim = 0
 }
 
 function cd() {
@@ -179,37 +179,39 @@ function rebuild() {
   popd > /dev/null
 }
 
-bind '"\t":menu-complete'
+if [ $in_nvim -eq 0 ]; then
+  bind '"\t":menu-complete'
 
-set keyseq-timeout 25
-# History Settings
-HISTFILESIZE=1000000
-HISTSIZE=1000000
-# Avoid duplicates
-HISTCONTROL=ignoredups:erasedups
-# When the shell exits, append to the history file instead of overwriting it
-shopt -s histappend
+  set keyseq-timeout 25
+  # History Settings
+  HISTFILESIZE=1000000
+  HISTSIZE=1000000
+  # Avoid duplicates
+  HISTCONTROL=ignoredups:erasedups
+  # When the shell exits, append to the history file instead of overwriting it
+  shopt -s histappend
 
-# After each command, append to the history file and reread it
-PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
-PROMPT_COMMAND="$PROMPT_COMMAND;pwd > /tmp/currentwd"
+  # After each command, append to the history file and reread it
+  PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+  PROMPT_COMMAND="$PROMPT_COMMAND;pwd > /tmp/currentwd"
 
-# fzf and fd shortcuts
-# CTRL-T to fuzzily search for a file or directory in your home directory then insert its path at the cursor
-#
-# ALT-C to fuzzily search for a directory in your home directory then cd into it
-#
-# CTRL-R to fuzzily search your command line history then run an old command
+  # fzf and fd shortcuts
+  # CTRL-T to fuzzily search for a file or directory in your home directory then insert its path at the cursor
+  #
+  # ALT-C to fuzzily search for a directory in your home directory then cd into it
+  #
+  # CTRL-R to fuzzily search your command line history then run an old command
 
-if command -v fzf-share >/dev/null; then
-	source "$(fzf-share)/completion.bash"
-	source "$(fzf-share)/key-bindings.bash"
+  if command -v fzf-share >/dev/null; then
+    source "$(fzf-share)/completion.bash"
+    source "$(fzf-share)/key-bindings.bash"
+  fi
+
+  export FZF_DEFAULT_COMMAND="fd . $HOME"
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+  export FZF_COMPLETION_TRIGGER=''
+  export PATH=/home/apple/.local/bin:/home/apple/.cargo/bin:/home/apple/Applications/:$PATH
 fi
-
-export FZF_DEFAULT_COMMAND="fd . $HOME"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-export FZF_ALT_C_COMMAND="fd -t d . $HOME"
-export FZF_COMPLETION_TRIGGER=''
-export PATH=/home/apple/.local/bin:/home/apple/.cargo/bin:/home/apple/Applications/:$PATH
 
 fd --max-depth=1 --color never | column
