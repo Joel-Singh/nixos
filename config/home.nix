@@ -43,6 +43,7 @@
     lua-language-server
     rust-analyzer
     btop
+    kdePackages.dolphin # have a file manager installed for DuckSlayer
   ];
 
   programs.gh.enable = true;
