@@ -44,6 +44,7 @@
     rust-analyzer
     btop
     xdg-desktop-portal-gtk
+    ncdu
   ];
 
   programs.gh.enable = true;
