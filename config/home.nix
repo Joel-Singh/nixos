@@ -46,6 +46,7 @@
     xdg-desktop-portal-gtk
     ncdu
     cloc
+    hyprshot
   ];
 
   programs.gh.enable = true;
