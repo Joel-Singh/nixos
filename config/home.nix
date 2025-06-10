@@ -45,6 +45,7 @@
     btop
     xdg-desktop-portal-gtk
     ncdu
+    cloc
   ];
 
   programs.gh.enable = true;
