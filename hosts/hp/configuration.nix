@@ -17,5 +17,5 @@
 
   environment.sessionVariables = {
     CURRENT_COMPUTER = "hp";
-  }
+  };
 }

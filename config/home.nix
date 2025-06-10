@@ -57,8 +57,8 @@
   programs.zathura.enable = true;
   programs.firefox.enable = true;
   programs.kitty.enable = true;
-  programs.bacon.enable = true;
 
+  programs.bacon.enable = true;
   programs.bacon.settings = {
     keybindings = {
       esc = "back";
