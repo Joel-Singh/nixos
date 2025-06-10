@@ -43,6 +43,7 @@
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
     "systemctl --user start hyprpaper.service" # Workaround, nix isn't starting it for some reason on boot
+    "git -C /home/apple/repos/nixos/ pull"
   ];
   
   general = {

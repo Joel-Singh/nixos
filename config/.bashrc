@@ -15,7 +15,7 @@ export JOELS_COMPUTER="true" # Used for DuckSlayer
 # Customizing Bash prompt
 GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"
-PS1="${GREEN}\W${RESET} "
+PS1="${GREEN}\$(echo \"\$nix_develop\")\W${RESET} "
 
 # Aliases
 alias l='ls --color=auto'
@@ -35,7 +35,7 @@ alias cr="cargo run"
 alias cb="cargo build"
 alias cf="cargo fmt"
 alias cc="cargo clippy --fix"
-alias nd="exec nix develop"
+alias nd='export nix_develop="ND "; exec nix develop'
 alias shareWithPhone="kdeconnect-cli -n jerry --share"
 alias nbr="nvim ~/repos/nixos/config/.bashrc"
 alias nil="nvim ~/.config/nvim/init.lua"
@@ -84,7 +84,7 @@ function nvim() {
     command nvim -S ~/.cache/nvim/session.vim
   fi
   kitten @ set-spacing padding=5
-  unset in_nvim=0
+  unset in_nvim
 }
 
 function cd() {
