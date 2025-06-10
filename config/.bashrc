@@ -211,7 +211,7 @@ if [ -z "$in_nvim" ]; then
     source "$(fzf-share)/key-bindings.bash"
   fi
 
-  export FZF_DEFAULT_COMMAND="fd --hidden . $HOME"
+  export FZF_DEFAULT_COMMAND="fd . $HOME"
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
   export FZF_ALT_C_COMMAND="fd -t d . $HOME"
   export FZF_COMPLETION_TRIGGER=''
