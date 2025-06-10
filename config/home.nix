@@ -47,6 +47,7 @@
     ncdu
     cloc
     hyprshot
+    rustfmt
   ];
 
   programs.gh.enable = true;
