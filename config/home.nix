@@ -48,6 +48,7 @@
     cloc
     hyprshot
     rustfmt
+    stylua
   ];
 
   programs.gh.enable = true;
