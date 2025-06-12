@@ -183,6 +183,15 @@ function rebuild() {
   popd > /dev/null
 }
 
+function nix-develop-if-flake() {
+  git_root=$(git rev-parse --show-toplevel 2> /dev/null || echo)
+  if [ -z "$nix_develop" ] && ls $(echo "$git_root"/flake.nix) &> /dev/null && [ -z "$(pwd | grep nixos)" ]; then
+    export nix_develop="ND "
+    exec nix develop
+  fi
+}
+
+
 if [ -z "$in_nvim" ]; then
   bind '"\t":menu-complete'
 
@@ -218,9 +227,4 @@ if [ -z "$in_nvim" ]; then
   export PATH=/home/apple/.local/bin:/home/apple/.cargo/bin:/home/apple/Applications/:$PATH
 fi
 
-
-git_root=$(git rev-parse --show-toplevel &> /dev/null || echo)
-if [ -z "$nix_develop" ] && ls $(echo "$git_root"/flake.nix) &> /dev/null && [ -z "$(pwd | grep nixos)" ]; then
-	export nix_develop="ND "
-	exec nix develop
-fi
+nix-develop-if-flake
