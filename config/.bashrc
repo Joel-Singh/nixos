@@ -36,7 +36,6 @@ alias cr="cargo run"
 alias cb="cargo build"
 alias cf="cargo fmt"
 alias cc="cargo clippy --fix"
-alias nd='export nix_develop="ND "; exec nix develop'
 alias shareWithPhone="kdeconnect-cli -n jerry --share"
 alias nbr="nvim ~/repos/nixos/config/.bashrc"
 alias nil="nvim ~/.config/nvim/init.lua"
@@ -221,3 +220,8 @@ fi
 
 
 fd --max-depth=1 --color never | column
+git_root=$(git rev-parse --show-toplevel)
+if [ -z "$nix_develop" ] && ls $(echo "$git_root"/flake.nix) &> /dev/null && [ -z "$(pwd | grep nixos)" ]; then
+	export nix_develop="ND "
+	exec nix develop
+fi
