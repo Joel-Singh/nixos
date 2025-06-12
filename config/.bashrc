@@ -219,7 +219,7 @@ if [ -z "$in_nvim" ]; then
 fi
 
 
-git_root=$(git rev-parse --show-toplevel)
+git_root=$(git rev-parse --show-toplevel &> /dev/null || echo)
 if [ -z "$nix_develop" ] && ls $(echo "$git_root"/flake.nix) &> /dev/null && [ -z "$(pwd | grep nixos)" ]; then
 	export nix_develop="ND "
 	exec nix develop
