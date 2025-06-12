@@ -127,6 +127,11 @@ function toMd() {
   pandoc "$1" -o "${1%.*}.md"
 }
 
+function fakeAdd() {
+  git add --intent-to-add $1
+  git update-index --assume-unchanged $1
+}
+
 function runCpp() {
   ls *.cpp | entr -c sh -c "g++ $1 -o ${1%.*} && ./${1%.*}"
 }
@@ -229,4 +234,4 @@ if [ -z "$in_nvim" ]; then
   export PATH=/home/apple/.local/bin:/home/apple/.cargo/bin:/home/apple/Applications/:$PATH
 fi
 
-# nix-develop-if-flake
+nix-develop-if-flake
