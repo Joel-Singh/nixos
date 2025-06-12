@@ -49,7 +49,6 @@
     hyprshot
     rustfmt
     stylua
-    clippy
   ];
 
   programs.gh.enable = true;
