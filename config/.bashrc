@@ -219,7 +219,6 @@ if [ -z "$in_nvim" ]; then
 fi
 
 
-fd --max-depth=1 --color never | column
 git_root=$(git rev-parse --show-toplevel)
 if [ -z "$nix_develop" ] && ls $(echo "$git_root"/flake.nix) &> /dev/null && [ -z "$(pwd | grep nixos)" ]; then
 	export nix_develop="ND "
