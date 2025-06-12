@@ -87,11 +87,6 @@ function nvim() {
   unset in_nvim
 }
 
-function cd() {
-    builtin cd "$@"
-    clear
-    fd --max-depth=1 --color never | column
-}
 
 function clone() {
   repo=$(gh repo list -L 99 | awk '/Joel-Singh/ {print $1}' | fzf)
@@ -189,6 +184,13 @@ function nix-develop-if-flake() {
     export nix_develop="ND "
     exec nix develop
   fi
+}
+
+function cd() {
+    builtin cd "$@"
+    clear
+    fd --max-depth=1 --color never | column
+    nix-develop-if-flake
 }
 
 
