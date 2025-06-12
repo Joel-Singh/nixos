@@ -229,4 +229,4 @@ if [ -z "$in_nvim" ]; then
   export PATH=/home/apple/.local/bin:/home/apple/.cargo/bin:/home/apple/Applications/:$PATH
 fi
 
-nix-develop-if-flake
+# nix-develop-if-flake
