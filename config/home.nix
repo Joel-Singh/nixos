@@ -49,6 +49,7 @@
     hyprshot
     rustfmt
     stylua
+    markdownlint-cli
   ];
 
   programs.gh.enable = true;
