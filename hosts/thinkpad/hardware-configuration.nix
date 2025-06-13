@@ -20,7 +20,7 @@
 
   swapDevices = [{
     device = "/swapfile";
-    size = 16 * 1024; # 16GB
+    size = 48 * 1024; # 48GB
   }];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
