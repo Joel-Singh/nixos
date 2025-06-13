@@ -61,6 +61,7 @@ alias qq="qalc"
 alias qalc="clear && qalc"
 alias calc="clear && qalc"
 alias cp="cp --update=none-fail"
+alias cdr="cd-repo"
 
 function z() {
   nohup zathura "$@" >/dev/null & disown & e
