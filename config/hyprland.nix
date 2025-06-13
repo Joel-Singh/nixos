@@ -1,7 +1,7 @@
 {
   bind = [
     "$mainMod, Return, exec, $terminal"
-    "$mainMod, Shift_L, exec, $terminal_home"
+    "$mainMod, Shift_R, exec, $terminal_home"
     "$mainMod, Q, exec, qutebrowser"
     "$mainMod, D, exec, tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""
     "$mainMod, T, exec, notify-send Time \"$(date)\""
