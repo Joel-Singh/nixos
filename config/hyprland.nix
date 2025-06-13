@@ -1,6 +1,7 @@
 {
   bind = [
     "$mainMod, Return, exec, $terminal"
+    "$mainMod, Shift_L, exec, $terminal_home"
     "$mainMod, Q, exec, qutebrowser"
     "$mainMod, D, exec, tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""
     "$mainMod, T, exec, notify-send Time \"$(date)\""
@@ -37,6 +38,7 @@
   monitor = ",preferred,auto,auto";
 
   "$terminal" = "kitty --working-directory \"$(cat /tmp/currentwd)\" --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
+  "$terminal_home" = "kitty --working-directory /home/apple --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
   
   exec-once = [
     "qutebrowser -r start"
