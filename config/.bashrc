@@ -156,6 +156,10 @@ function rebuild_manual() {
   sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER &>/home/apple/repos/nixos/nixos-switch.log
 }
 
+rebuild-current() {
+  sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER
+}
+
 function rebuild() {
   pushd ~/repos/nixos > /dev/null
 
