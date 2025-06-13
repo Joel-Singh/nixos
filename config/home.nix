@@ -81,6 +81,7 @@
     enable = true;
     userEmail = "joelsingh788@gmail.com";
     userName = "Joel Singh";
+    ignores = [ "programmer-notes.md" ];
     difftastic = {
       enable = true;
       enableAsDifftool = true;
