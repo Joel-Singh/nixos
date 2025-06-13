@@ -202,6 +202,15 @@ function cd() {
     nix-develop-if-flake
 }
 
+function cd-repo() {
+  repo=$(fd -d 1 . /home/apple/repos/ | fzf)
+  if [ -z "$repo" ]; then
+    echo No repo selected
+  else
+    cd $repo
+  fi
+}
+
 
 if [ -z "$in_nvim" ]; then
   bind '"\t":menu-complete'
