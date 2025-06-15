@@ -51,6 +51,24 @@
     stylua
     markdownlint-cli
     gimp
+
+    # For Bevy
+    alsa-lib.dev
+    udev.dev 
+    xorg.libX11
+    xorg.libXrandr
+    xorg.libXcursor
+    xorg.libxcb
+    xorg.libXi
+    wayland
+    libxkbcommon
+    libxkbcommon.dev
+    vulkan-loader
+    vulkan-tools
+    glfw
+    xorg.xf86videoamdgpu
+    cargo
+    rustc
   ];
 
   programs.gh.enable = true;
