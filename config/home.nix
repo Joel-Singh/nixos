@@ -53,6 +53,7 @@
     gimp
     cargo
     rustc
+    libqalculate
   ];
 
   programs.gh.enable = true;
