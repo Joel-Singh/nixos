@@ -54,6 +54,8 @@
 
     # For Bevy
     alsa-lib.dev
+    alsa-oss
+    alsa-utils
     udev.dev 
     xorg.libX11
     xorg.libXrandr
