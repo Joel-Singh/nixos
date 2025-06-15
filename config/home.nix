@@ -51,9 +51,8 @@
     stylua
     markdownlint-cli
     gimp
-
-    # For bevy
-    alsa-lib.dev
+    cargo
+    rustc
   ];
 
   programs.gh.enable = true;
