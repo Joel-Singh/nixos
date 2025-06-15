@@ -15,7 +15,7 @@ export JOELS_COMPUTER="true" # Used for DuckSlayer
 # Customizing Bash prompt
 GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"
-PS1="${GREEN}\$(echo \"\$nix_develop\")\W${RESET} "
+PS1="${GREEN}\W${RESET} "
 
 # Aliases
 alias l='ls --color=auto'
@@ -188,19 +188,10 @@ function rebuild() {
   popd > /dev/null
 }
 
-function nix-develop-if-flake() {
-  git_root=$(git rev-parse --show-toplevel 2> /dev/null || echo)
-  if [ -z "$nix_develop" ] && ls $(echo "$git_root"/flake.nix) &> /dev/null && [ -z "$(pwd | grep nixos)" ]; then
-    export nix_develop="ND "
-    exec nix develop
-  fi
-}
-
 function cd() {
     builtin cd "$@"
     clear
     fd --max-depth=1 --color never | column
-    nix-develop-if-flake
 }
 
 function cd-repo() {
@@ -247,5 +238,3 @@ if [ -z "$in_nvim" ]; then
   export FZF_COMPLETION_TRIGGER=''
   export PATH=/home/apple/.local/bin:/home/apple/.cargo/bin:/home/apple/Applications/:$PATH
 fi
-
-nix-develop-if-flake
