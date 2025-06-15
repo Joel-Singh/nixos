@@ -50,6 +50,7 @@
     rustfmt
     stylua
     markdownlint-cli
+    gimp
   ];
 
   programs.gh.enable = true;
