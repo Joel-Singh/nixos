@@ -34,6 +34,7 @@ alias gd="git diff"
 alias gp="git push"
 alias cr='nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "cargo run"'
 alias cb='nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "cargo build"'
+alias bacon='nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "bacon"'
 alias cf="cargo fmt"
 alias cc="cargo clippy --fix"
 alias shareWithPhone="kdeconnect-cli -n jerry --share"
