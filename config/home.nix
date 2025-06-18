@@ -54,6 +54,7 @@
     cargo
     rustc
     libqalculate
+    sxiv
   ];
 
   programs.gh.enable = true;
