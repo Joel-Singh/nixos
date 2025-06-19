@@ -161,6 +161,7 @@ rebuild-current() {
 }
 
 function rebuild() {
+  git reset
   pushd ~/repos/nixos > /dev/null
 
   if [[ -z "$(git diff --no-ext-diff)" && -z "$(git status | grep Untracked)" ]]; then
