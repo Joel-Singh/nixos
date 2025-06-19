@@ -1,4 +1,3 @@
-echo test, has been rebuilt!!!
 #
 # ~/.bashrc
 #
