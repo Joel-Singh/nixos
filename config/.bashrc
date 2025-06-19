@@ -1,4 +1,4 @@
-echo test, has been rebuilt
+echo test, has been rebuilt!!!
 #
 # ~/.bashrc
 #
