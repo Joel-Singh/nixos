@@ -32,12 +32,11 @@ alias e="exit"
 alias lg="lazygit"
 alias gd="git diff"
 alias gp="git push"
-alias cr='nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "cargo run"'
-alias cb='nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "cargo build"'
-alias bacon='nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "bacon"'
-alias cf='nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "cargo fmt"'
-alias cc='nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "cargo clippy"'
-alias cdeps='nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "cargo deps"'
+alias cr="cargo run"
+alias cb="cargo build"
+alias bacon="nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "bacon""
+alias cf="cargo fmt"
+alias cc="cargo clippy"
 alias shareWithPhone="kdeconnect-cli -n jerry --share"
 alias nbr="nvim ~/repos/nixos/config/.bashrc"
 alias nil="nvim ~/.config/nvim/init.lua"
@@ -89,6 +88,10 @@ function nvim() {
   fi
   kitten @ set-spacing padding=5
   unset in_nvim
+}
+
+function cargo() {
+  nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "cargo $@"
 }
 
 
