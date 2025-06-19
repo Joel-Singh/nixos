@@ -1,7 +1,6 @@
 {
   bind = [
     "$mainMod, Return, exec, $terminal"
-    "$mainMod, Shift_R, exec, $terminal_home"
     "$mainMod, Q, exec, qutebrowser"
     "$mainMod, D, exec, tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""
     "$mainMod, T, exec, notify-send Time \"$(date)\""
@@ -38,13 +37,11 @@
   monitor = ",preferred,auto,auto";
 
   "$terminal" = "kitty --working-directory \"$(cat /tmp/currentwd)\" --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
-  "$terminal_home" = "kitty --working-directory /home/apple --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
   
   exec-once = [
     "qutebrowser -r start"
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
-    "systemctl --user start hyprpaper.service" # Workaround, nix isn't starting it for some reason on boot
     "git -C /home/apple/repos/nixos/ pull"
   ];
   
