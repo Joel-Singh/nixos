@@ -43,7 +43,7 @@
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
     "git -C /home/apple/repos/nixos/ pull"
-    "kitty --working-directory /home/apple/repos/nixos --single-instance -o allow_remote_control=yes -o enabled_layouts=tall --hold sh -c \"git pull && rebuild-current\""
+    "kitty --working-directory /home/apple/repos/nixos --single-instance -o allow_remote_control=yes -o enabled_layouts=tall --hold sh -c \"/home/apple/repos/nixos/config/scripts/rebuild-if-behind.sh || notify-send \"Failed to rebuild\" \""
     "git pull -C /home/apple/.config/qutebrowser/ || notify-send \"Failed to pull qutebrowser repo\""
   ];
   

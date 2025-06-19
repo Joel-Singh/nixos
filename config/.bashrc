@@ -165,7 +165,7 @@ function rebuild() {
 
   if [[ -z "$(git diff --no-ext-diff)" && -z "$(git status | grep Untracked)" ]]; then
     echo "No changes"
-    popd
+    popd > /dev/null
     return 0
   fi
 
