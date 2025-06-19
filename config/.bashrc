@@ -163,7 +163,7 @@ rebuild-current() {
 function rebuild() {
   pushd ~/repos/nixos > /dev/null
 
-  if [ -z "$(git diff --no-ext-diff)" ]; then
+  if [[ -z "$(git diff --no-ext-diff)" && -z "$(git status | grep Untracked)" ]]; then
     echo "No changes"
     popd
     return 0
