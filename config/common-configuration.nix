@@ -76,6 +76,18 @@
     ];
   };
 
+  security.sudo.extraRules = [
+    {
+       users = [ "apple" ];
+       commands = [
+         {
+           command = "/run/current-system/sw/bin/nixos-rebuild";
+           options = [ "NOPASSWD" ];
+         }
+       ];
+    }
+  ];
+
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
