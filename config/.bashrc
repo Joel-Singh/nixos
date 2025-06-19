@@ -156,10 +156,6 @@ function timer() {
   termdown "$1" --no-bell && notify-send "Time's up!" $2
 }
 
-function rebuild_manual() {
-  sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER &>/home/apple/repos/nixos/nixos-switch.log
-}
-
 rebuild-current() {
   sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER
 }
@@ -174,12 +170,10 @@ function rebuild() {
   fi
 
   git diff -U0
-  git add -A
-  git commit -m "temporary" > /dev/null # Flakes doesn't recognize non-committed files
+  git add -A # Flakes don't recognize unadded files
   echo "NixOS Rebuilding..."
   sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER &>/home/apple/repos/nixos/nixos-switch.log
   is_rebuild_successful=$?
-  git reset --soft HEAD^
   if [ $is_rebuild_successful -ne 0 ]; then
     cat nixos-switch.log | grep --color error
   else
@@ -188,6 +182,7 @@ function rebuild() {
     git push --quiet
   fi
 
+  git reset
   popd > /dev/null
 }
 
