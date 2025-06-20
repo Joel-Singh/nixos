@@ -55,6 +55,7 @@
     rustc
     libqalculate
     sxiv
+    tracy
   ];
 
   programs.gh.enable = true;
