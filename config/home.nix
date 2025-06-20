@@ -41,21 +41,22 @@
     qutebrowser
     nwg-look
     lua-language-server
-    rust-analyzer
     btop
     xdg-desktop-portal-gtk
     ncdu
     cloc
     hyprshot
-    rustfmt
     stylua
     markdownlint-cli
     gimp
-    cargo
-    rustc
     libqalculate
     sxiv
-    tracy
+
+    # Rust stuff
+    rustfmt
+    cargo
+    rustc
+    rust-analyzer
   ];
 
   programs.gh.enable = true;
