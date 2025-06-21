@@ -6,9 +6,11 @@ mkShell rec {
   nativeBuildInputs = [
     pkg-config
     rustup
+
+    windows.mingw_w64_pthreads
   ];
   buildInputs = [
-    udev alsa-lib-with-plugins vulkan-loader
+    alsa-lib-with-plugins vulkan-loader
     xorg.libX11 xorg.libXcursor xorg.libXi xorg.libXrandr # To use the x11 feature
     libxkbcommon wayland # To use the wayland feature
   ];
