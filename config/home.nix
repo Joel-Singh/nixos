@@ -51,6 +51,7 @@
     gimp
     libqalculate
     sxiv
+    dig
 
     # Rust stuff
     rustfmt
