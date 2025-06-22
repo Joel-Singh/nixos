@@ -104,6 +104,9 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
 
+  programs.nix-ld.enable = true;
+  programs.nix-ld.libraries = with pkgs; [];
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
