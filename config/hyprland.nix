@@ -43,8 +43,8 @@
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
     "sh -c \"/home/apple/repos/nixos/config/scripts/pull-and-rebuild.sh || notify-send 'Failed to rebuild'\""
-    "cd /home/apple/.config/qutebrowser/; sleep 3; git pull || notify-send \"Failed to pull qutebrowser repo\""
-    "cd /home/apple/repos/Guiding-Principles/; sleep 3; git pull || notify-send \"Failed to pull Guiding-Principles repo\""
+    "cd /home/apple/.config/qutebrowser/; sleep 10; git pull || notify-send \"Failed to pull qutebrowser repo\""
+    "cd /home/apple/repos/Guiding-Principles/; sleep 10; git pull || notify-send \"Failed to pull Guiding-Principles repo\""
   ];
   
   general = {

@@ -1,5 +1,5 @@
 set -e
-sleep 3 # Wait for internet
+sleep 10 # Wait for internet
 
 cd /home/apple/repos/nixos/
 
