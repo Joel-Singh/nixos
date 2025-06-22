@@ -53,11 +53,14 @@
     sxiv
     dig
 
-    # Rust stuff
+    # Rust
     rustfmt
     cargo
     rustc
     rust-analyzer
+
+    # Jobbie
+    dotnetCorePackages.sdk_9_0_2xx-bin
   ];
 
   programs.gh.enable = true;
