@@ -7,6 +7,7 @@ export VISUAL="nvim"
 export EDITOR="nvim"
 export MANPAGER="nvim +Man!"
 export JOELS_COMPUTER="true" # Used for DuckSlayer
+export NIXPKGS_ALLOW_UNFREE=1
 
 # Added default
 # If not running interactively, don't do anything
