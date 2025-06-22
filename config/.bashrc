@@ -65,7 +65,6 @@ alias qalc="clear && qalc"
 alias calc="clear && qalc"
 alias cp="cp --update=none-fail"
 alias cdr="cd-repo"
-alias cdroot="git rev-parse --show-toplevel && cd $(git rev-parse --show-toplevel)"
 alias qb="qutebrowser"
 
 function z() {
@@ -197,6 +196,10 @@ function cd() {
     builtin cd "$@"
     clear
     fd --max-depth=1 --color never | column
+}
+
+function cdrt() {
+  git rev-parse --show-toplevel && cd $(git rev-parse --show-toplevel)
 }
 
 function cd-repo() {
