@@ -58,10 +58,6 @@
     cargo
     rustc
     rust-analyzer
-
-    # Jobbie stuff
-    dotnetCorePackages.sdk_9_0_2xx-bin
-    protobuf_29
   ];
 
   programs.gh.enable = true;
