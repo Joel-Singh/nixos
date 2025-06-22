@@ -60,7 +60,7 @@
     rust-analyzer
 
     # Jobbie
-    dotnetCorePackages.sdk_9_0_2xx-bin
+    dotnetCorePackages.sdk_8_0_3xx-bin
   ];
 
   programs.gh.enable = true;
