@@ -6,8 +6,6 @@ mkShell rec {
   nativeBuildInputs = [
     pkg-config
     rustup
-
-    windows.mingw_w64_pthreads
   ];
   buildInputs = [
     alsa-lib-with-plugins vulkan-loader
