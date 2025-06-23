@@ -92,9 +92,9 @@ function nvim() {
   unset in_nvim
 }
 
-function cargo() {
-  nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "cargo $@"
-}
+# function cargo() {
+#   nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "cargo $@"
+# }
 
 
 function clone() {
