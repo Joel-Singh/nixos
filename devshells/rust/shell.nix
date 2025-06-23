@@ -13,6 +13,9 @@ mkShell rec {
     pkgsCross.mingwW64.stdenv.cc
   ];
   LD_LIBRARY_PATH = lib.makeLibraryPath buildInputs;
+
   CARGO_TARGET_X86_64_PC_WINDOWS_GNU_RUSTFLAGS =
     "-L native=${pkgs.pkgsCross.mingwW64.windows.pthreads}/lib";
+
+  CARGO_FEATURE_PURE=1
 }
