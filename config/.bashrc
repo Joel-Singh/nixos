@@ -35,7 +35,6 @@ alias gd="git diff"
 alias gp="git push"
 alias cr="cargo run"
 alias cb="cargo build"
-alias bacon="nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "bacon""
 alias cf="cargo fmt"
 alias cc="cargo clippy"
 alias shareWithPhone="kdeconnect-cli -n jerry --share"
@@ -43,7 +42,6 @@ alias nbr="nvim ~/repos/nixos/config/.bashrc"
 alias nil="nvim ~/.config/nvim/init.lua"
 alias nhx="nvim ~/repos/nixos/config/home.nix"
 alias ns="nvim ~/scratch.txt"
-alias nixrust="nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix"
 alias mhcn="man home-configuration.nix"
 alias lvim="echo you probably meant nvim"
 alias snapshot="git diff && git add -A && git commit -m \"Snapshot \" && git push"
@@ -91,11 +89,6 @@ function nvim() {
   kitten @ set-spacing padding=5
   unset in_nvim
 }
-
-# function cargo() {
-#   nix-shell /home/apple/repos/nixos/devshells/rust/shell.nix --run "cargo $@"
-# }
-
 
 function clone() {
   repo=$(gh repo list -L 99 | awk '/Joel-Singh/ {print $1}' | fzf)
