@@ -54,10 +54,7 @@
     dig
 
     # Rust
-    rustfmt
-    cargo
-    rustc
-    rust-analyzer
+    rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
 
     # Jobbie
     dotnetCorePackages.sdk_8_0_3xx-bin
