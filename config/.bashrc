@@ -246,3 +246,5 @@ if [ -z "$in_nvim" ]; then
   export FZF_COMPLETION_TRIGGER=''
   export PATH=/home/apple/.local/bin:/home/apple/.cargo/bin:/home/apple/Applications/:$PATH
 fi
+
+eval "$(direnv hook bash)"
