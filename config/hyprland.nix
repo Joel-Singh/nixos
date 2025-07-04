@@ -14,6 +14,7 @@
     "$mainMod&Shift_L, C, exec, dunstctl history-pop"
     "$mainMod, P, exec, hyprshot -s -m region -o ~/screenshots"
     "Alt_L, Tab, workspace, +1"
+    "Alt_L, Tab, togglespecialworkspace, "
     "$mainMod, N, workspace, empty"
     "$mainMod&Shift_L, H, swapwindow, l"
     "$mainMod&Shift_L, K, swapwindow, u"
