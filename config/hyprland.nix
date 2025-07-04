@@ -129,9 +129,13 @@
     force_default_wallpaper = 0;
     disable_hyprland_logo = true;
     new_window_takes_over_fullscreen = 2;
-    workspace_back_and_forth = true;
   };
-  
+
+  binds = {
+    workspace_back_and_forth = true;
+    hide_special_on_workspace_change = true;
+  };
+
   input = {
     kb_layout = "us";
     kb_options = "caps:swapescape";
