@@ -19,7 +19,16 @@
     "$mainMod&Shift_L, K, swapwindow, u"
     "$mainMod&Shift_L, J, swapwindow, d"
     "$mainMod&Shift_L, L, swapwindow, r"
-    "$mainMod, bracketright, movetoworkspacesilent, e+1"
+    ''
+      $mainMod, bracketright, exec, sh -c \'
+        ws=$(hyprctl activeworkspace | jq .id);
+        if [ "$ws" -eq 1 ]; then
+          hyprctl dispatch movetoworkspace 2
+        else
+          hyprctl dispatch movetoworkspace 1
+        fi
+      \'
+    ''
     "ALT, 4, killactive,"
     "$mainMod, V, togglefloating,"
     "$mainMod, R, exec, $menu"
@@ -33,7 +42,7 @@
     "$mainMod, S, togglespecialworkspace, scratch"
     "$mainMod, M, togglespecialworkspace, messages"
     "$mainMod SHIFT, S, movetoworkspacesilent, special:scratch"
-    "$mainMod SHIFT, M, movetoworkspace, special:messages"
+    "$mainMod SHIFT, M, movetoworkspacesilent, special:messages"
     "$mainMod, mouse_down, workspace, e+1"
     "$mainMod, mouse_up, workspace, e-1"
   ];
