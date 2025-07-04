@@ -19,7 +19,7 @@
     "$mainMod&Shift_L, K, swapwindow, u"
     "$mainMod&Shift_L, J, swapwindow, d"
     "$mainMod&Shift_L, L, swapwindow, r"
-    "$mainMod, bracketright, movetoworkspacesilent, +1"
+    "$mainMod, bracketright, movetoworkspacesilent, e+1"
     "ALT, 4, killactive,"
     "$mainMod, V, togglefloating,"
     "$mainMod, R, exec, $menu"
