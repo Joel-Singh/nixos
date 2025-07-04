@@ -19,17 +19,7 @@
     "$mainMod&Shift_L, K, swapwindow, u"
     "$mainMod&Shift_L, J, swapwindow, d"
     "$mainMod&Shift_L, L, swapwindow, r"
-    ''
-      $mainMod, bracketright, exec, sh -c ' \
-        notify-send trying-to-switch \
-        ws=$(hyprctl activeworkspace -j | jq .id) \
-        if [ "$ws" -eq 1 ]; then \
-          hyprctl dispatch movetoworkspace 2 \
-        else \
-          hyprctl dispatch movetoworkspace 1 \
-        fi \
-      '
-    ''
+    "$mainMod, bracketright, exec, /home/apple/repos/nixos/config/scripts/move-workspace.sh"
     "ALT, 4, killactive,"
     "$mainMod, V, togglefloating,"
     "$mainMod, R, exec, $menu"
