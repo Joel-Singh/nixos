@@ -13,7 +13,7 @@
     "$mainMod, C, exec, dunstctl close"
     "$mainMod&Shift_L, C, exec, dunstctl history-pop"
     "$mainMod, P, exec, hyprshot -s -m region -o ~/screenshots"
-    "Alt_L, Tab, workspace_back_and_forth"
+    "Alt_L, Tab, workspace, 2"
     "$mainMod, N, workspace, empty"
     "$mainMod&Shift_L, H, swapwindow, l"
     "$mainMod&Shift_L, K, swapwindow, u"
@@ -129,6 +129,7 @@
     force_default_wallpaper = 0;
     disable_hyprland_logo = true;
     new_window_takes_over_fullscreen = 2;
+    workspace_back_and_forth = true;
   };
   
   input = {
