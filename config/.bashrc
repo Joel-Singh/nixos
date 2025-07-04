@@ -65,6 +65,7 @@ alias cp="cp --update=none-fail"
 alias cdr="cd-repo"
 alias qb="qutebrowser"
 alias rg="rg -i"
+alias fd="fd -i"
 
 function z() {
   nohup zathura "$@" >/dev/null & disown & e
