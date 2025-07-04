@@ -1,4 +1,9 @@
 {
+  workspace = [
+    "1"
+    "2"
+  ];
+
   bind = [
     "$mainMod, Return, exec, $terminal"
     "$mainMod, Q, exec, qutebrowser"
@@ -14,10 +19,7 @@
     "$mainMod&Shift_L, K, swapwindow, u"
     "$mainMod&Shift_L, J, swapwindow, d"
     "$mainMod&Shift_L, L, swapwindow, r"
-    "$mainMod, bracketleft, movetoworkspace, e-1 "
     "$mainMod, bracketright, movetoworkspace, e+1"
-    "$mainMod&Shift_L, bracketleft, movetoworkspace, r-1 "
-    "$mainMod&Shift_L, bracketright, movetoworkspace, r+1"
     "ALT, 4, killactive,"
     "$mainMod, V, togglefloating,"
     "$mainMod, R, exec, $menu"
@@ -28,8 +30,10 @@
     "$mainMod, L, movefocus, r"
     "$mainMod, K, movefocus, u"
     "$mainMod, J, movefocus, d"
-    "$mainMod, S, togglespecialworkspace, magic"
-    "$mainMod SHIFT, S, movetoworkspace, special:magic"
+    "$mainMod, S, togglespecialworkspace, scratch"
+    "$mainMod, M, togglespecialworkspace, messages"
+    "$mainMod SHIFT, S, movetoworkspace, special:scratch"
+    "$mainMod SHIFT, M, movetoworkspace, special:messages"
     "$mainMod, mouse_down, workspace, e+1"
     "$mainMod, mouse_up, workspace, e-1"
   ];
@@ -167,8 +171,7 @@
     ", XF86AudioPrev, exec, playerctl previous"
   ];
   
-  windowrulev2 = [
-    "suppressevent maximize, class:.*"
+  windowrule = [
     "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
   ];
 }

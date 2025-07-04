@@ -51,7 +51,6 @@
     gimp
     libqalculate
     sxiv
-    dig
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
