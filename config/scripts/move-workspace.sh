@@ -1,6 +1,6 @@
 ws=$(hyprctl activeworkspace -j | jq .id)
 if [ "$ws" -eq 1 ]; then
-  hyprctl dispatch movetoworkspace 2
+  hyprctl dispatch movetoworkspacesilent 2
 else
-  hyprctl dispatch movetoworkspace 1
+  hyprctl dispatch movetoworkspacesilent 1
 fi
