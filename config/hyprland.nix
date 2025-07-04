@@ -20,14 +20,14 @@
     "$mainMod&Shift_L, J, swapwindow, d"
     "$mainMod&Shift_L, L, swapwindow, r"
     ''
-      $mainMod, bracketright, exec, sh -c \'
+      $mainMod, bracketright, exec, sh -c '
         ws=$(hyprctl activeworkspace | jq .id);
         if [ "$ws" -eq 1 ]; then
           hyprctl dispatch movetoworkspace 2
         else
           hyprctl dispatch movetoworkspace 1
         fi
-      \'
+      '
     ''
     "ALT, 4, killactive,"
     "$mainMod, V, togglefloating,"
