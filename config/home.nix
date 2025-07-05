@@ -52,8 +52,6 @@
     libqalculate
     sxiv
     jq # Used in hyprland.nix
-    spotify-player
-    spotify
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
@@ -105,6 +103,9 @@
     enable = true;
     settings.git.paging.externalDiffCommand = "difft --color=always";
   };
+
+  programs.spotify-player.enable = true;
+  programs.spotify-player.settings.enable_notify = false;
 
   services.dunst.enable = true;
 
