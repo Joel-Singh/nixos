@@ -53,6 +53,7 @@
     sxiv
     jq # Used in hyprland.nix
     spotify-player
+    spotify
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
