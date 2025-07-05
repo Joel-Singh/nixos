@@ -52,7 +52,7 @@
     libqalculate
     sxiv
     jq # Used in hyprland.nix
-    spotify
+    spotify-player
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
