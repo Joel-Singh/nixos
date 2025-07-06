@@ -53,10 +53,6 @@
     termdown
     signal-desktop-bin
 
-    # cpp
-    ccls
-    sfml # For lsp
-
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
 
