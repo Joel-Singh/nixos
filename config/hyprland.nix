@@ -43,7 +43,7 @@
   
   exec-once = [
     "qutebrowser -r start"
-    "kitty -e spotify_player"
+    "[workspace special:messages silent] kitty -e spotify_player"
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
     "sh -c \"/home/apple/repos/nixos/config/scripts/pull-and-rebuild.sh || notify-send 'Failed to rebuild'\""
