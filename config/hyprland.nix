@@ -29,10 +29,12 @@
     "$mainMod, L, movefocus, r"
     "$mainMod, K, movefocus, u"
     "$mainMod, J, movefocus, d"
-    "$mainMod, S, togglespecialworkspace, scratch"
+    "$mainMod, N, togglespecialworkspace, scratch"
     "$mainMod, M, togglespecialworkspace, messages"
-    "$mainMod SHIFT, S, movetoworkspacesilent, special:scratch"
+    ''$mainMod, \,, togglespecialworkspace, logistical''
+    "$mainMod SHIFT, N, movetoworkspacesilent, special:scratch"
     "$mainMod SHIFT, M, movetoworkspacesilent, special:messages"
+    ''$mainMod SHIFT, \,, movetoworkspacesilent, special:logistical''
     "$mainMod, mouse_down, workspace, e+1"
     "$mainMod, mouse_up, workspace, e-1"
   ];
@@ -44,6 +46,7 @@
   exec-once = [
     "qutebrowser -r start"
     "[workspace special:messages silent] kitty -e spotify_player"
+    "[workspace special:logistical silent] kitty -e termdown"
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
     "sh -c \"/home/apple/repos/nixos/config/scripts/pull-and-rebuild.sh || notify-send 'Failed to rebuild'\""
