@@ -28,8 +28,6 @@
     luajitPackages.luarocks
     luajit # To build nvim-treesitter
     wayclip # Clipboard access for neovim
-    gcc
-    gnumake
     tree-sitter
     nodejs
     unzip
@@ -53,6 +51,7 @@
     sxiv
     jq # Used in hyprland.nix
     termdown
+    signal-desktop-bin
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
