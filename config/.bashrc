@@ -27,7 +27,6 @@ alias trp='trash-put --verbose'
 alias trp-downloads='trash-put --verbose ~/Downloads/*'
 alias kcli='kdeconnect-cli'
 alias c="clear && printf '\033[3J'; fd --max-depth=1 --color never | column "
-alias xterm='xterm & disown'
 alias df="df --human-readable | awk 'NR==1 || /\/$/'"
 alias e="exit"
 alias lg="lazygit"
@@ -66,6 +65,7 @@ alias cdr="cd-repo"
 alias qb="qutebrowser"
 alias rg="rg -i"
 alias fd="fd -i"
+alias td="termdown"
 
 function z() {
   nohup zathura "$@" >/dev/null & disown & e
