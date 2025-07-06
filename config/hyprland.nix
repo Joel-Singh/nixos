@@ -31,10 +31,10 @@
     "$mainMod, J, movefocus, d"
     "$mainMod, N, togglespecialworkspace, scratch"
     "$mainMod, M, togglespecialworkspace, messages"
-    ''$mainMod, \,, togglespecialworkspace, logistical''
+    "$mainMod, comma, togglespecialworkspace, logistical"
     "$mainMod SHIFT, N, movetoworkspacesilent, special:scratch"
     "$mainMod SHIFT, M, movetoworkspacesilent, special:messages"
-    ''$mainMod SHIFT, \,, movetoworkspacesilent, special:logistical''
+    "$mainMod SHIFT, comma, movetoworkspacesilent, special:logistical"
     "$mainMod, mouse_down, workspace, e+1"
     "$mainMod, mouse_up, workspace, e-1"
   ];
