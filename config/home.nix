@@ -52,6 +52,7 @@
     libqalculate
     sxiv
     jq # Used in hyprland.nix
+    termdown
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
