@@ -45,7 +45,7 @@
   
   exec-once = [
     "qutebrowser -r start"
-    "[workspace special:messages silent] kitty -e spotify_player"
+    "[workspace special:logistical silent] kitty -e spotify_player"
     "[workspace special:logistical silent] kitty -e termdown"
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
