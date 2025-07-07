@@ -52,6 +52,7 @@
     jq # Used in hyprland.nix
     termdown
     signal-desktop-bin
+    cheese
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
