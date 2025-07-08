@@ -7,6 +7,7 @@ mkShell rec {
     cmake
     gtest
     ccls
+    sfml
   ];
 
   buildInputs = [
