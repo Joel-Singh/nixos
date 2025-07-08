@@ -67,7 +67,7 @@ alias rg="rg -i"
 alias fd="fd -i"
 alias td="termdown"
 alias cmakerun="cmake --build build && ./build/bin/main"
-alias cmaketest="c; cmake --build build && ./build/bin/main_tests"
+alias cmaketest="c; clear; cmake --build build && ./build/bin/main_tests"
 alias penis="echo haha"
 
 function z() {
