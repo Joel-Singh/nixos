@@ -54,6 +54,7 @@
     signal-desktop-bin
     cheese
     pandoc
+    texliveBasic
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
