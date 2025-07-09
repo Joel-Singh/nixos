@@ -53,6 +53,7 @@
     termdown
     signal-desktop-bin
     cheese
+    pandoc
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
