@@ -36,7 +36,6 @@ alias cb="cargo build"
 alias cr="cargo fix --allow-dirty && cargo run"
 alias cf="cargo fix --allow-dirty"
 alias cc="cargo check"
-alias shareWithPhone="kdeconnect-cli -n jerry --share"
 alias nbr="nvim ~/repos/nixos/config/.bashrc"
 alias nil="nvim ~/.config/nvim/init.lua"
 alias nhx="nvim ~/repos/nixos/config/home.nix"
@@ -197,7 +196,7 @@ function rebuild() {
 function cd() {
     builtin cd "$@"
     clear
-    fd --max-depth=1 --color never | column
+    fd --max-depth=1 --color always | column
 }
 
 function cdrt() {
