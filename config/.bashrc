@@ -134,6 +134,10 @@ function toMd() {
   pandoc "$1" -o "${1%.*}.md"
 }
 
+function heicToPng {
+  nix-shell -p libheif --command "heif-dec $1 ${1%.*}.png"
+}
+
 function fakeAdd() {
   git add --intent-to-add $1
   git update-index --assume-unchanged $1
