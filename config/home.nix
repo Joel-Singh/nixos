@@ -55,6 +55,7 @@
     cheese
     pandoc
     texliveFull
+    zip
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
