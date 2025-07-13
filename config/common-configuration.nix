@@ -152,4 +152,6 @@
   };
   services.displayManager.autoLogin.enable = true;
   services.displayManager.autoLogin.user = "apple";
+
+  services.flatpak.enable = true;
 }
