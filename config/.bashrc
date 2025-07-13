@@ -68,7 +68,7 @@ alias td="/home/apple/repos/nixos/config/scripts/termdown-with-logging.sh"
 alias cmakerun="cmake --build build && ./build/bin/main"
 alias cmaketests="cmaketest"
 alias cmaketest="c; clear; cmake --build build && ./build/bin/main_tests"
-alias penis="echo haha"
+alias sp="spotify_player"
 
 function z() {
   nohup zathura "$@" >/dev/null & disown & e
