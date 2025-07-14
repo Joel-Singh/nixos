@@ -106,6 +106,16 @@
     settings.git.paging.externalDiffCommand = "difft --color=always";
   };
 
+  programs.jujutsu = {
+    enable = true;
+    settings = {
+      user = {
+        email = "joelsingh788@gmail.com";
+        name = "Joel Singh";
+      };
+    };
+  };
+
   programs.spotify-player.enable = true;
   programs.spotify-player.settings.enable_notify = false;
 

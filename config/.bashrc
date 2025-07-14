@@ -69,6 +69,7 @@ alias cmakerun="cmake --build build && ./build/bin/main"
 alias cmaketests="cmaketest"
 alias cmaketest="c; clear; cmake --build build && ./build/bin/main_tests"
 alias sp="spotify_player"
+alias rb="rebuild"
 
 
 alias gb="git branch"
