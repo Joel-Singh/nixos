@@ -70,6 +70,9 @@ alias cmaketests="cmaketest"
 alias cmaketest="c; clear; cmake --build build && ./build/bin/main_tests"
 alias sp="spotify_player"
 
+
+alias gb="git branch"
+
 function z() {
   nohup zathura "$@" >/dev/null & disown & e
 }
