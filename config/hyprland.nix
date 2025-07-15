@@ -7,7 +7,6 @@
   bind = [
     "$mainMod, Return, exec, $terminal"
     "$mainMod, Q, exec, qutebrowser"
-    "$mainMod, S, exec, smile"
     "$mainMod, D, exec, tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""
     "$mainMod, T, exec, notify-send Time \"$(date)\""
     "$mainMod, b, exec, notify-send Battery $(cat /sys/class/power_supply/BAT0/capacity || cat /sys/class/power_supply/BAT1/capacity)"

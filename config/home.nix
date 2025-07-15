@@ -58,7 +58,6 @@
     zip
     cmatrix
     audacity
-    smile # Emoji picker
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
