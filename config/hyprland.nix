@@ -41,7 +41,7 @@
   "$terminal" = "kitty --working-directory \"$(cat /tmp/currentwd)\" --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
   
   exec-once = [
-    "sleep 5 && qutebrowser -r start"
+    "sleep 10 && qutebrowser -r start"
     "[workspace special:logistical silent] kitty -e bash -c 'sleep 10 && spotify_player'"
     "[workspace special:logistical silent] kitty -e /home/apple/repos/nixos/config/scripts/termdown-with-logging.sh"
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
@@ -180,5 +180,6 @@
     "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
     ''workspace special:messages silent, initialTitle:.*instagram\.com.*''
     ''workspace special:messages silent, initialTitle:.*voice\.google\.com.*''
+    "float, class:DuckSlayer"
   ];
 }
