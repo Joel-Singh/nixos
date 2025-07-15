@@ -13,7 +13,6 @@
     "$mainMod, C, exec, dunstctl close"
     "$mainMod&Shift_L, C, exec, dunstctl history-pop"
     "$mainMod, P, exec, hyprshot -s -m region -o ~/screenshots"
-    "$mainMod&Shift_L, P, pin"
     "$mainMod&Shift_L, H, swapwindow, l"
     "$mainMod&Shift_L, K, swapwindow, u"
     "$mainMod&Shift_L, J, swapwindow, d"
@@ -42,8 +41,8 @@
   "$terminal" = "kitty --working-directory \"$(cat /tmp/currentwd)\" --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
   
   exec-once = [
-    "qutebrowser -r start"
-    "[workspace special:logistical silent] kitty -e spotify_player"
+    "sleep 5 && qutebrowser -r start"
+    "[workspace special:logistical silent] kitty -e bash -c 'sleep 10 && spotify_player'"
     "[workspace special:logistical silent] kitty -e /home/apple/repos/nixos/config/scripts/termdown-with-logging.sh"
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
