@@ -113,7 +113,10 @@
         email = "joelsingh788@gmail.com";
         name = "Joel Singh";
       };
-      ui.paginate = "never";
+      ui = {
+        paginate = "never";
+        default-command = "log";
+      };
     };
   };
 
