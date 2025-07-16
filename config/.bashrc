@@ -27,6 +27,7 @@ alias trp='trash-put --verbose'
 alias trp-downloads='trash-put --verbose ~/Downloads/*'
 alias kcli='kdeconnect-cli'
 alias c="clear && printf '\033[3J'; fd --max-depth=1 --color always | column "
+alias cl="clear && printf '\033[3J'"
 alias df="df --human-readable | awk 'NR==1 || /\/$/'"
 alias e="exit"
 alias lg="lazygit"
