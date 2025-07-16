@@ -71,6 +71,8 @@ alias cmaketest="c; clear; cmake --build build && ./build/bin/main_tests"
 alias sp="spotify_player"
 alias rb="rebuild"
 
+alias jjd="jj describe -m"
+
 
 alias gb="git branch"
 
