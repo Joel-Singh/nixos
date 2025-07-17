@@ -115,7 +115,7 @@
         name = "Joel Singh";
       };
       ui = {
-        paginate = "never";
+        # paginate = "never";
         default-command = "log";
       };
     };
