@@ -47,6 +47,7 @@ alias snapshot="git diff && git add -A && git commit -m \"Snapshot \" && git pus
 alias ss="snapshot"
 alias keymaps="bind -P | awk '/can be found/ {print \$0}' | fzf"
 alias cal3="cal -3"
+alias caly="cal --year"
 alias calyear="cal --year"
 alias pdft='mkdir -p output && pdflatex -output-directory=./output'
 alias neofetch='fastfetch'
