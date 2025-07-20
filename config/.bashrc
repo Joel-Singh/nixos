@@ -46,7 +46,7 @@ alias lvim="echo you probably meant nvim"
 alias snapshot="git diff && git add -A && git commit -m \"Snapshot \" && git push"
 alias ss="snapshot"
 alias keymaps="bind -P | awk '/can be found/ {print \$0}' | fzf"
-alias cal3="cal -3"
+alias cal="cal -3"
 alias caly="cal --year"
 alias calyear="cal --year"
 alias pdft='mkdir -p output && pdflatex -output-directory=./output'
