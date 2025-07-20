@@ -58,6 +58,8 @@
     zip
     cmatrix
     audacity
+    tuxpaint # beautiful program
+    nwg-displays
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
