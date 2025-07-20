@@ -71,6 +71,7 @@ alias rb="rebuild"
 
 alias jjd="jj describe -m"
 alias jjwatch="watch --color --interval='0.2' jj --ignore-working-copy log --color=always"
+alias jjs="jj show"
 
 
 alias gb="git branch"
