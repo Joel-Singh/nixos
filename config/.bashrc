@@ -112,7 +112,7 @@ function clone() {
 
 function create-dev-env() {
   current_repo=$(basename $(git rev-parse --show-toplevel))
-  ls "/home/apple/repos/nixos/devshells/$current_repo.nix"
+  ls "/home/apple/repos/nixos/devshells/$current_repo.nix" > /dev/null
   if [[  $? -eq 0 ]]; then
     echo Creating dev environment...
     pushd $(git rev-parse --show-toplevel) > /dev/null
