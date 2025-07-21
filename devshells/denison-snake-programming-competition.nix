@@ -8,6 +8,7 @@ mkShell rec {
     gtest
     ccls
     sfml
+    bear
   ];
 
   buildInputs = [
