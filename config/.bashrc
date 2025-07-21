@@ -74,7 +74,6 @@ alias jjwatch="watch --color --interval='0.2' jj --ignore-working-copy log --col
 alias jjs="jj show"
 alias jje="jj edit"
 
-
 alias gb="git branch"
 
 function z() {
@@ -108,6 +107,24 @@ function clone() {
     gh repo clone $repo
   else
     echo "No repo selected."
+  fi
+}
+
+function create-dev-env() {
+  current_repo=$(basename $(git rev-parse --show-toplevel))
+  ls "/home/apple/repos/nixos/devshells/$current_repo.nix"
+  if [[  $? -eq 0 ]]; then
+    echo Creating dev environment...
+    pushd $(git rev-parse --show-toplevel) > /dev/null
+
+    echo "use nix" >> .envrc
+    ln -s "/home/apple/repos/nixos/devshells/$current_repo.nix" ./shell.nix
+    direnv allow
+
+    echo .envrc created and ./shell.nix linked
+    popd > /dev/null
+  else
+    echo No devshell found in repos/nixos/devshells
   fi
 }
 
