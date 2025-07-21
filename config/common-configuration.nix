@@ -146,6 +146,12 @@
      vim
   ];
 
+  # Installing for jobbie
+  services.mysql = {
+    enable = false;
+    package = pkgs.mariadb;
+  };
+
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
