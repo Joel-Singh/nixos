@@ -28,6 +28,7 @@
     luajitPackages.luarocks
     luajit # To build nvim-treesitter
     wayclip # Clipboard access for neovim
+    gcc # Used for building new treesitters (I think)
     tree-sitter
     nodejs
     unzip
