@@ -121,6 +121,10 @@ function create-dev-env() {
     ln -s "/home/apple/repos/nixos/devshells/$current_repo.nix" ./shell.nix
     direnv allow
 
+    echo .direnv >> ./.git/info/exclude
+    echo .envrc >> ./.git/info/exclude
+    echo shell.nix >> ./.git/info/exclude
+
     echo .envrc created and ./shell.nix linked
     popd > /dev/null
   else
