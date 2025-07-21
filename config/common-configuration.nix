@@ -148,7 +148,7 @@
 
   # Installing for jobbie
   services.mysql = {
-    enable = false;
+    enable = true;
     package = pkgs.mariadb;
   };
 
