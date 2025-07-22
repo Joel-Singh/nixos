@@ -62,6 +62,7 @@
     tuxpaint # beautiful program
     nwg-displays
     gnucash
+    entr
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
