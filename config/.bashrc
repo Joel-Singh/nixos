@@ -82,7 +82,7 @@ function z() {
 }
 
 function launch_gnucash() {
-  nohup gnucash ~/gnucash/myMainMoneyFile.gnucash > /dev/null & disown & e
+  nohup gnucash /home/apple/repos/gnucash/myMainMoneyFile.gnucash > /dev/null & disown & e
 }
 
 
