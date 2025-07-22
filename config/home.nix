@@ -61,6 +61,7 @@
     audacity
     tuxpaint # beautiful program
     nwg-displays
+    gnucash
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
