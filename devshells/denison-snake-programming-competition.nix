@@ -9,6 +9,7 @@ mkShell rec {
     ccls
     sfml
     bear
+    clang-tools # For clang-format
   ];
 
   buildInputs = [

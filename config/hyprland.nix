@@ -181,5 +181,6 @@
     ''workspace special:messages silent, initialTitle:.*instagram\.com.*''
     ''workspace special:messages silent, initialTitle:.*voice\.google\.com.*''
     "float, class:DuckSlayer"
+    "float, class:Denison Snake!"
   ];
 }
