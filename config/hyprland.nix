@@ -182,5 +182,6 @@
     ''workspace special:messages silent, initialTitle:.*voice\.google\.com.*''
     "float, class:DuckSlayer"
     "float, class:Denison Snake!"
+    "center, class:Denison Snake!"
   ];
 }
