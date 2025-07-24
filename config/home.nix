@@ -27,7 +27,7 @@
     trash-cli
     luajitPackages.luarocks
     luajit # To build nvim-treesitter
-    wayclip # Clipboard access for neovim
+    wayclip # Clipboard access for neovim and unipicker
     gcc # Used for building new treesitters (I think)
     tree-sitter
     nodejs
@@ -64,7 +64,6 @@
     gnucash
     entr
     unipicker
-    xclip # Used with unipicker
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
