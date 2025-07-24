@@ -38,6 +38,7 @@
     brightnessctl
     file
     qutebrowser
+    socat # For faster qutebrowser open
     nwg-look
     lua-language-server
     btop
