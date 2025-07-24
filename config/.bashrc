@@ -74,7 +74,7 @@ alias up="unipicker --copy-command waycopy"
 alias unipicker="unipicker --copy-command waycopy"
 
 alias jjn="jj --no-pager"
-alias jjd="jj describe -m"
+alias jjd="jj describe"
 alias jjwatch="watch --color --interval='0.2' jj --ignore-working-copy log --color=always"
 alias jjs="jj show"
 alias jje="jj edit"
