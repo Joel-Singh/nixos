@@ -10,6 +10,7 @@ mkShell rec {
     sfml
     bear
     clang-tools # For clang-format
+    doxygen
   ];
 
   buildInputs = [

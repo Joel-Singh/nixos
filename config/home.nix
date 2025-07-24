@@ -63,6 +63,8 @@
     nwg-displays
     gnucash
     entr
+    unipicker
+    xclip # Used with unipicker
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
