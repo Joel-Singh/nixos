@@ -69,6 +69,7 @@ alias cmaketests="cmaketest"
 alias cmaketest="c; clear; cmake --build build && ./build/bin/main_tests"
 alias sp="spotify_player"
 alias rb="rebuild"
+alias unipicker="unipicker --copy"
 
 alias jjd="jj describe -m"
 alias jjwatch="watch --color --interval='0.2' jj --ignore-working-copy log --color=always"
