@@ -124,6 +124,7 @@
       ui = {
         # paginate = "never";
         default-command = "log";
+        editor = "nvim";
       };
     };
   };
