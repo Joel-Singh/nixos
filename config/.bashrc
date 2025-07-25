@@ -70,8 +70,6 @@ alias cmaketests="cmaketest"
 alias cmaketest="c; clear; cmake --build build && ./build/bin/main_tests"
 alias sp="spotify_player"
 alias rb="rebuild"
-alias up="unipicker --copy-command waycopy"
-alias unipicker="unipicker --copy-command waycopy"
 
 alias jjn="jj --no-pager"
 alias jjd="jj describe"

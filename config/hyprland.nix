@@ -47,9 +47,14 @@
   "$terminal" = "kitty --working-directory \"$(cat /tmp/currentwd)\" --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
   
   exec-once = [
-    "sleep 5 && qutebrowser -r start"
+    "[workspace 1 silent] $terminal"
+
+    "[workspace special:messages silent] qutebrowser --window https://www.instagram.com/direct/t/17843911364363418/"
+    "[workspace special:messages silent] qutebrowser --window https://voice.google.com/u/0/messages"
+
     "[workspace special:logistical silent] kitty -e bash -c 'sleep 10 && spotify_player'"
     "[workspace special:logistical silent] kitty -e /home/apple/repos/nixos/config/scripts/termdown-with-logging.sh"
+
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
     "sh -c \"/home/apple/repos/nixos/config/scripts/pull-and-rebuild.sh || notify-send 'Failed to rebuild'\""
