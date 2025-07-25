@@ -47,7 +47,6 @@
   "$terminal" = "kitty --working-directory \"$(cat /tmp/currentwd)\" --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
   
   exec-once = [
-    "qutebrowser --nowindow"
     "sleep 5 && qutebrowser -r start"
     "[workspace special:logistical silent] kitty -e bash -c 'sleep 10 && spotify_player'"
     "[workspace special:logistical silent] kitty -e /home/apple/repos/nixos/config/scripts/termdown-with-logging.sh"
