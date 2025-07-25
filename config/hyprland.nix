@@ -7,7 +7,7 @@
   bind = [
     "$mainMod, Return, exec, kitty --single-instance -o allow_remote_control=yes"
 
-    "$mainMod, Return, E, sleep 0.2 && hyprctl dispatch togglefloating"
+    "$mainMod, E, exec, sleep 0.1 && hyprctl dispatch setfloating title:emoji-picker.sh"
     "$mainMod, E, exec, kitty --single-instance -o allow_remote_control=yes /home/apple/repos/nixos/config/scripts/emoji-picker.sh"
 
     "$mainMod, Q, exec, /home/apple/repos/nixos/config/scripts/open_url_in_instance.sh" # Open qb faster 
@@ -197,7 +197,6 @@
     ''workspace special:messages silent, initialTitle:.*voice\.google\.com.*''
     "float, class:DuckSlayer"
     "float, class:Denison Snake!"
-    "float, title:emoji-picker.sh"
     "center, class:Denison Snake!"
   ];
 }
