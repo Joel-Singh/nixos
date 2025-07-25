@@ -7,7 +7,7 @@
   bind = [
     "$mainMod, Return, exec, kitty --single-instance -o allow_remote_control=yes"
 
-    "$mainMod, E, exec, sleep 0.1 && hyprctl dispatch setfloating title:emoji-picker.sh && hyprctl dispatch movewindowpixel exact 50% 50%, title:emoji-picker.sh"
+    "$mainMod, E, exec, sleep 0.1 && hyprctl dispatch setfloating title:emoji-picker.sh && hyprctl dispatch movewindowpixel exact 100% 0%, title:emoji-picker.sh"
     "$mainMod, E, exec, kitty --single-instance -o allow_remote_control=yes /home/apple/repos/nixos/config/scripts/emoji-picker.sh"
 
     "$mainMod, Q, exec, /home/apple/repos/nixos/config/scripts/open_url_in_instance.sh" # Open qb faster 
