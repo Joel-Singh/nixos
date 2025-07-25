@@ -6,6 +6,7 @@
 
   bind = [
     "$mainMod, Return, exec, kitty --single-instance -o allow_remote_control=yes"
+    "$mainMod, Return, exec, sleep 0.2 && hyprctl dispatch togglefloating"
     "$mainMod, E, exec, kitty --single-instance -o allow_remote_control=yes /home/apple/repos/nixos/config/scripts/emoji-picker.sh"
     "$mainMod, Q, exec, /home/apple/repos/nixos/config/scripts/open_url_in_instance.sh" # Open qb faster 
     "$mainMod, D, exec, tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""
