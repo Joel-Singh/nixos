@@ -6,7 +6,7 @@
 
   bind = [
     "$mainMod, Return, exec, kitty --single-instance -o allow_remote_control=yes"
-    "$mainMod, E, exec, [float] kitty --single-instance -o allow_remote_control=yes bash -c 'unipicker | wl-copy 2>/dev/null'"
+    "$mainMod, E, exec, [workspace 2; float; move 0 0] kitty --single-instance -o allow_remote_control=yes bash -c 'unipicker | wl-copy 2>/dev/null'"
     "$mainMod, Q, exec, /home/apple/repos/nixos/config/scripts/open_url_in_instance.sh" # Open qb faster 
     "$mainMod, D, exec, tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""
     "$mainMod, T, exec, notify-send Time \"$(date)\""
