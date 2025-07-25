@@ -18,10 +18,10 @@
     "$mainMod&Shift_L, J, swapwindow, d"
     "$mainMod&Shift_L, L, swapwindow, r"
 
-    "$mainMod&Alt_R, H, resizeactive, -10 0"
-    "$mainMod&Alt_R, K, resizeactive, 0 10"
-    "$mainMod&Alt_R, J, resizeactive, 0 -10"
-    "$mainMod&Alt_R, L, resizeactive, 10 0"
+    "$mainMod&Alt_R, H, resizeactive, -25 0"
+    "$mainMod&Alt_R, K, resizeactive, 0 25"
+    "$mainMod&Alt_R, J, resizeactive, 0 -25"
+    "$mainMod&Alt_R, L, resizeactive, 25 0"
 
     "Alt_L, Tab, exec, /home/apple/repos/nixos/config/scripts/switch-workspace.sh"
     "$mainMod, bracketright, exec, /home/apple/repos/nixos/config/scripts/move-workspace.sh"
