@@ -5,7 +5,8 @@
   ];
 
   bind = [
-    "$mainMod, Return, exec, $terminal"
+    "$mainMod, Return, exec, kitty --single-instance -o allow_remote_control=yes"
+    "$mainMod, E, exec, " # Open qb faster 
     "$mainMod, Q, exec, /home/apple/repos/nixos/config/scripts/open_url_in_instance.sh" # Open qb faster 
     "$mainMod, D, exec, tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""
     "$mainMod, T, exec, notify-send Time \"$(date)\""
