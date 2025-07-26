@@ -174,10 +174,10 @@
 
   # binde repeats on hold
   binde = [
-    "$mainMod&Shift_R, H, moveactive, -5% 0"
-    "$mainMod&Shift_R, K, moveactive, 0 -5%"
-    "$mainMod&Shift_R, J, moveactive, 0 5%"
-    "$mainMod&Shift_R, L, moveactive, 5% 0"
+    "$mainMod&Shift_R, H, moveactive, -50 0"
+    "$mainMod&Shift_R, K, moveactive, 0 -50"
+    "$mainMod&Shift_R, J, moveactive, 0 50"
+    "$mainMod&Shift_R, L, moveactive, 50 0"
 
     "$mainMod&Alt_R, H, resizeactive, -25 0"
     "$mainMod&Alt_R, K, resizeactive, 0 -25"
