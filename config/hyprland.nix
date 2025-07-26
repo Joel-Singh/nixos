@@ -7,8 +7,7 @@
   bind = [
     "$mainMod, Return, exec, kitty --single-instance -o allow_remote_control=yes"
 
-    "$mainMod, E, exec, [float] sleep 0.1 && hyprctl dispatch setfloating title:emoji-picker.sh && hyprctl dispatch movewindowpixel exact 30% 30%, title:emoji-picker.sh"
-    "$mainMod, E, exec, kitty --single-instance -o allow_remote_control=yes /home/apple/repos/nixos/config/scripts/emoji-picker.sh"
+    "$mainMod, E, exec, kitty --single-instance --title emoji-picker -o allow_remote_control=yes /home/apple/repos/nixos/config/scripts/emoji-picker.sh"
 
     "$mainMod, Q, exec, /home/apple/repos/nixos/config/scripts/open_url_in_instance.sh" # Open qb faster 
     "$mainMod, D, exec, tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""
@@ -207,6 +206,8 @@
     ''workspace special:messages silent, initialTitle:.*instagram\.com.*''
     ''workspace special:messages silent, initialTitle:.*voice\.google\.com.*''
     "float, class:DuckSlayer"
+    "float, title:emoji-picker"
+    "center, title:emoji-picker"
     "float, class:Denison Snake!"
     "center, class:Denison Snake!"
   ];
