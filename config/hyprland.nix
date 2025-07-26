@@ -7,7 +7,7 @@
   bind = [
     "$mainMod, Return, exec, kitty --single-instance -o allow_remote_control=yes"
 
-    "$mainMod, E, exec, sleep 0.1 && hyprctl dispatch setfloating title:emoji-picker.sh && hyprctl dispatch movewindowpixel exact 50% 0%, title:emoji-picker.sh"
+    "$mainMod, E, exec, sleep 0.1 && hyprctl dispatch setfloating title:emoji-picker.sh && hyprctl dispatch movewindowpixel exact 30% 0%, title:emoji-picker.sh"
     "$mainMod, E, exec, kitty --single-instance -o allow_remote_control=yes /home/apple/repos/nixos/config/scripts/emoji-picker.sh"
 
     "$mainMod, Q, exec, /home/apple/repos/nixos/config/scripts/open_url_in_instance.sh" # Open qb faster 
@@ -23,12 +23,7 @@
     "$mainMod&Shift_L, J, swapwindow, d"
     "$mainMod&Shift_L, L, swapwindow, r"
 
-    "$mainMod&Shift_L, H, moveactive, -5% 0"
 
-    "$mainMod&Alt_R, H, resizeactive, -25 0"
-    "$mainMod&Alt_R, K, resizeactive, 0 25"
-    "$mainMod&Alt_R, J, resizeactive, 0 -25"
-    "$mainMod&Alt_R, L, resizeactive, 25 0"
 
     "Alt_L, Tab, exec, /home/apple/repos/nixos/config/scripts/switch-workspace.sh"
     "$mainMod, bracketright, exec, /home/apple/repos/nixos/config/scripts/move-workspace.sh"
@@ -176,6 +171,19 @@
   bindm = [
     "$mainMod, mouse:272, movewindow"
     "$mainMod, mouse:273, resizewindow"
+  ];
+
+  # binde repeats on hold
+  binde = [
+    "$mainMod&Alt_R, H, moveactive, -5% 0"
+    "$mainMod&Alt_R, K, moveactive, 0 5%"
+    "$mainMod&Alt_R, J, moveactive, 0 -5%"
+    "$mainMod&Alt_R, L, moveactive, 5% 0"
+
+    "$mainMod&Alt_R, H, resizeactive, -25 0"
+    "$mainMod&Alt_R, K, resizeactive, 0 25"
+    "$mainMod&Alt_R, J, resizeactive, 0 -25"
+    "$mainMod&Alt_R, L, resizeactive, 25 0"
   ];
   
   bindel = [
