@@ -1,1 +1,1 @@
-unipicker | wl-copy 2>/dev/null
+unipicker | wl-copy --trim-newline 2>/dev/null
