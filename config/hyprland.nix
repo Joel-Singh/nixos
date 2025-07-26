@@ -48,7 +48,6 @@
   "$terminal" = "kitty --working-directory \"$(cat /tmp/currentwd)\" --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
   
   exec-once = [
-    "[workspace 1] 'sleep 5 && org.vinegarhq.Sober'"
     # "[workspace 1 silent] kitty --working-directory /home/apple/repos/Guiding-Principles/ --single-instance -o allow_remote_control=yes -o enabled_layouts=tall"
     #
     # "[workspace special:messages silent] qutebrowser --target window https://www.instagram.com/direct/t/17843911364363418/"
