@@ -50,8 +50,8 @@
   exec-once = [
     "[workspace 1 silent] kitty --working-directory /home/apple/repos/Guiding-Principles/ --single-instance -o allow_remote_control=yes -o enabled_layouts=tall"
 
-    "[workspace special:messages silent] qutebrowser --window https://www.instagram.com/direct/t/17843911364363418/"
-    "[workspace special:messages silent] qutebrowser --window https://voice.google.com/u/0/messages"
+    "[workspace special:messages silent] qutebrowser --target window https://www.instagram.com/direct/t/17843911364363418/"
+    "[workspace special:messages silent] qutebrowser --target window https://voice.google.com/u/0/messages"
 
     "[workspace special:logistical silent] kitty -e bash -c 'sleep 10 && spotify_player'"
     "[workspace special:logistical silent] kitty -e /home/apple/repos/nixos/config/scripts/termdown-with-logging.sh"
