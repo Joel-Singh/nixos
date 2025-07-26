@@ -9,6 +9,8 @@
 
     "$mainMod, E, exec, kitty --single-instance --title emoji-picker -o allow_remote_control=yes /home/apple/repos/nixos/config/scripts/emoji-picker.sh"
 
+    ", caps_lock, exec, hyprctl dispatch sendkeystate ',escape,down,activewindow'"
+
     "$mainMod, Q, exec, /home/apple/repos/nixos/config/scripts/open_url_in_instance.sh" # Open qb faster 
     "$mainMod, D, exec, tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""
     "$mainMod, T, exec, notify-send Time \"$(date)\""
@@ -150,7 +152,6 @@
 
   input = {
     kb_layout = "us";
-    kb_options = "caps:swapescape";
     repeat_rate = 35;
     repeat_delay = 120;
     follow_mouse = 1;
