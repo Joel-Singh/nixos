@@ -4,8 +4,9 @@
     "2"
   ];
 
+  "$terminal" = "kitty --working-directory \"$(cat /tmp/currentwd)\" --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
   bind = [
-    "$mainMod, Return, exec, kitty --single-instance -o allow_remote_control=yes"
+    "$mainMod, Return, exec, $terminal"
 
     "$mainMod, E, exec, kitty --single-instance --title emoji-picker -o allow_remote_control=yes /home/apple/repos/nixos/config/scripts/emoji-picker.sh"
 
@@ -45,7 +46,6 @@
 
   monitor = ",preferred,auto,auto";
 
-  "$terminal" = "kitty --working-directory \"$(cat /tmp/currentwd)\" --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
   
   exec-once = [
     "[workspace 1 silent] kitty --working-directory /home/apple/repos/Guiding-Principles/ --single-instance -o allow_remote_control=yes -o enabled_layouts=tall"
