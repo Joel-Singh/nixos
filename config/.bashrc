@@ -73,7 +73,7 @@ alias sp="spotify_player"
 alias rb="rebuild"
 
 alias jjn="jj --no-pager"
-alias jjd="jj describe"
+alias jjcom="jj describe && jj new"
 alias jjwatch="watch --color --interval='0.2' jj --ignore-working-copy log --color=always"
 alias jjs="jj show"
 alias jje="jj edit"
