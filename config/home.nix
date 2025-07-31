@@ -68,6 +68,7 @@
     wl-clipboard # Different clipboard for unipicker because wayclip hangs for some reason 
     wf-recorder
     ffmpeg
+    vlc
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
