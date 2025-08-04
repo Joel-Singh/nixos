@@ -6,6 +6,7 @@
 
 if [[ $TERM_PROGRAM == "vscode" ]]; then 
   return 0
+  echo exiting early!
   exit
 fi
 
