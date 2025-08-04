@@ -69,6 +69,7 @@
     wf-recorder
     ffmpeg
     vlc
+    vscode-fhs
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
