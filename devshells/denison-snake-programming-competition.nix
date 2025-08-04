@@ -11,6 +11,7 @@ mkShell rec {
     bear
     clang-tools # For clang-format
     doxygen
+    gdb
   ];
 
   buildInputs = [

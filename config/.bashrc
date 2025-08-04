@@ -2,6 +2,12 @@
 # ~/.bashrc
 #
 #
+#
+
+if [[ $TERM_PROGRAM == "vscode" ]]; then 
+  return 0
+  exit
+fi
 
 export VISUAL="nvim"
 export EDITOR="nvim"
