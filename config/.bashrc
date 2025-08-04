@@ -53,7 +53,6 @@ alias pdft='mkdir -p output && pdflatex -output-directory=./output'
 alias neofetch='fastfetch'
 alias ff='fastfetch'
 alias zcs="z /home/apple/Personal/Denison/spring-2024/CS234/cs234-book.pdf"
-alias ztn='ls /home/apple/Personal/Denison/spring-2024/MATH145/teacher-notes/ | $(echo z /home/apple/Personal/Denison/spring-2024/MATH145/teacher-notes/$(fzf)) && exit'
 alias mv="mv -i"
 alias qq="qalc"
 alias qalc="clear && qalc"
@@ -139,6 +138,15 @@ function create-dev-env() {
 
 function n-graph() {
   document=$(fd . /home/apple/repos/Guiding-Principles/ | fzf)
+  if [ -z "$document" ]; then
+    echo No document selected
+  else
+    nvim "$document"
+  fi
+}
+
+function notes() {
+  document=$(fd . /home/apple/repos/nixos/notes/ | fzf)
   if [ -z "$document" ]; then
     echo No document selected
   else

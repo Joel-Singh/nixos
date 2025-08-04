@@ -1,26 +1,35 @@
 # Hoops & Boops Programming Plan
+## TODO
+- Zoom in option to each planet
 
-## List of implementations 
-
-## GameState
+## Tooltip
 ```rust
-/// GameState::Titlescreen is the initial state
-/// GameState::TitleScreenToFirstPlanet is a transition, where there is a zoom in on the planet in the titlescreen
-/// GameState::FirstPlanetToMainGame Zooms out to reveal the Main Game
-/// GameState::MainGame where you can buy new loops and see *6* planets
-enum GameState {
-    Titlescreen,
-    TitleScreenToFirstPlanet,
-    FirstPlanet,
-    FirstPlanetToMainGame,
-    MainGame
+pub fn tooltip_plugin() {
+
+}
+
+/// Shows a tool tip (fades in)
+struct ShowToolTip;
+impl Command for ShowToolTip {
+    // ...
+}
+
+/// Hides a tool tip (fades out)
+struct HideToolTip;
+impl Command for ShowToolTip {
+    // ...
 }
 ```
 
-## CameraTransition
+## CameraTransitions
 ```rust
 /// This module will simply have implemented easing for Orthographic projection, giving warning if an easing for a projection that isn't orthagrphic is tried. See https://docs.rs/bevy_easings/0.16.0/src/bevy_easings/implemented.rs.html as an example of how to implement it.
 mod implement_projection_easing;
+mod tweens;
+
+/// Event for use with observers to run code after an animation finishes
+#[derive(Event)]
+struct FinishedCurrentCameraTransition;
 
 const FIRST_PLANET_CAMERA_ORIGIN: Vec2 = /* */; /// The origin of the camera during the first planet. Also the position of the first planet in world coords
 
@@ -39,7 +48,63 @@ const MAIN_GAME_ZOOM: f32 = /* */; /// The origin of the camera during the main 
 pub fn camera_transition_plugin() {
 
 }
+
+struct CameraTransitionToFirstPlanet;
+impl Command for CameraTransitionToFirstPlanet {
+
+}
+
+struct CameraTransitionToMainGame;
+impl Command for CameraTransitionToMainGame {
+
+}
 ```
+
+## TransitionToMainGame
+```rust
+```
+
+## TransitionToFirstPlanet
+```rust
+mod tweens;
+
+/// Spawns the first planet, and transitions to it using a transition in CameraTransitions. Also sets up transitioning to the main game.
+struct TransitionToFirstPlanet;
+impl Command for TransitionToFirstPlanet {
+
+}
+```
+
+## Titlescreen
+```rust
+
+/// Marker struct for play btn
+#[derive(Component)]
+pub struct PlayBtn;
+
+/// Marker struct for the art of the Titlescreen
+#[derive(Component)]
+pub struct TitlescreenArt;
+
+/// Marker struct for the art of the Titlescreen
+#[derive(Component)]
+pub struct TitlescreenBtn;
+
+/// In World coords
+pub const PLAY_BTN_LOCATION: Vec2 = (-56., 75.);
+
+/// Spawns the titlescreen and play btn
+pub fn titlescreen_plugin(app: &mut App) {
+
+}
+
+/// Spawns the Titlescreen, Which will call transition to first planet.
+fn spawn_title_screen() {
+
+}
+
+```
+
 
 ## Background
 ```rust
@@ -48,15 +113,6 @@ pub fn background_plugin() {
 }
 ```
 
-## Titlescreen
-```rust
-
-/// Spawns the titlescreen and play btn
-pub fn titlescreen_plugin() {
-
-}
-
-```
 
 ## LoopBoopHoopPlugin
 ```rust
@@ -128,11 +184,6 @@ fn load_random_variant(file: String, range: Range<u32> asset_server: &AssetServe
 
 ## NewBoopAndHoopMoonBtns
 ```rust
-enum BtnType {
-    NewHoop,
-    NewBoop
-}
-
 #[derive(Component)]
 struct MoonBtn {
     type: BtnType,
