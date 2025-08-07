@@ -181,6 +181,10 @@ function toMd() {
   pandoc "$1" -o "${1%.*}.md"
 }
 
+function webmToMp3 {
+  ffmpeg -i "$1" -map 0:a:0 "${1%.*}.mp3"
+}
+
 function heicToPng {
   nix-shell -p libheif --command "heif-dec $1 ${1%.*}.png"
 }
