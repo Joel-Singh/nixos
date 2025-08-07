@@ -72,6 +72,7 @@
     vscode-fhs
     godot
     kew
+    yt-dlp
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
