@@ -10,6 +10,7 @@
 
   home.file = {
     ".bashrc".source = ./.bashrc;
+    ".config/kew/kewrc".source = ./kewrc;
   };
 
   home.pointerCursor = {
