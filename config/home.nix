@@ -151,9 +151,6 @@
     };
   };
 
-  programs.spotify-player.enable = true;
-  programs.spotify-player.settings.enable_notify = false;
-
   services.dunst.enable = true;
 
   wayland.windowManager.hyprland.enable = true;
