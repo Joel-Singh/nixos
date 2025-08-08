@@ -74,6 +74,7 @@
     godot
     kew
     yt-dlp
+    cmus
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
