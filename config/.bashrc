@@ -94,6 +94,10 @@ function launch_gnucash() {
   nohup gnucash /home/apple/repos/gnucash/myMainMoneyFile.gnucash > /dev/null & disown & e
 }
 
+function launch_gimp() {
+  nohup gimp "$@" > /dev/null & disown & e
+}
+
 
 if [ -z "$in_nvim" ]; then
   kitten @ set-spacing padding=5

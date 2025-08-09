@@ -10,7 +10,6 @@
 
   home.file = {
     ".bashrc".source = ./.bashrc;
-    ".config/kew/kewrc".source = ./kewrc;
   };
 
   home.pointerCursor = {
@@ -72,7 +71,6 @@
     vlc
     vscode-fhs
     godot
-    kew
     yt-dlp
     cmus
 
