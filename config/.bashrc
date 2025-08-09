@@ -70,10 +70,12 @@ alias qb="qutebrowser"
 alias rg="rg -i"
 alias fd="fd -i"
 alias td="/home/apple/repos/nixos/config/scripts/termdown-with-logging.sh"
+
 alias cmakerun="cmake --build build && ./build/bin/main"
 alias cmakebuild="cmake --build build"
 alias cmaketests="cmaketest"
 alias cmaketest="c; clear; cmake --build build && ./build/bin/main_tests"
+
 alias sp="spotify_player"
 alias rb="rebuild"
 
@@ -85,6 +87,8 @@ alias jjs="jj show"
 alias jje="jj edit"
 
 alias gb="git branch"
+
+alias download-music="yt-dlp -t mp3"
 
 function z() {
   nohup zathura "$@" >/dev/null & disown & e

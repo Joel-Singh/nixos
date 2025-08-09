@@ -8,7 +8,7 @@
   bind = [
     "$mainMod, Return, exec, $terminal"
 
-    "$mainMod, E, exec, kitty --single-instance --title emoji-picker -o allow_remote_control=yes /home/apple/repos/nixos/config/scripts/emoji-picker.sh"
+    "$mainMod, E, exec, kitty --single-instance --title emoji-picker -o allow_remote_control=yes /home/apple/repos/nixos/config/scripts/emoji-picker/emoji-picker.sh"
 
     "$mainMod, Q, exec, /home/apple/repos/nixos/config/scripts/open_url_in_instance.sh" # Open qb faster 
     "$mainMod, D, exec, tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""
