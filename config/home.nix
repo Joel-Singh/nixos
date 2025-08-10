@@ -73,7 +73,6 @@
     godot
     yt-dlp
     cmus
-    airshipper
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
