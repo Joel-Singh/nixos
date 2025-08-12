@@ -73,6 +73,7 @@
     godot
     yt-dlp
     cmus
+    abaddon
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
