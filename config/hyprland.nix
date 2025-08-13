@@ -54,7 +54,6 @@
     "[workspace special:messages silent] qutebrowser --target window https://voice.google.com/u/0/messages"
 
     "[workspace special:logistical silent] kitty -e bash -c 'cmus'"
-    "[workspace special:logistical silent] kitty -e /home/apple/repos/nixos/config/scripts/termdown-with-logging.sh"
 
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
