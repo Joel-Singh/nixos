@@ -4,10 +4,5 @@ active=$(hyprctl -j monitors | jq --raw-output '.[] | select(.focused==true).spe
 if [[ ${#active} -gt 0 ]]; then
   hyprctl dispatch togglespecialworkspace "$active"
 else
-  activeWorkspace=$(hyprctl -j monitors | jq '.[0].activeWorkspace.id')
-  if [[ $activeWorkspace -eq 1 ]]; then
-    hyprctl dispatch workspace 2
-  else
-    hyprctl dispatch workspace 1
-  fi
+  hyprctl dispatch workspace 1
 fi
