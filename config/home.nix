@@ -74,6 +74,7 @@
     yt-dlp
     cmus
     abaddon
+    freetube
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
