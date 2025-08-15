@@ -75,6 +75,7 @@
     cmus
     abaddon
     freetube
+    gcr # Provides org.gnome.keyring.SystemPrompter
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
@@ -153,6 +154,8 @@
   };
 
   services.dunst.enable = true;
+
+  services.gnome-keyring.enable = true;
 
   wayland.windowManager.hyprland.enable = true;
   wayland.windowManager.hyprland.settings = import ./hyprland.nix;
