@@ -25,7 +25,7 @@
 
 
     "Alt_L, Tab, exec, /home/apple/repos/nixos/config/scripts/switch-workspace.sh"
-    "$mainMod, bracketright, movetoworkspacesilent 1"
+    "$mainMod, bracketright, movetoworkspacesilent, 1"
     "ALT, 4, killactive,"
     "$mainMod, V, togglefloating,"
     "$mainMod, R, exec, $menu"
