@@ -87,6 +87,8 @@ alias jjwatch="watch --color --interval='0.2' jj --ignore-working-copy log --col
 alias jjs="jj show"
 alias jje="jj edit"
 
+alias abad="cat ~/.config/abaddon/abaddon.ini"
+
 alias gb="git branch"
 
 alias download-music="yt-dlp -t mp3"
