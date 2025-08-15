@@ -1,7 +1,6 @@
 {
   workspace = [
     "1"
-    "2"
   ];
 
   "$terminal" = "kitty --working-directory \"$(cat /tmp/currentwd)\" --single-instance -o allow_remote_control=yes -o enabled_layouts=tall";
@@ -25,8 +24,8 @@
 
 
 
-    "Alt_L, Tab, exec, /home/apple/repos/nixos/config/scripts/switch-workspace.sh"
-    "$mainMod, bracketright, exec, /home/apple/repos/nixos/config/scripts/move-workspace.sh"
+    "Alt_L, Tab, exec, workspace 1"
+    "$mainMod, bracketright, exec, movetoworkspacesilent 1"
     "ALT, 4, killactive,"
     "$mainMod, V, togglefloating,"
     "$mainMod, R, exec, $menu"
