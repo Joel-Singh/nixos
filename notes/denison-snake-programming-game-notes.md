@@ -1,58 +1,29 @@
 # TODO
-
 Make a dedicated game document and ask David to review
 
+modify the vs code launch.json to build before running
+
+Have people put optional bot information as a comment on the top of their bot:
+- Name (displayed during the in-person tournament, if you submit multiple bots as the same person names must be unique!)
+
+- Grid needs an api to get the time left.. Perhaps I'll have to pass in the start time to the bots so they can accurately calculate how much they have left.
+
+Create a `cpp` script to automatically compile every bot into a command line
+program using the compile_bot target. The compiled bot will be named
+first-last-name. `first` and `last` is the creator's name and `name` is the name
+written at the top of their file.
+
+- Generate all Round robin tournament matches from a vector of strings in the above format
+- Append to each line of the round robin tournament matches who won and who lost
+- Able to continue from a borked state, simply going to the closest line from the top without a result.
+- Display on screen who is currently going against each other
+- Display on screen the reason for the win. E.g going into a wall, ran out of time, 
+- Controls: A to bring up the new rankings. S to bring up the next set of bots. D to start the next match.
+
 Run the snakes on separate processes with a time and resource (cpu + memory)
-limit. Grid would have to have an api to get the time left..
+limit. 
 
-Create a bash script to automatically compile every bot into a command line program which:
-
-## takes in the game information via stdin
-It needs:
-is_player_one: `bool`
-current_tick: `int`
-Cell row size: `int`
-Cells: `std::vector<std::vector<Cell>>`
-player_one_segments: `std::vector<Pos>`
-player_two_segments: `std::vector<Pos>`
-
-Uh can just do a bunch of symbols separated by spaces and newlines. Newline indicates a new parameter.
-
-Example stdin:
-false \\ is_player_one
-32241 \\ current_tick
-10 
-EMPTY FRUIT PLAYER_ONE PLAYER_TWO... \\ the first number indicates the row length, i.e, each set of ten values is a row.
-3 1 3 1 4 5 1 4 1 3 1 4 5 6 5 1 9 3 9 1 \\ every pair of two numbers is a position, the first one is the head. There are an even count of numbers
-3 1 3 1 4 5 1 4 1 3 1 4 5 6 5 1 9 3 9 1 \\ every pair of two numbers is a position, the first one is the head. There are an even count of numbers
-
-A pos is:
-(x, y)
-
-A Cell is:
-```cpp
-enum Cell {
-  EMPTY,
-  FRUIT,
-  PLAYER_ONE,
-  PLAYER_ONE_HEAD,
-  PLAYER_TWO,
-  PLAYER_TWO_HEAD
-};
-```
-
-------------------------------
-
-outputs the direction via stdout
-
-It runs the binary in the background, giving it however many seconds and resource limits
-
-A way to run the game programmatically and keep a running count of the results
-as it happens. Round Robin Style. Compile all the bots into a commandline
-program. Generate Round Robin matches--automatically playing the games, and
-then showing it as a tournament ranking as a graph at the end of each game.
-
-Whats a way to allow other people to actually test their bot with resource
+- Whats a way to allow other people to actually test their bot with resource
 limits? Could give the tournament program that will be used for running the
 bots and letting them see how their performs.
 
