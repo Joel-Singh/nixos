@@ -1,12 +1,17 @@
 # TODO
-Make a dedicated game document and ask David to review
+- Make a dedicated game document and ask David to review
 
-modify the vs code launch.json to build before running
+- modify the vs code launch.json to build before running
 
-Have people put optional bot information as a comment on the top of their bot:
-- Name (displayed during the in-person tournament, if you submit multiple bots as the same person names must be unique!)
+- Have people put optional bot information as a comment on the top of their bot:
+Name (displayed during the in-person tournament, if you submit multiple bots as the same person names must be unique!)
 
 - Grid needs an api to get the time left.. Perhaps I'll have to pass in the start time to the bots so they can accurately calculate how much they have left.
+
+- Add sounds. fruit eating, a ping every timestep, a crunch sound on loss etc.
+
+- Run a cpp 101 aimed at those who took APCSA to get them up and running for
+the competition. Create a script beforehand.
 
 Create a `cpp` script to automatically compile every bot into a command line
 program using the compile_bot target. The compiled bot will be named
@@ -18,7 +23,7 @@ written at the top of their file.
 - Able to continue from a borked state, simply going to the closest line from the top without a result.
 - Display on screen who is currently going against each other
 - Display on screen the reason for the win. E.g going into a wall, ran out of time, 
-- Controls: A to bring up the new rankings. S to bring up the next set of bots. D to start the next match.
+- Controls: A to bring up the new rankings. S to bring up the next set of bots. D to start the next match. Space to pause an on-going match. L to step forward. Space to unpause.
 
 Run the snakes on separate processes with a time and resource (cpu + memory)
 limit. 

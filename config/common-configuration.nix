@@ -154,4 +154,9 @@
   services.displayManager.autoLogin.user = "apple";
 
   services.flatpak.enable = true;
+
+  services.tor = {
+    enable = true;
+    openFirewall = true;
+  };
 }
