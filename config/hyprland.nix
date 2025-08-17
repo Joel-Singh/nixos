@@ -36,9 +36,10 @@
     "$mainMod, K, movefocus, u"
     "$mainMod, J, movefocus, d"
     "$mainMod, M, togglespecialworkspace, messages"
-    "$mainMod, comma, togglespecialworkspace, logistical"
+    "$mainMod, comma, togglespecialworkspace, music"
+    "$mainMod, period, togglespecialworkspace, timer"
     "$mainMod SHIFT, M, movetoworkspacesilent, special:messages"
-    "$mainMod SHIFT, comma, movetoworkspacesilent, special:logistical"
+    "$mainMod SHIFT, comma, movetoworkspacesilent, special:music"
     "$mainMod, mouse_down, workspace, e+1"
     "$mainMod, mouse_up, workspace, e-1"
   ];
@@ -52,7 +53,9 @@
     "[workspace special:messages silent] qutebrowser --target window https://www.instagram.com/direct/t/17843911364363418/"
     "[workspace special:messages silent] qutebrowser --target window https://voice.google.com/u/0/messages"
 
-    "[workspace special:logistical silent] kitty -e bash -c 'cmus'"
+    "[workspace special:music silent] kitty -e bash -c 'cmus'"
+
+    "[workspace special:timer silent] kitty -e bash -c '/home/apple/repos/nixos/config/scripts/termdown-with-logging.sh'"
 
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
