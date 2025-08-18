@@ -75,7 +75,7 @@ alias td="/home/apple/repos/nixos/config/scripts/termdown-with-logging.sh"
 alias cmakerun="cmake --build build && ./build/bin/main"
 alias cmakebuild="cmake --build build"
 alias cmaketests="cmaketest"
-alias cmaketest="c; clear; cmake --build build && ./build/bin/main_tests; ./build/bin/bot_compile_tests"
+alias cmaketest="c; clear; cmake --build build && ./build/bin/main_tests; ./build/bin/bot_compile_tests; ./build/bin/tournament_tests"
 
 alias sp="spotify_player"
 alias rb="rebuild"
