@@ -14,6 +14,11 @@ Name (displayed during the in-person tournament, if you submit multiple bots as 
 the competition. Create a script beforehand.
 
 ## Creating the tournament software
+Create a `cpp` script to automatically compile every bot into a command line
+program using the compile_bot target. The compiled bot will be named
+first-last-name. `first` and `last` is the creator's name and `name` is the name
+written at the top of their file.
+
 - Look for a /tmp/du_slither_current_matches.txt
 - If it exists, generate matches from a vec of the following class:
 ```cpp
@@ -23,6 +28,10 @@ public:
     string get_player_one;
     string get_player_two;
     MatchResult match_result;
+    Match(string player_one, string player_two, MatchResult match_result) :
+        player_one(player_one), player_two(player_two), match_result(match_result) {}
+
+    operator=
 private:
     string player_one;
     string player_two;
@@ -39,22 +48,24 @@ enum class MatchResult {
 }
 ```
 
-- If it doesn't, generate round robin matches for all bots in ./src/tournament/bots. And write to /tmp/du_slither_current_matches.txt
+- If it doesn't, generate round robin matches for all bots in ./src/tournament/bots. And write to /tmp/du_slither_current_matches.txt.
+- Need to generate round robin matches from `vector<string>`
+
+- Create a `vector<Match>` from a string with the format of /tmp/du_slither_current_matches.txt
 
 - in either case, now we have a `vector<Match>`.
+
 - Find if there's an unrun match in 
 
-Create a `cpp` script to automatically compile every bot into a command line
-program using the compile_bot target. The compiled bot will be named
-first-last-name. `first` and `last` is the creator's name and `name` is the name
-written at the top of their file.
+- Run the game with the following controls:
 
-- Generate all Round robin tournament matches from a vector of strings in the above format
-- Append to each line of the round robin tournament matches who won and who lost
-- Able to continue from a borked state, simply going to the closest line from the top without a result.
+- Controls: D to start the next match. Space to pause an on-going match. L to step forward. A to bring up the new rankings. S to bring up the next set of bots. Space to unpause.
+
 - Display on screen who is currently going against each other
+
 - Display on screen the reason for the win. E.g going into a wall, ran out of time, 
-- Controls: A to bring up the new rankings. S to bring up the next set of bots. D to start the next match. Space to pause an on-going match. L to step forward. Space to unpause.
+
+- Update the text file as each match finishes
 
 Run the snakes on separate processes with a time and resource (cpu + memory)
 limit. 
