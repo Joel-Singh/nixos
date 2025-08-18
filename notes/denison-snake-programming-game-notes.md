@@ -13,6 +13,37 @@ Name (displayed during the in-person tournament, if you submit multiple bots as 
 - Run a cpp 101 aimed at those who took APCSA to get them up and running for
 the competition. Create a script beforehand.
 
+## Creating the tournament software
+- Look for a /tmp/du_slither_current_matches.txt
+- If it exists, generate matches from a vec of the following class:
+```cpp
+/// \brief represents a match. player_one and player_two follow the first-last-name convention.
+class Match {
+public:
+    string get_player_one;
+    string get_player_two;
+    MatchResult match_result;
+private:
+    string player_one;
+    string player_two;
+}
+```
+
+```cpp
+/// \brief represents a result for a match between two snakes.
+enum class MatchResult {
+    PlayerOneWon,
+    PlayerTwoWon,
+    Draw,
+    NotRun,
+}
+```
+
+- If it doesn't, generate round robin matches for all bots in ./src/tournament/bots. And write to /tmp/du_slither_current_matches.txt
+
+- in either case, now we have a `vector<Match>`.
+- Find if there's an unrun match in 
+
 Create a `cpp` script to automatically compile every bot into a command line
 program using the compile_bot target. The compiled bot will be named
 first-last-name. `first` and `last` is the creator's name and `name` is the name
