@@ -94,6 +94,8 @@ alias gb="git branch"
 
 alias download-music="yt-dlp -t mp3"
 
+alias mocp="mocp -C ~/repos/nixos/config/moc-config"
+
 function z() {
   nohup zathura "$@" >/dev/null & disown & e
 }
