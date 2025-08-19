@@ -10,6 +10,8 @@
 
   home.file = {
     ".bashrc".source = ./.bashrc;
+    "~/.moc/config".source = ./moc.config;
+    "~/.moc/moc-keymap".source = ./moc-keymap;
   };
 
   home.pointerCursor = {
