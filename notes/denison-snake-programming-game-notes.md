@@ -50,7 +50,6 @@ enum class MatchResult {
 
 - If it doesn't, generate round robin matches for all bots in ./src/tournament/bots. And write to /tmp/du_slither_current_matches.txt.
 - Need to generate round robin matches from `vector<string>`
-
 - Create a `vector<Match>` from a string with the format of /tmp/du_slither_current_matches.txt
 
 - in either case, now we have a `vector<Match>`.

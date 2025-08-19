@@ -76,6 +76,7 @@
     abaddon
     freetube
     gcr # Provides org.gnome.keyring.SystemPrompter
+    moc
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
