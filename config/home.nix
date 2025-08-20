@@ -72,7 +72,6 @@
     vscode-fhs
     godot
     yt-dlp
-    cmus
     abaddon
     freetube
     gcr # Provides org.gnome.keyring.SystemPrompter

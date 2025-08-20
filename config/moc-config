@@ -297,7 +297,7 @@
 #
 # Example:    Keymap = my_keymap
 #
-Keymap = ~/repos/nixos/config/moc-keymap
+Keymap = /home/apple/repos/nixos/config/moc-keymap
 
 # Use ASCII rather than graphic characters for drawing lines.  This
 # helps on some terminals.
