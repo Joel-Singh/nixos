@@ -76,6 +76,7 @@
     freetube
     gcr # Provides org.gnome.keyring.SystemPrompter
     moc
+    gnumake
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
