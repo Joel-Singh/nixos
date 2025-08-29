@@ -6,12 +6,16 @@
 - Have people put optional bot information as a comment on the top of their bot:
 Name (displayed during the in-person tournament, if you submit multiple bots as the same person names must be unique!)
 
-- Grid needs an api to get the time left.. Perhaps I'll have to pass in the start time to the bots so they can accurately calculate how much they have left.
+- Grid needs an api to get the time left.. Perhaps I'll have to pass in the start time to the bots so they can accurately calculate how much they have left. Create a dedicated TimeLeft class that abstracts away the chrono library.
 
 - Add sounds. fruit eating, a ping every timestep, a crunch sound on loss etc.
 
 - Run a cpp 101 aimed at those who took APCSA to get them up and running for
 the competition. Create a script beforehand.
+
+- Specify which bot is which with some ui. Maybe on the sides put the name of the bot in the same color as that bot.
+
+- When to do a C++ 101 for everyone for snake
 
 ## Creating the tournament software
 Create a `cpp` script to automatically compile every bot into a command line
@@ -67,7 +71,7 @@ enum class MatchResult {
 - Update the text file as each match finishes
 
 Run the snakes on separate processes with a time and resource (cpu + memory)
-limit. 
+limit. Use `ulimit` and `cpulimit`
 
 - Whats a way to allow other people to actually test their bot with resource
 limits? Could give the tournament program that will be used for running the

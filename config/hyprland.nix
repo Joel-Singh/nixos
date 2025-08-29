@@ -53,7 +53,7 @@
     "[workspace special:messages silent] qutebrowser --target window https://www.instagram.com/direct/t/17843911364363418/"
     "[workspace special:messages silent] qutebrowser --target window https://voice.google.com/u/0/messages"
 
-    "[workspace special:music silent] kitty -e bash -c 'mocp'"
+    "[workspace special:music silent] kitty -e bash -c 'echo mocp'"
 
     "[workspace special:timer silent] kitty -e bash -c '/home/apple/repos/nixos/config/scripts/termdown-with-logging.sh'"
 

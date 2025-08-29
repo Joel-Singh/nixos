@@ -13,6 +13,7 @@ mkShell rec {
     doxygen
     gdb
     hello
+    cpulimit
   ];
 
   buildInputs = [
