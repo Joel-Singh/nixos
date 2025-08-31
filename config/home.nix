@@ -77,6 +77,7 @@
     gcr # Provides org.gnome.keyring.SystemPrompter
     moc
     gnumake
+    qrencode
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
