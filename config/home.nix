@@ -88,6 +88,10 @@
   programs.ripgrep.enable = true;
   programs.fzf.enable = true;
   programs.fd.enable = true;
+  programs.fd.ignores = [
+    ".git/"
+    ".jj/"
+  ];
   programs.feh.enable = true;
   programs.bat.enable = true;
   programs.tofi.enable = true;
