@@ -78,6 +78,7 @@
     moc
     gnumake
     qrencode
+    typst
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
