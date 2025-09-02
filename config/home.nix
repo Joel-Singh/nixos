@@ -80,6 +80,9 @@
     qrencode
     typst
 
+    arduino-cli
+    arduino-language-server
+
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
   ];
