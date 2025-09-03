@@ -83,6 +83,8 @@
     arduino-cli
     arduino-language-server
 
+    logisim
+
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
   ];
