@@ -79,6 +79,7 @@
     gnumake
     qrencode
     typst
+    pavucontrol
 
     arduino-cli
     arduino-language-server
