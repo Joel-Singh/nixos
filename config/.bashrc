@@ -279,6 +279,10 @@ function cd-repo() {
   fi
 }
 
+function typst-watch() {
+  typst watch "$1" /tmp/current-typ-file.pdf
+}
+
 
 if [ -z "$in_nvim" ]; then
   bind '"\t":menu-complete'
