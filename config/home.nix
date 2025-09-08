@@ -84,7 +84,6 @@
     arduino-cli
     arduino-language-server
 
-    logisim
     logisim-evolution
 
     # Rust
