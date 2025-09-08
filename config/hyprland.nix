@@ -50,7 +50,7 @@
   exec-once = [
     "[workspace 1 silent] kitty --working-directory /home/apple/repos/Guiding-Principles/ --single-instance -o allow_remote_control=yes -o enabled_layouts=tall"
 
-    "[workspace special:messages silent] qutebrowser --target window https://www.instagram.com/direct/t/17843911364363418/"
+    "[workspace special:messages silent] qutebrowser --target window https://web.whatsapp.com/"
     "[workspace special:messages silent] qutebrowser --target window https://voice.google.com/u/0/messages"
 
     "[workspace special:music silent] kitty -e bash -c 'echo mocp'"
