@@ -50,8 +50,8 @@
   exec-once = [
     "[workspace 1 silent] kitty --working-directory /home/apple/repos/Guiding-Principles/ --single-instance -o allow_remote_control=yes -o enabled_layouts=tall"
 
-    "[workspace special:messages silent] qutebrowser --target window https://web.whatsapp.com/"
-    "[workspace special:messages silent] qutebrowser --target window https://voice.google.com/u/0/messages"
+    "qutebrowser --target window https://web.whatsapp.com/"
+    "qutebrowser --target window https://voice.google.com/u/0/messages"
 
     "[workspace special:music silent] kitty -e bash -c 'echo mocp'"
 
@@ -205,6 +205,7 @@
   windowrule = [
     "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
     ''workspace special:messages silent, initialTitle:.*instagram\.com.*''
+    ''workspace special:messages silent, initialTitle:.*web\.whatsapp\.com.*''
     ''workspace special:messages silent, initialTitle:.*voice\.google\.com.*''
     "float, class:DuckSlayer"
     "float, title:emoji-picker"
