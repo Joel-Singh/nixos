@@ -174,6 +174,7 @@
 
   fonts.packages = with pkgs; [
     courier-prime
+    noto-fonts
   ];
 
   services.displayManager.sddm = {
