@@ -173,8 +173,7 @@
   ];
 
   fonts.packages = with pkgs; [
-    courier-prime
-    noto-fonts
+    liberation_ttf
   ];
 
   services.displayManager.sddm = {
