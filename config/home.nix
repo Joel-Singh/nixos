@@ -86,11 +86,10 @@
 
     logisim-evolution
 
-    courier-prime
-
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
   ];
+
 
   programs.gh.enable = true;
   programs.neovim.enable = true;

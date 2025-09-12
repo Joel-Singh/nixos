@@ -172,6 +172,10 @@
      vim
   ];
 
+  fonts.packages = with pkgs; [
+    courier-prime
+  ];
+
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
