@@ -173,7 +173,7 @@
   ];
 
   fonts.packages = with pkgs; [
-    liberation_ttf
+    corefonts
   ];
 
   services.displayManager.sddm = {
