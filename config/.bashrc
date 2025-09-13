@@ -143,7 +143,7 @@ function create-dev-env() {
     echo Creating dev environment...
     pushd $(git rev-parse --show-toplevel) > /dev/null
 
-    echo "use nix" >> .envrc
+    echo "use nix" > .envrc
     ln -s "/home/apple/repos/nixos/devshells/$current_repo.nix" ./shell.nix
     direnv allow
 
