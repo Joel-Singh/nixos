@@ -104,7 +104,7 @@
 
 # Set playback toggles.
 #Repeat = no
-#Shuffle = no
+Shuffle = yes
 #AutoNext = yes
 
 # Default FormatString:
@@ -569,7 +569,7 @@ Keymap = /home/apple/repos/nixos/config/moc-keymap
 #SetScreenTitle = yes
 
 # Display full paths instead of just file names in the playlist.
-#PlaylistFullPaths = yes
+PlaylistFullPaths = no
 
 # The following setting describes how block markers are displayed in
 # the play time progress bar.  Its value is a string of exactly three
