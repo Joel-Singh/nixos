@@ -83,6 +83,7 @@
 
     arduino-cli
     arduino-language-server
+    arduino-ide
 
     logisim-evolution
 
