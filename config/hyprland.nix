@@ -51,7 +51,7 @@
     "[workspace 1 silent] kitty --working-directory /home/apple/repos/Guiding-Principles/ --single-instance -o allow_remote_control=yes -o enabled_layouts=tall"
 
     "qutebrowser --target window https://web.whatsapp.com/"
-    "qutebrowser --target window https://voice.google.com/u/1/messages"
+    "qutebrowser --target window https://voice.google.com/u/0/messages"
 
     "[workspace special:music silent] kitty -e bash -c 'echo mocp'"
 
