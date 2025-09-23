@@ -86,6 +86,7 @@
     arduino-ide
 
     logisim-evolution
+    logisim
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
