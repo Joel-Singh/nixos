@@ -14,7 +14,7 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   networking.hosts = {
-    "0.0.0.0" = [
+    "127.0.0.1" = [
       "reddit.com"
       "tumblr.com"
       "youtube.com"
