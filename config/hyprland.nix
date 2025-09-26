@@ -37,7 +37,7 @@
     "$mainMod, J, movefocus, d"
     "$mainMod, M, togglespecialworkspace, messages"
     "$mainMod, comma, togglespecialworkspace, music"
-    "$mainMod, period, togglespecialworkspace, timer"
+    "$mainMod, period, togglespecialworkspace, calendar"
     "$mainMod SHIFT, M, movetoworkspacesilent, special:messages"
     "$mainMod SHIFT, comma, movetoworkspacesilent, special:music"
     "$mainMod, mouse_down, workspace, e+1"
@@ -53,9 +53,7 @@
     "qutebrowser --target window https://web.whatsapp.com/"
     "qutebrowser --target window https://voice.google.com/u/1/messages"
 
-    "[workspace special:music silent] kitty -e bash -c 'echo mocp'"
-
-    "[workspace special:timer silent] kitty -e bash -c '/home/apple/repos/nixos/config/scripts/termdown-with-logging.sh'"
+    "qutebrowser --target window https://calendar.google.com/calendar/u/0/r"
 
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
@@ -207,6 +205,7 @@
     ''workspace special:messages silent, initialTitle:.*instagram\.com.*''
     ''workspace special:messages silent, initialTitle:.*web\.whatsapp\.com.*''
     ''workspace special:messages silent, initialTitle:.*voice\.google\.com.*''
+    ''workspace special:calendar silent, initialTitle:.*calendar\.google\.com.*''
     "float, class:DuckSlayer"
     "float, title:emoji-picker"
     "center, title:emoji-picker"
