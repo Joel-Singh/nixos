@@ -204,7 +204,8 @@
     "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
     ''workspace special:messages silent, initialTitle:.*instagram\.com.*''
     ''workspace special:messages silent, initialTitle:.*web\.whatsapp\.com.*''
-    ''workspace special:messages silent, initialTitle:.*whatsie.*''
+    ''workspace special:messages silent, initialTitle:.*WhatSie.*''
+    ''workspace special:messages silent, initialTitle:.*voice\.google\.com.*''
     ''workspace special:calendar silent, initialTitle:.*calendar\.google\.com.*''
     "float, class:DuckSlayer"
     "float, title:emoji-picker"
