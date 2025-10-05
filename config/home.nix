@@ -92,7 +92,6 @@
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
 
     whatsie
-    waydroid
   ];
 
 

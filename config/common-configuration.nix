@@ -197,4 +197,6 @@
   services.displayManager.autoLogin.user = "apple";
 
   services.flatpak.enable = true;
+
+  virtualisation.waydroid.enable = true;
 }
