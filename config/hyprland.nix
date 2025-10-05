@@ -212,5 +212,6 @@
     "center, title:emoji-picker"
     "float, class:Denison Snake!"
     "center, class:Denison Snake!"
+    "float, class:Waydroid"
   ];
 }
