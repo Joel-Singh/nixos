@@ -1,86 +1,74 @@
 # TODO
 - Make a dedicated game document and ask David to review
 
-- modify the vs code launch.json to build before running
-
 - Have people put optional bot information as a comment on the top of their bot:
 Name (displayed during the in-person tournament, if you submit multiple bots as the same person names must be unique!)
 
-- Grid needs an api to get the time left.. Perhaps I'll have to pass in the start time to the bots so they can accurately calculate how much they have left. Create a dedicated TimeLeft class that abstracts away the chrono library.
-
 - Add sounds. fruit eating, a ping every timestep, a crunch sound on loss etc.
 
-- Run a cpp 101 aimed at those who took APCSA to get them up and running for
-the competition. Create a script beforehand.
-
-- Specify which bot is which with some ui. Maybe on the sides put the name of the bot in the same color as that bot.
-
-- When to do a C++ 101 for everyone for snake
-
 ## Creating the tournament software
-Create a `cpp` script to automatically compile every bot into a command line
-program using the compile_bot target. The compiled bot will be named
-first-last-name. `first` and `last` is the creator's name and `name` is the name
-written at the top of their file.
+manually compile every bot into a command line program using the compile_bot
+target. The compiled bot will be named first-last-name. `first` and `last` is
+the creator's name and `name` is the name written at the top of their file.
 
 - Look for a /tmp/du_slither_current_matches.txt
-- If it exists, generate matches from a vec of the following class:
-```cpp
-/// \brief represents a match. player_one and player_two follow the first-last-name convention.
-class Match {
-public:
-    string get_player_one;
-    string get_player_two;
-    MatchResult match_result;
-    Match(string player_one, string player_two, MatchResult match_result) :
-        player_one(player_one), player_two(player_two), match_result(match_result) {}
-
-    operator=
-private:
-    string player_one;
-    string player_two;
-}
-```
-
-```cpp
-/// \brief represents a result for a match between two snakes.
-enum class MatchResult {
-    PlayerOneWon,
-    PlayerTwoWon,
-    Draw,
-    NotRun,
-}
-```
-
+- If it exists, generate matches from a vec of `Match`:
 - If it doesn't, generate round robin matches for all bots in ./src/tournament/bots. And write to /tmp/du_slither_current_matches.txt.
 - Need to generate round robin matches from `vector<string>`
 - Create a `vector<Match>` from a string with the format of /tmp/du_slither_current_matches.txt
 
 - in either case, now we have a `vector<Match>`.
 
-- Find if there's an unrun match in 
+- Find if there's an unrun match in `/tmp/du_slither_current_matches.txt`
 
 - Run the game with the following controls:
 
-- Controls: D to start the next match. Space to pause an on-going match. L to step forward. A to bring up the new rankings. S to bring up the next set of bots. Space to unpause.
+- Controls: D to start the next match after the previous has ended. L to step forward. A to print the current rankings to std out. Space to unpause.
 
 - Display on screen who is currently going against each other
-
 - Display on screen the reason for the win. E.g going into a wall, ran out of time, 
 
 - Update the text file as each match finishes
 
-Run the snakes on separate processes with a time and resource (cpu + memory)
-limit. Use `ulimit` and `cpulimit`
+### Pseudocode
+```
+- Get all possible matches
+processed_game_end = false;
+player_one = ...
+player_two = ...
+while true {
+    Input input = getInput();
 
-- Whats a way to allow other people to actually test their bot with resource
-limits? Could give the tournament program that will be used for running the
-bots and letting them see how their performs.
+    if (input.L & gamestate == not done) {
+        process game for one tick
+    }
 
-## Done, just needs to merge. will do after Colin's feedback
+    if (gamestate == done & !processed_game_end) {
+        curMsg = loss_reason;
+        update match file;
+    }
 
-Instructions for setting command line flags for vs code
+    if (D & gamestate == done) {
+        processed_game_end = false;
+        reset_board_state(...);
+        randomly load next match replacing player_one and player_two bots;
+    }
 
-Fix heads going into each other being them swapping positions or a win.
+    if (A) {
+        printRanking();
+    }
 
-After 100 ticks, the longer snake wins.
+    drawboard();
+    drawMsg();
+}
+
+```
+
+
+### TODO
+- Limit cpu and memory in run_bot with `ulimit` and `cpulimit`
+- Refactor `compute_game_logic` to return loss reason
+- Refactor `run_bot` to return loss reason
+- Implement `printRanking(matches)`
+- Implement `drawMsg(msg)`
+- `resetGame(...)` taking in all needed game variables
