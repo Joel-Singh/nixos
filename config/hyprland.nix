@@ -15,7 +15,7 @@
     "$mainMod, b, exec, notify-send Battery $(cat /sys/class/power_supply/BAT0/capacity || cat /sys/class/power_supply/BAT1/capacity)"
     "$mainMod, C, exec, dunstctl close"
     "$mainMod&Shift_L, C, exec, dunstctl history-pop"
-    "$mainMod, P, exec, hyprshot -s -m region -o ~/screenshots"
+    "$mainMod, P, exec, hyprshot -s -m region --freeze -o ~/screenshots"
 
     "$mainMod&Shift_L, H, swapwindow, l"
     "$mainMod&Shift_L, K, swapwindow, u"
