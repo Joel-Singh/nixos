@@ -21,8 +21,8 @@
       "tumblr.com"
       "www.tumblr.com"
 
-      # "youtube.com"
-      # "www.youtube.com"
+      "youtube.com"
+      "www.youtube.com"
     ];
   };
 
