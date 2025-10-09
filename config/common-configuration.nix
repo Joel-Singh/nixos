@@ -21,8 +21,11 @@
       "tumblr.com"
       "www.tumblr.com"
 
-      "youtube.com"
-      "www.youtube.com"
+      # "youtube.com"
+      # "www.youtube.com"
+
+      "news.ycombinator.com"
+      "www.news.ycombinator.com"
     ];
   };
 
