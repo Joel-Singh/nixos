@@ -23,7 +23,7 @@ the creator's name and `name` is the name written at the top of their file.
 
 - Run the game with the following controls:
 
-- Controls: D to start the next match after the previous has ended. L to step forward. A to print the current rankings to std out. Space to unpause.
+- Controls: D to start the next match after the previous has ended. L to step forward. A to print the current rankings to std out.
 
 - Display on screen who is currently going against each other
 - Display on screen the reason for the win. E.g going into a wall, ran out of time, 
@@ -33,9 +33,13 @@ the creator's name and `name` is the name written at the top of their file.
 ### Pseudocode
 ```
 - Get all possible matches
-processed_game_end = false;
+
 player_one = ...
 player_two = ...
+
+find the initial game
+
+processed_game_end = false;
 while true {
     Input input = getInput();
 
