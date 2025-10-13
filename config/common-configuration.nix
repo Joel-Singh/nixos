@@ -15,8 +15,8 @@
 
   networking.hosts = {
     "127.0.0.1" = [
-      "reddit.com"
-      "www.reddit.com"
+      # "reddit.com"
+      # "www.reddit.com"
 
       "tumblr.com"
       "www.tumblr.com"
