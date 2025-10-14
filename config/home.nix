@@ -88,6 +88,8 @@
     logisim-evolution
     logisim
 
+    openshot-qt
+
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
 
