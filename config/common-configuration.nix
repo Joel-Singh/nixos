@@ -30,8 +30,8 @@
       "pornhub.com"
       "www.pornhub.com"
 
-      "news.ycombinator.com"
-      "www.news.ycombinator.com"
+      # "news.ycombinator.com"
+      # "www.news.ycombinator.com"
     ];
   };
 
