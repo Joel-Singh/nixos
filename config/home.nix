@@ -90,7 +90,7 @@
 
     openshot-qt
 
-    gcalcli
+    khal
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
