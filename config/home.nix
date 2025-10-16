@@ -90,8 +90,6 @@
 
     openshot-qt
 
-    evolution
-
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
 
