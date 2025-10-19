@@ -271,6 +271,10 @@ function cdrt() {
   git rev-parse --show-toplevel && cd $(git rev-parse --show-toplevel)
 }
 
+function cdd() {
+  cd ~/repos/Denison/
+}
+
 function cd-repo() {
   repo=$(fd -d 1 . /home/apple/repos/ | fzf)
   if [ -z "$repo" ]; then
