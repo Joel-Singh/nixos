@@ -1,78 +1,30 @@
-# TODO
-- Make a dedicated game document and ask David to review
+# DU Slither Project
 
-- Have people put optional bot information as a comment on the top of their bot:
-Name (displayed during the in-person tournament, if you submit multiple bots as the same person names must be unique!)
+## Moving Branches Into Binary Options
 
-- Add sounds. fruit eating, a ping every timestep, a crunch sound on loss etc.
+Going to add two binary options:
 
-## Creating the tournament software
-manually compile every bot into a command line program using the compile_bot
-target. The compiled bot will be named first-last-name. `first` and `last` is
-the creator's name and `name` is the name written at the top of their file.
+"--infinite": Infinitely replays the game.
+"--tournament": Executes the tournament main. Not valid with infinite.
 
-- Look for a /tmp/du_slither_current_matches.txt
-- If it exists, generate matches from a vec of `Match`:
-- If it doesn't, generate round robin matches for all bots in ./src/tournament/bots. And write to /tmp/du_slither_current_matches.txt.
-- Need to generate round robin matches from `vector<string>`
-- Create a `vector<Match>` from a string with the format of /tmp/du_slither_current_matches.txt
+Refactor get_player_from_args to be get_args. Returning an Argument struct:
 
-- in either case, now we have a `vector<Match>`.
-
-- Find if there's an unrun match in `/tmp/du_slither_current_matches.txt`
-
-- Run the game with the following controls:
-
-- Controls: D to start the next match after the previous has ended. L to step forward. A to print the current rankings to std out.
-
-- Display on screen who is currently going against each other
-- Display on screen the reason for the win. E.g going into a wall, ran out of time, 
-
-- Update the text file as each match finishes
-
-### Pseudocode
-```
-- Get all possible matches
-
-player_one = ...
-player_two = ...
-
-find the initial game
-
-processed_game_end = false;
-while true {
-    Input input = getInput();
-
-    if (input.L & gamestate == not done) {
-        process game for one tick
-    }
-
-    if (gamestate == done & !processed_game_end) {
-        curMsg = loss_reason;
-        update match file;
-    }
-
-    if (D & gamestate == done) {
-        processed_game_end = false;
-        reset_board_state(...);
-        randomly load next match replacing player_one and player_two bots;
-    }
-
-    if (A) {
-        printRanking();
-    }
-
-    drawboard();
-    drawMsg();
+```cpp
+struct Arguments {
+    const bool infinite;
+    const optional<PlayerType> player_type;
+    const bool tournament;
 }
-
 ```
 
+if infinite and tournament, return an error as that isn't valid.
 
-### TODO
-- Limit cpu and memory in run_bot with `ulimit` and `cpulimit`
-- Refactor `compute_game_logic` to return loss reason
-- Refactor `run_bot` to return loss reason
-- Implement `printRanking(matches)`
-- Implement `drawMsg(msg)`
-- `resetGame(...)` taking in all needed game variables
+I would need to encode the regular bot main into `versus_main(PlayerType, is_infinite)` and the tournament code into `tournament_main(void)` and then run the corresponding one based upon the arguments.
+
+## TODO
+- Limit cpu and memory in run_bot with `ulimit` and `cpulimit`.
+- Make a prettier tournament interface including adding sounds.
+- Ensure tests compile for windows.
+- Write up a plan for teaching the youngin's for the denison snake program tutor and ask for David Khan review.
+- Automatic compilation of bots for tournament
+- Move all different code paths into different binary options rather than different branches.
