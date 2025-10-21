@@ -21,6 +21,17 @@ if infinite and tournament, return an error as that isn't valid.
 
 I would need to encode the regular bot main into `versus_main(PlayerType, is_infinite)` and the tournament code into `tournament_main(void)` and then run the corresponding one based upon the arguments.
 
+Lets start with refactoring get_player_from_args to get_args returning an argument struct of: 
+
+```cpp
+struct Arguments {
+    const bool infinite;
+    const PlayerType player_type;
+}
+```
+
+Without the tournament and optional player type
+
 ## TODO
 - Limit cpu and memory in run_bot with `ulimit` and `cpulimit`.
 - Make a prettier tournament interface including adding sounds.
