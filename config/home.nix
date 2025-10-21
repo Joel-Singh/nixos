@@ -75,7 +75,6 @@
     abaddon
     freetube
     gcr # Provides org.gnome.keyring.SystemPrompter
-    moc
     gnumake
     qrencode
     typst
@@ -88,15 +87,14 @@
     logisim-evolution
     logisim
 
-    openshot-qt
-
     khal
     vdirsyncer
+
+    gemini-cli
 
     # Rust
     rustup # Comes with rust-analyzer, cargo, rustc, rustfmt
 
-    whatsie
   ];
 
 
