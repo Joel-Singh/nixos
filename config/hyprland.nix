@@ -159,10 +159,6 @@
   };
   
   
-  gestures = {
-    workspace_swipe = false;
-  };
-  
   "$mainMod" = "SUPER";
   
   bindm = [
