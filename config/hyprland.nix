@@ -176,13 +176,21 @@
     "$mainMod&Alt_R, K, resizeactive, 0 -25"
     "$mainMod&Alt_R, J, resizeactive, 0 25"
     "$mainMod&Alt_R, L, resizeactive, 25 0"
-    "Alt_L, a, exec, wtype 'ā'" 
-    "Alt_L, e, exec, wtype 'ē'" 
-    "Alt_L, g, exec, wtype 'ḡ'" 
-    "Alt_L, i, exec, wtype 'ī'" 
-    "Alt_L, o, exec, wtype 'ō'" 
-    "Alt_L, u, exec, wtype 'ū'" 
-    "Alt_L, y, exec, wtype 'ȳ'" 
+    "Alt_L, a, exec, wtype 'ā'"
+    "Alt_L, e, exec, wtype 'ē'"
+    "Alt_L, g, exec, wtype 'ḡ'"
+    "Alt_L, i, exec, wtype 'ī'"
+    "Alt_L, o, exec, wtype 'ō'"
+    "Alt_L, u, exec, wtype 'ū'"
+    "Alt_L, y, exec, wtype 'ȳ'"
+
+    "Shift_R&Alt_L, A, exec, wtype 'Ā'"
+    "Shift_R&Alt_L, E, exec, wtype 'Ē'"
+    "Shift_R&Alt_L, G, exec, wtype 'Ḡ'"
+    "Shift_R&Alt_L, I, exec, wtype 'Ī'"
+    "Shift_R&Alt_L, O, exec, wtype 'Ō'"
+    "Shift_R&Alt_L, U, exec, wtype 'Ū'"
+    "Shift_R&Alt_L, Y, exec, wtype 'Ȳ'"
   ];
   
   bindel = [
