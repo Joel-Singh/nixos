@@ -252,7 +252,7 @@ function rebuild() {
   if [ $is_rebuild_successful -ne 0 ]; then
     cat nixos-switch.log | grep --color error
   else
-    gen=$(nixos-rebuild list-generations | grep current)
+    gen=$(nixos-rebuild list-generations | grep True | awk '{ print $1 }')
     git commit -am "$gen"
     git push --quiet
   fi
