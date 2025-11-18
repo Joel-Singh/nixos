@@ -50,7 +50,6 @@
   exec-once = [
     "[workspace 1 silent] kitty --working-directory /home/apple/repos/Guiding-Principles/ --single-instance -o allow_remote_control=yes -o enabled_layouts=tall"
 
-    "whatsie"
     "qutebrowser --target window https://voice.google.com/u/1/messages"
 
     "qutebrowser --target window https://calendar.google.com/calendar/u/0/r"
@@ -200,7 +199,6 @@
     "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
     ''workspace special:messages silent, initialTitle:.*instagram\.com.*''
     ''workspace special:messages silent, initialTitle:.*web\.whatsapp\.com.*''
-    ''workspace special:messages silent, initialTitle:.*WhatSie.*''
     ''workspace special:messages silent, initialTitle:.*voice\.google\.com.*''
     ''workspace special:calendar silent, initialTitle:.*calendar\.google\.com.*''
     "float, class:DuckSlayer"
