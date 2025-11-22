@@ -184,13 +184,13 @@
     "Alt_L, u, exec, wtype 'ū'"
     "Alt_L, y, exec, wtype 'ȳ'"
 
-    "Shift_R&Alt_L, A, exec, wtype 'Ā'"
-    "Shift_R&Alt_L, E, exec, wtype 'Ē'"
-    "Shift_R&Alt_L, G, exec, wtype 'Ḡ'"
-    "Shift_R&Alt_L, I, exec, wtype 'Ī'"
-    "Shift_R&Alt_L, O, exec, wtype 'Ō'"
-    "Shift_R&Alt_L, U, exec, wtype 'Ū'"
-    "Shift_R&Alt_L, Y, exec, wtype 'Ȳ'"
+    "Shift_L&Alt_L, A, exec, wtype 'Ā'"
+    "Shift_L&Alt_L, E, exec, wtype 'Ē'"
+    "Shift_L&Alt_L, G, exec, wtype 'Ḡ'"
+    "Shift_L&Alt_L, I, exec, wtype 'Ī'"
+    "Shift_L&Alt_L, O, exec, wtype 'Ō'"
+    "Shift_L&Alt_L, U, exec, wtype 'Ū'"
+    "Shift_L&Alt_L, Y, exec, wtype 'Ȳ'"
   ];
   
   bindel = [
