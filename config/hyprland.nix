@@ -221,6 +221,7 @@
     "float, class:Denison Snake!"
     "center, class:Denison Snake!"
     "float, class:Waydroid"
-    "size 50%, 80%, class:Waydroid"
+    # Giving error message on hp laptop but not thinkpad?
+    # "size 50%, 80%, class:Waydroid"
   ];
 }
