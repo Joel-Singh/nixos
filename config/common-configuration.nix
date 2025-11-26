@@ -213,6 +213,8 @@
 
   fonts.packages = with pkgs; [
     corefonts
+    inconsolata
+    libertinus
   ];
 
   services.displayManager.sddm = {
