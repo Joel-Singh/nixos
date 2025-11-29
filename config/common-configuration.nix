@@ -24,8 +24,8 @@
       "tumblr.com"
       "www.tumblr.com"
 
-      # "youtube.com"
-      # "www.youtube.com"
+      "youtube.com"
+      "www.youtube.com"
 
       "pornhub.com"
       "www.pornhub.com"
@@ -215,6 +215,7 @@
     corefonts
     inconsolata
     libertine
+    newcomputermodern
   ];
 
   services.displayManager.sddm = {
