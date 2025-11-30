@@ -40,6 +40,7 @@
     "$mainMod, period, togglespecialworkspace, calendar"
     "$mainMod SHIFT, M, movetoworkspacesilent, special:messages"
     "$mainMod SHIFT, comma, movetoworkspacesilent, special:music"
+    "$mainMod SHIFT, period, movetoworkspacesilent, special:calendar"
     "$mainMod, mouse_down, workspace, e+1"
     "$mainMod, mouse_up, workspace, e-1"
   ];
