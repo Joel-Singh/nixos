@@ -63,7 +63,7 @@
   
   general = {
     gaps_in = 5;
-    gaps_out = "50,20,20,20";
+    gaps_out = "20,20,20,20";
     border_size = 4;
     "col.active_border" = "rgba(3ae846ee) rgba(e3e3e3ee) 60deg";
     "col.inactive_border" = "rgba(595959aa)";
