@@ -285,7 +285,7 @@ function cd-repo() {
 }
 
 function typst-watch() {
-  typst watch "$1" /tmp/current-typ-file.pdf
+  typst watch "$1" /tmp/current-typ-file.pdf --root $(git rev-parse --show-toplevel)
 }
 
 
