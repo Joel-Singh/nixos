@@ -100,6 +100,8 @@
     tinymist
 
     dillo
+
+    httrack
   ];
 
 
