@@ -23,7 +23,7 @@ export JOELS_COMPUTER="true" # Used for DuckSlayer
 # Customizing Bash prompt
 GREEN="\[$(tput setaf 2)\]"
 RESET="\[$(tput sgr0)\]"
-PS1="${GREEN}\W${RESET} "
+PS1="${GREEN}> ${RESET} "
 
 # Aliases
 alias l='ls --color=auto'
