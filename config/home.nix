@@ -102,6 +102,8 @@
     dillo
 
     httrack
+
+    slides
   ];
 
 
