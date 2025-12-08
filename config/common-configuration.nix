@@ -27,8 +27,8 @@
       "youtube.com"
       "www.youtube.com"
 
-      "chatgpt.com"
-      "www.chatgpt.com"
+      # "chatgpt.com"
+      # "www.chatgpt.com"
 
       "pornhub.com"
       "www.pornhub.com"
