@@ -149,7 +149,7 @@
     kb_layout = "us";
     kb_options = "caps:swapescape";
     repeat_rate = 35;
-    repeat_delay = 240;
+    repeat_delay = 120;
     follow_mouse = 1;
     sensitivity = 0;
     touchpad = {
