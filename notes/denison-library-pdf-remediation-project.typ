@@ -11,3 +11,10 @@ Need to make sure to use dotenv for my api key...
 
 https://dri.es/automating-alt-text-generation-ai
 https://dri.es/comparing-local-llms-for-alt-text-generation
+
+Going to modify the above to not use httrack:
+
+- Pass in a url and then it:
+  - opens the page with puppeteer
+  - modifies the HTML img tags as necessary
+  - 
