@@ -29,7 +29,6 @@ PS1="${GREEN}\W${RESET} "
 alias l='ls --color=auto'
 alias ls='ls --color=auto'
 alias pacman='pacman --color=auto'
-alias rm='echo Use trash silly'
 alias trp='trash-put --verbose'
 alias trp-downloads='trash-put --verbose ~/Downloads/*'
 alias kcli='kdeconnect-cli'
