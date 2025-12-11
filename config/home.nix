@@ -110,6 +110,8 @@
     pdf2svg
     xclip
     rofi
+
+    python315
   ];
 
 
