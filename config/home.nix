@@ -106,12 +106,11 @@
     slides
 
     # Dependencies for inkscape-shortcut-manager
-    python313Packages.xlib
     pdf2svg
     xclip
     rofi
 
-    python315
+    inkscape
   ];
 
 
