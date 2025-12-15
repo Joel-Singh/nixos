@@ -97,7 +97,13 @@ alias mocp="mocp -C ~/repos/nixos/config/moc-config"
 alias mocp-keymap="cat ~/repos/nixos/config/moc-keymap | fzf"
 
 function z() {
-  nohup zathura "$@" >/dev/null & disown & e
+  if [[ -z "$1" ]]; then
+    nohup zathura "$@" >/dev/null & disown & e
+  else
+    TEMP_FILE="$(mktemp)"
+    typst compile "$1" $TEMP_FILE --format pdf
+    nohup zathura "$TEMP_FILE" >/dev/null & disown & e
+  fi
 }
 
 function launch_gnucash() {
