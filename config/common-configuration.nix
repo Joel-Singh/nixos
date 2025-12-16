@@ -42,8 +42,8 @@
       "lobste.rs"
       "www.lobste.rs"
 
-      "google.com"
-      "www.google.com"
+      # "google.com"
+      # "www.google.com"
     ];
   };
 
