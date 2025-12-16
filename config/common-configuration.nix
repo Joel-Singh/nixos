@@ -78,14 +78,6 @@
     openFirewall = true;
   };
 
-  services.printing = {
-    enable = true;
-    drivers = with pkgs; [
-      cups-filters
-      cups-browsed
-    ];
-  };
-
   # Enable sound with pipewire.
   hardware.pulseaudio.enable = false;
 
