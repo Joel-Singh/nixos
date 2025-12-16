@@ -111,6 +111,8 @@
     rofi
 
     inkscape
+    
+    blueman
   ];
 
 
