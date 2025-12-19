@@ -113,6 +113,8 @@
     inkscape
     
     blueman
+
+    kdePackages.kget
   ];
 
 
