@@ -236,16 +236,13 @@ rebuild-current() {
 
 function rebuild() {
   pushd ~/repos/nixos > /dev/null
-  git reset > /dev/null
 
-  if [[ -z "$(git diff --no-ext-diff)" && -z "$(git status | grep Untracked)" ]]; then
+  if [[ -z "$(jj diff --git)" ]]; then
     echo "No changes"
     popd > /dev/null
     return 0
   fi
 
-  git diff -U0
-  git add -A # Flakes don't recognize unadded files
   echo "NixOS Rebuilding..."
   sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER &>/home/apple/repos/nixos/nixos-switch.log
   is_rebuild_successful=$?
@@ -253,8 +250,8 @@ function rebuild() {
     cat nixos-switch.log | grep --color error
   else
     gen=$(nixos-rebuild list-generations | grep True | awk '{ print $1 }')
-    git commit -am "$gen"
-    git push --quiet
+    jj commit -m "$gen"
+    jj git push
   fi
 
   git reset > /dev/null
