@@ -12,6 +12,8 @@
     ".bashrc".source = ./.bashrc;
   };
 
+  xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
+
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Ice";
@@ -125,6 +127,7 @@
     nsnake
 
     moc # Music on console player
+    xwayland-satellite
   ];
 
 
@@ -206,16 +209,7 @@
   services.dunst.enable = true;
 
   services.gnome-keyring.enable = true;
-
-  wayland.windowManager.hyprland.enable = true;
-  wayland.windowManager.hyprland.settings = import ./hyprland.nix;
-  services.hyprpaper = {
-    enable = true;
-    settings = {
-      preload = [ "~/repos/nixos/config/keroppi-wallpaper.jpeg" ];
-      wallpaper = [ ", ~/repos/nixos/config/keroppi-wallpaper.jpeg" ];
-    };
-  };
+  services.polkit-gnome.enable = true;
 
   xdg.mimeApps.enable = true;
   xdg.mimeApps.defaultApplications = {
