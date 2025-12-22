@@ -28,6 +28,13 @@
           inputs.home-manager.nixosModules.default
         ];
       };
+      thinkpad-new = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/thinkpad-new/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
     };
   };
 }
