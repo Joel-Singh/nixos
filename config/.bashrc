@@ -26,8 +26,8 @@ RESET="\[$(tput sgr0)\]"
 PS1="${GREEN}\W${RESET} "
 
 # Aliases
-alias l='ls --color=auto'
-alias ls='ls --color=auto'
+alias l='ls --color=auto --human-readable'
+alias ls='ls --color=auto --human-readable'
 alias pacman='pacman --color=auto'
 alias trp='trash-put --verbose'
 alias trp-downloads='trash-put --verbose ~/Downloads/*'
@@ -95,6 +95,8 @@ alias download-music="yt-dlp -t mp3"
 
 alias mocp="mocp -C ~/repos/nixos/config/moc-config"
 alias mocp-keymap="cat ~/repos/nixos/config/moc-keymap | fzf"
+
+alias show-wifi-passwords="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
 
 function z() {
     nohup zathura "$@" >/dev/null & disown & e
