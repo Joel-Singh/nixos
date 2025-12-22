@@ -57,8 +57,6 @@
 
     "sh ~/repos/nixos/config/scripts/battery-warning.sh"
     "sh ~/repos/nixos/config/scripts/external-monitor-only-if-connected.sh"
-    "cd /home/apple/.config/qutebrowser/; sleep 10; git pull || notify-send \"Failed to pull qutebrowser repo\""
-    "cd /home/apple/repos/Guiding-Principles/; sleep 10; git pull || notify-send \"Failed to pull Guiding-Principles repo\""
   ];
   
   general = {
