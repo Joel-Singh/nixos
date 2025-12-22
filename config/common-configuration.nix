@@ -39,8 +39,8 @@
       "news.ycombinator.com"
       "www.news.ycombinator.com"
 
-      "lobste.rs"
-      "www.lobste.rs"
+      # "lobste.rs"
+      # "www.lobste.rs"
 
       # "google.com"
       # "www.google.com"
