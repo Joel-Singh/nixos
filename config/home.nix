@@ -117,6 +117,8 @@
     kdePackages.kget
 
     gp-saml-gui # To login to denison remote
+
+    gpclient
   ];
 
 
