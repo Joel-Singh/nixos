@@ -121,6 +121,8 @@
     gpclient
 
     wev
+
+    nsnake
   ];
 
 
