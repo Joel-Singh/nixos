@@ -246,6 +246,8 @@ function rebuild() {
     return 0
   fi
 
+  jj diff
+
   echo "NixOS Rebuilding..."
   sudo nixos-rebuild switch --flake ~/repos/nixos\#$CURRENT_COMPUTER &>/home/apple/repos/nixos/nixos-switch.log
   is_rebuild_successful=$?

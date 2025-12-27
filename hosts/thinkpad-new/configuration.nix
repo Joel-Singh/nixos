@@ -18,4 +18,6 @@
   environment.sessionVariables = {
     CURRENT_COMPUTER = "thinkpad-new";
   };
+
+  hardware.i2c.enable = true;
 }
