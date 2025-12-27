@@ -216,6 +216,10 @@
      vim
   ];
 
+  environment.variables = {
+    XDG_CONFIG_HOME = "/home/apple/repos/nixos/config/xdg-config/";
+  };
+
   fonts.packages = with pkgs; [
     corefonts
     inconsolata

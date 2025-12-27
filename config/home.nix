@@ -12,9 +12,6 @@
     ".bashrc".source = ./.bashrc;
   };
 
-  xdg.enable = true;
-  xdg.configHome = "/home/apple/repos/nixos/config/xdg-config/";
-
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
     name = "Bibata-Modern-Ice";
