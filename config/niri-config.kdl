@@ -358,6 +358,8 @@ binds {
     Mod+Q hotkey-overlay-title="Run an Application: Qutebrowser" { spawn-sh "/home/apple/repos/nixos/config/scripts/open_url_in_instance.sh"; }
     Mod+T hotkey-overlay-title="Get Time" { spawn-sh "notify-send Time \"$(date)\""; }
     Mod+B hotkey-overlay-title="Get Battery" { spawn-sh "notify-send Battery $(cat /sys/class/power_supply/BAT0/capacity || cat /sys/class/power_supply/BAT1/capacity)"; }
+    Mod+C hotkey-overlay-title="Close Notification" { spawn-sh "dunstctl close"; }
+    Mod+Shift+C hotkey-overlay-title="Pop History" { spawn-sh "dunstctl history-pop"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"; }
@@ -506,8 +508,6 @@ binds {
     // Expand the focused column to space not taken up by other fully visible columns.
     // Makes the column "fill the rest of the space".
     Mod+Ctrl+F { expand-column-to-available-width; }
-
-    Mod+C { center-column; }
 
     // Center all fully visible columns on screen.
     Mod+Ctrl+C { center-visible-columns; }
