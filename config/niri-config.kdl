@@ -186,8 +186,8 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         on
 
-        width 8 
-        active-gradient from="#3ae846ee" to="#e3e3e3ee" angle=60
+        width 6 
+        active-gradient from="#30bf39" to="#cccccc" angle=60
         inactive-color "#595959aa"
 
         // Color of the border around windows that request your attention.
