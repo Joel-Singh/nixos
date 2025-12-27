@@ -187,7 +187,7 @@ layout {
         on
 
         width 6 
-        active-gradient from="#30bf39" to="#cccccc" angle=60
+        active-color "#30bf39"
         inactive-color "#595959aa"
 
         // Color of the border around windows that request your attention.
