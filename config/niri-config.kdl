@@ -187,8 +187,8 @@ layout {
         on
 
         width 16 
-        active-gradient from=rgba(3ae846ee) to=rgba(e3e3e3ee) angle=60
-        inactive-color rgba(595959aa)
+        active-gradient from="rgba(3ae846ee)" to="rgba(e3e3e3ee)" angle=60
+        inactive-color "rgba(595959aa)"
 
         // Color of the border around windows that request your attention.
         urgent-color "#9b0000"
