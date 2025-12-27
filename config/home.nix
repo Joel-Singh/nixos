@@ -130,7 +130,6 @@
     xwayland-satellite
 
     swaybg # Sway Background
-    gcalcli
   ];
 
 
