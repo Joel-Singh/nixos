@@ -12,8 +12,8 @@
     ".bashrc".source = ./.bashrc;
   };
 
-  xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
-  xdg.configFile."DankMaterialShell/settings.json".source = config.lib.file.mkOutOfStoreSymlink ./dms-settings.json;
+  xdg.enable = true;
+  xdg.configHome = "/home/apple/repos/nixos/config/xdg-config/";
 
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
@@ -210,9 +210,6 @@
   };
 
   services.dunst.enable = true;
-
-  services.gnome-keyring.enable = true;
-  services.polkit-gnome.enable = true;
 
   xdg.mimeApps.enable = true;
   xdg.mimeApps.defaultApplications = {
