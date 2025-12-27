@@ -13,6 +13,7 @@
   };
 
   xdg.configFile."niri/config.kdl".source = ./niri-config.kdl;
+  xdg.configFile."DankMaterialShell/settings.json".source = config.lib.file.mkOutOfStoreSymlink ./dms-settings.json;
 
   home.pointerCursor = {
     package = pkgs.bibata-cursors;
