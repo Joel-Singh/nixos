@@ -235,7 +235,7 @@ Shuffle = yes
 #
 # Example:    Theme = laras_theme
 #
-Theme = ~/repos/nixos/config/moc-theme
+Theme = /home/apple/repos/nixos/config/moc-theme
 
 # The theme used when running on an xterm.
 #
