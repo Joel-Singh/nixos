@@ -12,19 +12,9 @@ input {
         repeat-rate 35
 
         xkb {
-            // You can set rules, model, layout, variant and options.
-            // For more information, see xkeyboard-config(7).
-
-            // For example:
-            // layout "us,ru"
             options "caps:swapescape"
-
-            // If this section is empty, niri will fetch xkb settings
-            // from org.freedesktop.locale1. You can control these using
-            // localectl set-x11-keymap.
         }
 
-        // Enable numlock on startup, omitting this setting disables it.
         numlock
     }
 
@@ -63,12 +53,9 @@ input {
         // middle-emulation
     }
 
-    // Uncomment this to make the mouse warp to the center of newly focused windows.
     warp-mouse-to-focus
 
-    // Focus windows and outputs automatically when moving the mouse into them.
-    // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-    focus-follows-mouse // max-scroll-amount="0%"
+    focus-follows-mouse
 }
 
 // You can configure outputs by their name, which you can find
@@ -343,7 +330,7 @@ window-rule {
 
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
+window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
@@ -368,10 +355,6 @@ binds {
     Mod+D hotkey-overlay-title="Run an Application: Tofi" { spawn-sh "tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""; }
     Mod+Q hotkey-overlay-title="Run an Application: Qutebrowser" { spawn-sh "/home/apple/repos/nixos/config/scripts/open_url_in_instance.sh"; }
 
-    // Example volume keys mappings for PipeWire & WirePlumber.
-    // The allow-when-locked=true property makes them work even when the session is locked.
-    // Using spawn-sh allows to pass multiple arguments together with the command.
-    // "-l 1.0" limits the volume to 100%.
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"; }
     XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
