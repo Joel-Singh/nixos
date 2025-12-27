@@ -166,6 +166,7 @@
 
 
   programs.niri.enable = true;
+  programs.dms-shell.enable = true;
 
   programs.steam = {
     enable = true;
