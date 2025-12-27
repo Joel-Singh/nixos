@@ -123,6 +123,8 @@
     wev
 
     nsnake
+
+    moc # Music on console player
   ];
 
 
