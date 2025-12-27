@@ -250,6 +250,7 @@ function rebuild() {
     cat nixos-switch.log | grep --color error
   else
     gen=$(nixos-rebuild list-generations | grep True | awk '{ print $1 }')
+    jj bookmark set -r @ main
     jj commit -m "$gen"
     jj git push
   fi
