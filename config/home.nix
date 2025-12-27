@@ -130,6 +130,8 @@
     xwayland-satellite
 
     swaybg # Sway Background
+
+    khal
   ];
 
 
