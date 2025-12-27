@@ -126,6 +126,7 @@ function nvim() {
     command nvim -S ~/.cache/nvim/session.vim
   fi
   kitten @ set-spacing padding=5
+  kitten @ set-colors background="#000000"
   unset in_nvim
 }
 
