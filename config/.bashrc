@@ -113,11 +113,13 @@ function launch_gimp() {
 
 if [ -z "$in_nvim" ]; then
   kitten @ set-spacing padding=5
+  kitten @ set-colors background="#000000"
 fi
 
 function nvim() {
   export in_nvim=1
   kitten @ set-spacing padding=0
+  kitten @ set-colors background="#1a1b26"
   if [[ -n $@ ]]; then 
     command nvim "$@"
   else
