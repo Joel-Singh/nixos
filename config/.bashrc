@@ -254,7 +254,6 @@ function rebuild() {
     jj git push
   fi
 
-  git reset > /dev/null
   popd > /dev/null
 }
 
