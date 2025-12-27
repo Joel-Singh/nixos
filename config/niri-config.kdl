@@ -186,7 +186,7 @@ layout {
         // If you enable the border, you probably want to disable the focus ring.
         on
 
-        width 4
+        width 16 
         active-gradient from="rgba(3ae846ee)" to="rgba(e3e3e3ee)" angle=60
         inactive-color "rgba(595959aa)"
 
