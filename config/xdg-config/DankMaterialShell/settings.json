@@ -173,7 +173,7 @@
   "showDock": false,
   "dockAutoHide": false,
   "dockGroupByApp": false,
-  "dockOpenOnOverview": true,
+  "dockOpenOnOverview": false,
   "dockPosition": 1,
   "dockSpacing": 4,
   "dockBottomGap": 0,
