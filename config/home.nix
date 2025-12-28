@@ -94,7 +94,6 @@
     logisim-evolution
     logisim
 
-    khal
     vdirsyncer
 
     gemini-cli
