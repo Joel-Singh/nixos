@@ -151,8 +151,9 @@
   programs.zathura.enable = true;
   programs.firefox.enable = true;
   programs.kitty.enable = true;
+
   programs.dankMaterialShell.enable = true;
-  programs.dankMaterialShell.quickshell.package = pkgs.quickshell;
+  programs.dankMaterialShell.systemd.enable = true;
 
   programs.direnv.enable = true;
   programs.direnv.silent = true;
