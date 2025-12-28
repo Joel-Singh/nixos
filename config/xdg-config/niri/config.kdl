@@ -368,6 +368,7 @@ binds {
     Mod+T hotkey-overlay-title="Get Time" { spawn-sh "notify-send Time \"$(date)\""; }
     Mod+B hotkey-overlay-title="Get Battery" { spawn-sh "notify-send Battery $(cat /sys/class/power_supply/BAT0/capacity || cat /sys/class/power_supply/BAT1/capacity)"; }
     Mod+C hotkey-overlay-title="Close Notification" { spawn-sh "dunstctl close"; }
+    Mod+P hotkey-overlay-title="Power Menu" { spawn-sh "dms ipc call powermenu toggle"; }
     Mod+Shift+C hotkey-overlay-title="Pop History" { spawn-sh "dunstctl history-pop"; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"; }

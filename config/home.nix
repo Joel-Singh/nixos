@@ -154,6 +154,7 @@
   programs.dankMaterialShell.enable = true;
   programs.dankMaterialShell.plugins = {
     DankNiriWindows = {
+      enable = true;
       src = pkgs.fetchFromGitHub {
         owner = "rochacbruno";
         repo = "DankNiriWindows";
