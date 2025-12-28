@@ -129,8 +129,6 @@
 
     moc # Music on console player
     xwayland-satellite
-
-    swaybg # Sway Background
   ];
 
 
