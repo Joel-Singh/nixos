@@ -264,6 +264,7 @@ layout {
 // spawn-at-startup "waybar"
 
 spawn-sh-at-startup "/home/apple/repos/nixos/config/scripts/battery-warning.sh"
+spawn-sh-at-startup "dms restart"
 
 spawn-sh-at-startup "swaybg -i /home/apple/repos/nixos/config/keroppi-wallpaper.jpeg"
 
@@ -362,7 +363,7 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     Mod+Return hotkey-overlay-title="Open a Terminal: Kitty" { spawn-sh "kitty --working-directory \"$(cat /tmp/currentwd)\" --single-instance -o allow_remote_control=yes -o enabled_layouts=tall"; }
-    Mod+D hotkey-overlay-title="Run an Application: Tofi" { spawn-sh "tofi-run --fuzzy-match=true --require-match=false | xargs -I {} sh -c \"{}\""; }
+    Mod+D hotkey-overlay-title="Application Launcher" { spawn-sh "dms ipc call spotlight toggle"; }
     Mod+Q hotkey-overlay-title="Run an Application: Qutebrowser" { spawn-sh "/home/apple/repos/nixos/config/scripts/open_url_in_instance.sh"; }
     Mod+T hotkey-overlay-title="Get Time" { spawn-sh "notify-send Time \"$(date)\""; }
     Mod+B hotkey-overlay-title="Get Battery" { spawn-sh "notify-send Battery $(cat /sys/class/power_supply/BAT0/capacity || cat /sys/class/power_supply/BAT1/capacity)"; }
