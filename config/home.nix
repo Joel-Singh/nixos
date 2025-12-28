@@ -152,17 +152,6 @@
   programs.kitty.enable = true;
 
   programs.dankMaterialShell.enable = true;
-  programs.dankMaterialShell.plugins = {
-    DankNiriWindows = {
-      enable = true;
-      src = pkgs.fetchFromGitHub {
-        owner = "rochacbruno";
-        repo = "DankNiriWindows";
-        rev = "b845277ad505556caff828241ec6a80a75f0e034";
-        hash = "sha256-rdZAnkRyfycI2a2wjSiepQwRI49zKbwoRzpz1+c6ZJA=";
-      };
-    };
-  };
 
   programs.direnv.enable = true;
   programs.direnv.silent = true;
