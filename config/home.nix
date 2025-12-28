@@ -1,6 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    inputs.dms.homeModules.dankMaterialShell.default
+  ];
+
   programs.home-manager.enable = true;
 
   home.username = "apple";
@@ -147,6 +151,8 @@
   programs.zathura.enable = true;
   programs.firefox.enable = true;
   programs.kitty.enable = true;
+  programs.dankMaterialShell.enable = true;
+  programs.dankMaterialShell.quickshell.package = pkgs.quickshell;
 
   programs.direnv.enable = true;
   programs.direnv.silent = true;
