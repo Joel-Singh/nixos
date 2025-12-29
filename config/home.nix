@@ -134,6 +134,8 @@
     xwayland-satellite
 
     calcurse # Terminal calendar app
+
+    thunderbird
   ];
 
 
