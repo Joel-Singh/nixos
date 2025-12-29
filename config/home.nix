@@ -132,6 +132,8 @@
 
     moc # Music on console player
     xwayland-satellite
+
+    calcurse # Terminal calendar app
   ];
 
 
