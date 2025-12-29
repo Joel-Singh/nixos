@@ -250,11 +250,11 @@
       ],
       "rightWidgets": [
         {
-          "id": "battery",
+          "id": "systemTray",
           "enabled": true
         },
         {
-          "id": "systemTray",
+          "id": "notificationButton",
           "enabled": true
         },
         {
