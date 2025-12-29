@@ -285,7 +285,7 @@
       "widgetOutlineOpacity": 1,
       "widgetOutlineThickness": 1,
       "fontScale": 1,
-      "autoHide": true,
+      "autoHide": false,
       "autoHideDelay": 0,
       "openOnOverview": true,
       "visible": true,
