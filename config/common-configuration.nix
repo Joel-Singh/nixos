@@ -30,8 +30,8 @@
       "chatgpt.com"
       "www.chatgpt.com"
 
-      "pornhub.com"
-      "www.pornhub.com"
+      # "pornhub.com"
+      # "www.pornhub.com"
 
       "gemini.google.com"
       "www.gemini.google.com"
