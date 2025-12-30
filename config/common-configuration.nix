@@ -24,14 +24,14 @@
       "tumblr.com"
       "www.tumblr.com"
 
-      # "youtube.com"
-      # "www.youtube.com"
+      "youtube.com"
+      "www.youtube.com"
 
       "chatgpt.com"
       "www.chatgpt.com"
 
-      # "pornhub.com"
-      # "www.pornhub.com"
+      "pornhub.com"
+      "www.pornhub.com"
 
       "gemini.google.com"
       "www.gemini.google.com"

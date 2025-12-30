@@ -266,8 +266,6 @@ layout {
 spawn-sh-at-startup "/home/apple/repos/nixos/config/scripts/battery-warning.sh"
 spawn-sh-at-startup "dms restart"
 
-spawn-sh-at-startup "swaybg -i /home/apple/repos/nixos/config/keroppi-wallpaper.jpeg"
-
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
     // skip-at-startup
