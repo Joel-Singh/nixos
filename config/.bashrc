@@ -214,7 +214,7 @@ function fakeAdd() {
 }
 
 function runCpp() {
-  ls *.cpp | entr -c sh -c "g++ $1 -o ${1%.*} && ./${1%.*}"
+  ls *.cpp | entr -cr sh -c "g++ $1 -o ${1%.*} && ./${1%.*}"
 }
 
 function runCppMake() {
@@ -280,7 +280,7 @@ function cdd() {
 function cd-repo() {
   repo=$(fd -d 1 . /home/apple/repos/ | fzf)
   if [ -z "$repo" ]; then
-    echo No repo selected
+    cd /home/apple/repos
   else
     cd $repo
   fi
