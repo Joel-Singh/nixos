@@ -136,8 +136,6 @@
     calcurse # Terminal calendar app
 
     thunderbird
-
-    android-tools
   ];
 
 
