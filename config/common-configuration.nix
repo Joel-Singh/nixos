@@ -21,11 +21,11 @@
       "reddit.com"
       "www.reddit.com"
 
-      # "tumblr.com"
-      # "www.tumblr.com"
+      "tumblr.com"
+      "www.tumblr.com"
 
-      # "youtube.com"
-      # "www.youtube.com"
+      "youtube.com"
+      "www.youtube.com"
 
       "chatgpt.com"
       "www.chatgpt.com"
