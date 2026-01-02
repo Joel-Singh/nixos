@@ -94,7 +94,7 @@ alias gb="git branch"
 
 alias download-music="yt-dlp -t mp3"
 
-alias mocp="mocp -C ~/repos/nixos/config/moc-config"
+alias mocp="mocp -C ~/repos/nixos/config/moc-config /home/apple/repos/music/downloaded-music/"
 alias mocp-keymap="cat ~/repos/nixos/config/moc-keymap | fzf"
 
 alias show-wifi-passwords="sudo grep -r '^psk=' /etc/NetworkManager/system-connections/"
