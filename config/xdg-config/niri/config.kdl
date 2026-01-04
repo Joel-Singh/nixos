@@ -403,6 +403,11 @@ binds {
     Mod+Shift+K     { move-window-up-or-to-workspace-up; }
     Mod+Shift+L     { move-column-right; }
 
+    Mod+Ctrl+H     { set-column-width "-1%"; }
+    Mod+Ctrl+J     { set-window-height "+1%"; }
+    Mod+Ctrl+K     { set-window-height "-1%"; }
+    Mod+Ctrl+L     { set-column-width "+1%"; }
+
     // Alternative commands that move across workspaces when reaching
     // the first or last window in a column.
     // Mod+Ctrl+J     { move-window-down-or-to-workspace-down; }

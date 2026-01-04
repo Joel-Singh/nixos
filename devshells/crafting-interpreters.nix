@@ -4,7 +4,7 @@ with pkgs;
 
 mkShell rec {
   nativeBuildInputs = [
-    javaPackages.compiler.openjdk8
+    javaPackages.compiler.openjdk25
     gdb
   ];
 }
