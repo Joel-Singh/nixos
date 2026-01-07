@@ -24,8 +24,8 @@
       "tumblr.com"
       "www.tumblr.com"
 
-      # "youtube.com"
-      # "www.youtube.com"
+      "youtube.com"
+      "www.youtube.com"
 
       "chatgpt.com"
       "www.chatgpt.com"
@@ -39,8 +39,8 @@
       "news.ycombinator.com"
       "www.news.ycombinator.com"
 
-      # "lobste.rs"
-      # "www.lobste.rs"
+      "lobste.rs"
+      "www.lobste.rs"
 
       # "google.com"
       # "www.google.com"
