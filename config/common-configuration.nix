@@ -18,8 +18,8 @@
       "www.bsky.app"
       "bsky.app"
 
-      # "reddit.com"
-      # "www.reddit.com"
+      "reddit.com"
+      "www.reddit.com"
 
       "tumblr.com"
       "www.tumblr.com"
