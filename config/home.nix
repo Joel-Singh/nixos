@@ -199,6 +199,11 @@
         default-command = "log";
         editor = "nvim";
       };
+
+      aliases = {
+        tug = ["bookmark" "move" "--from" "heads(::@- & bookmarks())" "--to" "@-"];
+      };
+
       templates = {
         draft_commit_description = ''
           concat(
