@@ -221,6 +221,12 @@
     XDG_CONFIG_HOME = "/home/apple/repos/nixos/config/xdg-config/";
   };
 
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
+
   fonts.packages = with pkgs; [
     corefonts
     inconsolata
