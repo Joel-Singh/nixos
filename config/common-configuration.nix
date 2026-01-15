@@ -18,14 +18,14 @@
       "www.bsky.app"
       "bsky.app"
 
-      "reddit.com"
-      "www.reddit.com"
+      # "reddit.com"
+      # "www.reddit.com"
 
       "tumblr.com"
       "www.tumblr.com"
 
-      # "youtube.com"
-      # "www.youtube.com"
+      "youtube.com"
+      "www.youtube.com"
 
       "chatgpt.com"
       "www.chatgpt.com"
