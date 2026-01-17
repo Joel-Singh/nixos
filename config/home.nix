@@ -175,13 +175,17 @@
 
   programs.git = {
     enable = true;
-    userEmail = "joelsingh788@gmail.com";
-    userName = "Joel Singh";
-    difftastic = {
-      enable = true;
-      enableAsDifftool = true;
+    settings = {
+      user = {
+        email = "joelsingh788@gmail.com";
+        name = "Joel Singh";
+      };
     };
   };
+
+  programs.difftastic.git.diffToolMode = true;
+  programs.difftastic.enable = true;
+  programs.difftastic.git.enable = true;
 
   programs.lazygit = {
     enable = true;
