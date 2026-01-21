@@ -201,6 +201,10 @@ function toMd() {
   pandoc "$1" -o "${1%.*}.md"
 }
 
+function toTyp() {
+  pandoc "$1" -o "${1%.*}.typ"
+}
+
 function webmToMp3 {
   ffmpeg -i "$1" -map 0:a:0 "${1%.*}.mp3"
 }
