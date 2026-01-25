@@ -100,7 +100,12 @@ alias mocp-keymap="cat ~/repos/nixos/config/moc-keymap | fzf"
 alias show-wifi-passwords="sudo sh -c 'grep -r '^psk=' /etc/NetworkManager/system-connections/ | fzf'"
 
 function z() {
+  if [[ "$1" == *.typ ]]; then
+    local tmpfile=$(mktemp /tmp/XXXXXX.pdf)
+    typst compile "$1" "$tmpfile" && nohup zathura "$tmpfile" >/dev/null & disown & e
+  else
     nohup zathura "$@" >/dev/null & disown & e
+  fi
 }
 
 function launch_gnucash() {
