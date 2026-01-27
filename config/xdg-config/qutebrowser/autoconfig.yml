@@ -16,6 +16,7 @@ settings:
     global: dark
   content.desktop_capture:
     https://discord.com: true
+    https://meet.google.com: true
   content.geolocation:
     https://crawl.develz.org: true
     https://www.flyfrontier.com: false
@@ -39,6 +40,7 @@ settings:
     https://discourse.nixos.org: access-paste
     https://docs.docker.com: access-paste
     https://drive.google.com: access-paste
+    https://editor.graphite.art: access-paste
     https://emojidb.org: access-paste
     https://emojipedia.org: access-paste
     https://en.wikipedia.org: access-paste
@@ -58,11 +60,14 @@ settings:
     https://xunit.net: access-paste
   content.media.audio_capture:
     https://discord.com: true
+    https://meet.google.com: true
     https://teams.live.com: true
     https://voice.google.com: true
     https://www.instagram.com: true
     https://www.messenger.com: true
   content.media.audio_video_capture:
+    https://app.zoom.us: true
+    https://meet.google.com: true
     https://member.healthiestyou.com: true
     https://teams.live.com: true
   content.media.video_capture:
@@ -71,6 +76,7 @@ settings:
     https://web.whatsapp.com: true
     https://www.messenger.com: true
   content.notifications.enabled:
+    https://app.zoom.us: true
     https://calendar.google.com: false
     https://voice.google.com: false
   content.notifications.presenter:
