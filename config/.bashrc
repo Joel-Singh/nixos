@@ -102,7 +102,7 @@ alias show-wifi-passwords="sudo sh -c 'grep -r '^psk=' /etc/NetworkManager/syste
 function z() {
   if [[ "$1" == *.typ ]]; then
     local tmpfile=$(mktemp /tmp/XXXXXX.pdf)
-    if typst compile "$1" "$tmpfile"; then
+    if typst compile --root "$(git rev-parse --show-toplevel)" "$1" "$tmpfile"; then
       nohup zathura "$tmpfile" >/dev/null & disown & e
     fi
   else
