@@ -136,6 +136,8 @@
     thunderbird
 
     sssnake
+
+    kdePackages.okular
   ];
 
 
