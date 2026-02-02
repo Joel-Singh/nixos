@@ -150,7 +150,12 @@
   ];
   programs.feh.enable = true;
   programs.bat.enable = true;
+
   programs.zathura.enable = true;
+  programs.zathura.options = {
+    selection-clipboard = "clipboard";
+  };
+
   programs.firefox.enable = true;
   programs.kitty.enable = true;
 
