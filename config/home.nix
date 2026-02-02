@@ -138,6 +138,9 @@
     sssnake
 
     kdePackages.okular
+
+    orca
+    at-spi2-atk
   ];
 
 
