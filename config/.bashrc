@@ -197,6 +197,10 @@ function n-config() {
   fi
 }
 
+function newSvgTemplate() {
+    cp /home/apple/repos/inkscape-templates/empty-svg-template.svg /home/apple/repos/inkscape-templates/"$1" && inkscape /home/apple/repos/inkscape-templates/"$1"
+}
+
 function viewMd() {
   pandoc "$1" -o "/home/apple/Personal/Temporary/viewMdFile.pdf" && z "/home/apple/Personal/Temporary/viewMdFile.pdf"
 }
