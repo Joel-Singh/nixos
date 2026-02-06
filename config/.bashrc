@@ -126,7 +126,9 @@ if [ -z "$in_nvim" ]; then
 fi
 
 function ink() {
-  cp -n /home/apple/repos/inkscape-templates/empty-svg-template.svg "$@"
+  if [[ ! -f "$@" ]]; then
+    cp -n /home/apple/repos/inkscape-templates/empty-svg-template.svg "$@"
+  fi
 
   nohup inkscape "$@" >/dev/null & disown & e
 }
