@@ -63,6 +63,7 @@ alias pdft='mkdir -p output && pdflatex -output-directory=./output'
 alias neofetch='fastfetch'
 alias ff='fastfetch'
 alias zcs="z /home/apple/Personal/Denison/spring-2024/CS234/cs234-book.pdf"
+alias docs=""
 alias mv="mv -i"
 alias qq="qalc"
 alias qalc="clear && qalc"
@@ -118,7 +119,6 @@ function launch_gnucash() {
 function launch_gimp() {
   nohup gimp "$@" > /dev/null & disown & e
 }
-
 
 if [ -z "$in_nvim" ]; then
   kitten @ set-spacing padding=5
