@@ -125,6 +125,12 @@ if [ -z "$in_nvim" ]; then
   kitten @ set-colors background="#000000"
 fi
 
+function ink() {
+  cp -n /home/apple/repos/inkscape-templates/empty-svg-template.svg "$@"
+
+  nohup inkscape "$@" >/dev/null & disown & e
+}
+
 function nvim() {
   export in_nvim=1
   kitten @ set-spacing padding=0
