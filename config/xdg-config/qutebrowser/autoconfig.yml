@@ -14,6 +14,8 @@ settings:
     global: never
   colors.webpage.preferred_color_scheme:
     global: dark
+  completion.web_history.max_items:
+    global: 104
   content.desktop_capture:
     https://discord.com: true
     https://meet.google.com: true
