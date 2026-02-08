@@ -296,7 +296,7 @@ function cd() {
     clear
     fd --max-depth=1 --color always | column
 
-    export TYPST_ROOT="$(git rev-parse --show-toplevel) &> /dev/null"
+    export TYPST_ROOT="$(git rev-parse --show-toplevel &> /dev/null)"
 }
 
 function cdrt() {
