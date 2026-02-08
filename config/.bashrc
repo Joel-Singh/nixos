@@ -102,6 +102,8 @@ alias mocp-keymap="cat ~/repos/nixos/config/moc-keymap | fzf"
 
 alias show-wifi-passwords="sudo sh -c 'grep -r '^psk=' /etc/NetworkManager/system-connections/ | fzf'"
 
+alias google-chrome-stable="google-chrome-stable --password-store=basic"
+
 function z() {
   if [[ "$1" == *.typ ]]; then
     local tmpfile=$(mktemp /tmp/XXXXXX.pdf)
