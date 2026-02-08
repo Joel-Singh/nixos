@@ -5,7 +5,7 @@
 #
 
 export NIXPKGS_ALLOW_UNFREE=1
-export TYPST_ROOT="$(git rev-parse --show-toplevel)"
+export TYPST_ROOT="$(git rev-parse --show-toplevel || echo '')"
 
 if [[ $TERM_PROGRAM == "vscode" ]]; then 
   return 0
@@ -294,7 +294,7 @@ function cd() {
     clear
     fd --max-depth=1 --color always | column
 
-    export TYPST_ROOT="$(git rev-parse --show-toplevel)"
+    export TYPST_ROOT="$(git rev-parse --show-toplevel) || echo ''"
 }
 
 function cdrt() {
