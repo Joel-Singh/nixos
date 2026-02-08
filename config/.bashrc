@@ -104,6 +104,14 @@ alias show-wifi-passwords="sudo sh -c 'grep -r '^psk=' /etc/NetworkManager/syste
 
 alias google-chrome-stable="google-chrome-stable --password-store=basic"
 
+function print() {
+  if typst compile "$1" "/tmp/${1%.typ}.pdf"; then
+    google-chrome-stable --password-store=basic "/tmp/${1%.typ}.pdf" printrelease.denison.edu
+  else 
+    echo failed to compile
+  fi
+}
+
 function z() {
   if [[ "$1" == *.typ ]]; then
     local tmpfile=$(mktemp /tmp/XXXXXX.pdf)
