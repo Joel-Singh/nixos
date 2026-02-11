@@ -141,6 +141,8 @@
 
     orca
     at-spi2-atk
+
+    jdk
   ];
 
 
