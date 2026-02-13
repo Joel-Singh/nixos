@@ -143,6 +143,8 @@
     at-spi2-atk
 
     jdk
+
+    mars-mips # Mips simulator for CS281
   ];
 
 
