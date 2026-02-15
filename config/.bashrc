@@ -112,6 +112,15 @@ function print() {
   fi
 }
 
+function typCompile() {
+  mkdir -p ~/TypstPdfs
+  if typst compile -f pdf "$1" "~/TypstPdfs/${1%.typ}.pdf"; then
+    echo compiled $1 in ~/TypstPdfs/${1%.typ}.pdf
+  else
+    echo failed to compile $1
+  fi
+}
+
 function z() {
   if [[ "$1" == *.typ ]]; then
     local tmpfile=$(mktemp /tmp/XXXXXX.pdf)
@@ -323,11 +332,6 @@ function cd-repo() {
     cd $repo
   fi
 }
-
-function typst-watch() {
-  typst watch "$1" /tmp/current-typ-file.pdf --root $(git rev-parse --show-toplevel)
-}
-
 
 if [ -z "$in_nvim" ]; then
   bind '"\t":menu-complete'
