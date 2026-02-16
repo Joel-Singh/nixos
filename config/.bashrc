@@ -114,8 +114,8 @@ function print() {
 
 function typCompile() {
   mkdir -p ~/TypstPdfs
-  if typst compile -f pdf "$1" "~/TypstPdfs/${1%.typ}.pdf"; then
-    echo compiled $1 in ~/TypstPdfs/${1%.typ}.pdf
+  if typst compile "$1" "$HOME/TypstPdfs/${1%.typ}.pdf"; then
+    echo compiled $1 in $HOME/TypstPdfs/${1%.typ}.pdf
   else
     echo failed to compile $1
   fi
