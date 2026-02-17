@@ -29,7 +29,7 @@ PS1="${GREEN}\W${RESET} "
 # Aliases
 alias l='ls --color=auto --human-readable'
 alias ls='ls --color=auto --human-readable'
-alias tugdl='mv "/home/apple/Downloads/$(ls -t /home/apple/Downloads/ | head -n 1)" ./'
+alias tugdl='mv "/home/apple/Downloads/$(ls -t /home/apple/Downloads/ | head -n 1)"'
 alias pacman='pacman --color=auto'
 alias trp='trash-put --verbose'
 alias trp-downloads='trash-put --verbose ~/Downloads/*'
