@@ -124,7 +124,7 @@ function typCompile() {
 # rn = Rename
 function rn() {
   file_ending=${1##*.} 
-  echo mv $1 "$(dirname $1)/$2.$file_ending"
+  mv $1 "$(dirname $1)/$2.$file_ending"
 }
 
 function z() {
