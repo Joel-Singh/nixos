@@ -127,6 +127,12 @@ function rn() {
   mv $1 "$(dirname $1)/$2.$file_ending"
 }
 
+function tugdl() {
+  latest_file="/home/apple/Downloads/$(ls -t /home/apple/Downloads/ | head -n 1)"
+  echo mv "$latest_file" "$1"
+  mv "$latest_file" "$1"
+}
+
 function z() {
   if [[ "$1" == *.typ ]]; then
     local tmpfile=$(mktemp /tmp/XXXXXX.pdf)
