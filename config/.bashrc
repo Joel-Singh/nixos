@@ -133,6 +133,12 @@ function tugdl() {
   mv "$latest_file" "$1"
 }
 
+function tugz() {
+  latest_file="/home/apple/Documents/$(ls -t /home/apple/Documents/ | head -n 1)"
+  echo z "$latest_file"
+  z "$latest_file"
+}
+
 function z() {
   if [[ "$1" == *.typ ]]; then
     local tmpfile=$(mktemp /tmp/XXXXXX.pdf)

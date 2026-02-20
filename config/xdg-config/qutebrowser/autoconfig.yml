@@ -81,6 +81,7 @@ settings:
     https://app.zoom.us: true
     https://calendar.google.com: false
     https://voice.google.com: false
+    https://web.tolstoycomments.com: false
   content.notifications.presenter:
     global: libnotify
   content.register_protocol_handler:
