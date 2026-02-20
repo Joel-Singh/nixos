@@ -133,7 +133,7 @@
   users.users.apple = {
     isNormalUser = true;
     description = "apple";
-    extraGroups = [ "networkmanager" "wheel" "adbusers" ];
+    extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
     #  thunderbird
     ];
@@ -175,8 +175,6 @@
 
   programs.nix-ld.enable = true;
   programs.nix-ld.libraries = with pkgs; [];
-
-  programs.adb.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

@@ -145,6 +145,8 @@
     jdk
 
     mars-mips # Mips simulator for CS281
+
+    android-tools
   ];
 
 
